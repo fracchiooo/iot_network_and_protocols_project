@@ -1,0 +1,15 @@
+menu "Project Configuration Options"
+
+config WIFI_SSID
+    string "ID WiFi"
+    default "OnePlus Nord"
+    
+config WIFI_PASS
+    string "WiFi password"
+    default "123456789"
+    
+config BROKER_URI
+    string "MQTT broker URI"
+    default "mqtts://uri_to_broker"  
+    
+endmenu
