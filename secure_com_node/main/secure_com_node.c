@@ -4,9 +4,10 @@
 #include "wifi_wrapper.h"
 #include "mqtt_wrapper.h"
 #include "freertos/queue.h"
+#include "esp_mac.h"
 
 
-  QueueHandle_t queue;
+QueueHandle_t queue;
   
   
 char* get_unique_MAC_address(){

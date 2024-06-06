@@ -1,0 +1,929 @@
+1717606584: mosquitto version 2.0.18 starting
+1717606584: Config loaded from /mosquitto/config/mosquitto.conf.
+1717606584: Opening ipv4 listen socket on port 8883.
+1717606584: Opening ipv6 listen socket on port 8883.
+1717606584: Error: Unable to load certificate revocation file "/mosquitto/config/client-cert-list.pem". Check crlfile.
+1717606584: Error: No such file or directory
+1717606584: OpenSSL Error[0]: error:02FFF002:system library:func(4095):No such file or directory
+1717606584: OpenSSL Error[1]: error:20FFF002:BIO routines:CRYPTO_internal:system lib
+1717606584: OpenSSL Error[2]: error:0BFFF002:x509 certificate routines:CRYPTO_internal:system lib
+1717606625: mosquitto version 2.0.18 starting
+1717606625: Config loaded from /mosquitto/config/mosquitto.conf.
+1717606625: Opening ipv4 listen socket on port 8883.
+1717606625: Opening ipv6 listen socket on port 8883.
+1717606625: Error: Unable to load certificate revocation file "/mosquitto/config/client-cert-list.pem". Check crlfile.
+1717606625: Error: No such file or directory
+1717606625: OpenSSL Error[0]: error:02FFF002:system library:func(4095):No such file or directory
+1717606625: OpenSSL Error[1]: error:20FFF002:BIO routines:CRYPTO_internal:system lib
+1717606625: OpenSSL Error[2]: error:0BFFF002:x509 certificate routines:CRYPTO_internal:system lib
+1717606682: mosquitto version 2.0.18 starting
+1717606682: Config loaded from /mosquitto/config/mosquitto.conf.
+1717606682: Opening ipv4 listen socket on port 8883.
+1717606682: Opening ipv6 listen socket on port 8883.
+1717606682: mosquitto version 2.0.18 running
+1717606748: mosquitto version 2.0.18 starting
+1717606748: Config loaded from /mosquitto/config/mosquitto.conf.
+1717606748: Opening ipv4 listen socket on port 8883.
+1717606748: Opening ipv6 listen socket on port 8883.
+1717606748: mosquitto version 2.0.18 running
+1717625700: mosquitto version 2.0.18 starting
+1717625700: Config loaded from /mosquitto/config/mosquitto.conf.
+1717625700: Opening ipv4 listen socket on port 8883.
+1717625700: Opening ipv6 listen socket on port 8883.
+1717625700: mosquitto version 2.0.18 running
+1717628174: mosquitto version 2.0.18 starting
+1717628174: Config loaded from /mosquitto/config/mosquitto.conf.
+1717628174: Opening ipv4 listen socket on port 8883.
+1717628174: Opening ipv6 listen socket on port 8883.
+1717628174: mosquitto version 2.0.18 running
+1717628197: mosquitto version 2.0.18 terminating
+1717628197: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717628202: mosquitto version 2.0.18 starting
+1717628202: Config loaded from /mosquitto/config/mosquitto.conf.
+1717628202: Opening ipv4 listen socket on port 8883.
+1717628202: Opening ipv6 listen socket on port 8883.
+1717628202: mosquitto version 2.0.18 running
+1717628217: mosquitto version 2.0.18 terminating
+1717628217: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717628728: mosquitto version 2.0.18 starting
+1717628728: Config loaded from /mosquitto/config/mosquitto.conf.
+1717628728: Opening ipv4 listen socket on port 8883.
+1717628728: Opening ipv6 listen socket on port 8883.
+1717628728: mosquitto version 2.0.18 running
+1717628746: mosquitto version 2.0.18 terminating
+1717628746: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717628871: mosquitto version 2.0.18 starting
+1717628871: Config loaded from /mosquitto/config/mosquitto.conf.
+1717628871: Opening ipv4 listen socket on port 8883.
+1717628871: Opening ipv6 listen socket on port 8883.
+1717628871: mosquitto version 2.0.18 running
+1717628875: mosquitto version 2.0.18 terminating
+1717628875: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717629082: mosquitto version 2.0.18 starting
+1717629082: Config loaded from /mosquitto/config/mosquitto.conf.
+1717629082: Opening ipv4 listen socket on port 8883.
+1717629082: Opening ipv6 listen socket on port 8883.
+1717629082: mosquitto version 2.0.18 running
+1717629220: mosquitto version 2.0.18 starting
+1717629220: Config loaded from /mosquitto/config/mosquitto.conf.
+1717629220: Opening ipv4 listen socket on port 8883.
+1717629220: Opening ipv6 listen socket on port 8883.
+1717629220: mosquitto version 2.0.18 running
+1717629490: mosquitto version 2.0.18 starting
+1717629490: Config loaded from /mosquitto/config/mosquitto.conf.
+1717629490: Opening ipv4 listen socket on port 8883.
+1717629490: Opening ipv6 listen socket on port 8883.
+1717629490: mosquitto version 2.0.18 running
+1717629637: mosquitto version 2.0.18 starting
+1717629637: Config loaded from /mosquitto/config/mosquitto.conf.
+1717629637: Opening ipv4 listen socket on port 8883.
+1717629637: Opening ipv6 listen socket on port 8883.
+1717629637: mosquitto version 2.0.18 running
+1717629921: New connection from ::1:55386 on port 8883.
+1717629921: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717629921: Client <unknown> disconnected: Protocol error.
+1717629921: New connection from ::1:55392 on port 8883.
+1717629921: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717629921: Client <unknown> disconnected: Protocol error.
+1717629921: New connection from ::1:55408 on port 8883.
+1717629921: OpenSSL Error[0]: error:14039418:SSL routines:ACCEPT_SR_CERT_VRFY:tlsv1 alert unknown ca
+1717629921: Client <unknown> disconnected: Protocol error.
+1717629921: New connection from ::1:55410 on port 8883.
+1717629921: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717629921: Client <unknown> disconnected: Protocol error.
+1717629922: New connection from ::1:55422 on port 8883.
+1717629922: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717629922: Client <unknown> disconnected: Protocol error.
+1717629922: New connection from ::1:55430 on port 8883.
+1717629922: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717629922: Client <unknown> disconnected: Protocol error.
+1717630077: mosquitto version 2.0.18 terminating
+1717630077: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717630088: mosquitto version 2.0.18 starting
+1717630088: Config loaded from /mosquitto/config/mosquitto.conf.
+1717630088: Opening ipv4 listen socket on port 8883.
+1717630088: Opening ipv6 listen socket on port 8883.
+1717630088: mosquitto version 2.0.18 running
+1717630107: mosquitto version 2.0.18 terminating
+1717630107: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717630152: mosquitto version 2.0.18 starting
+1717630152: Config loaded from /mosquitto/config/mosquitto.conf.
+1717630152: Opening ipv4 listen socket on port 8883.
+1717630152: Opening ipv6 listen socket on port 8883.
+1717630152: mosquitto version 2.0.18 running
+1717630157: mosquitto version 2.0.18 terminating
+1717630157: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717630213: mosquitto version 2.0.18 starting
+1717630213: Config loaded from /mosquitto/config/mosquitto.conf.
+1717630213: Opening ipv4 listen socket on port 8883.
+1717630213: Opening ipv6 listen socket on port 8883.
+1717630213: mosquitto version 2.0.18 running
+1717630216: mosquitto version 2.0.18 terminating
+1717630216: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717630312: mosquitto version 2.0.18 starting
+1717630312: Config loaded from /mosquitto/config/mosquitto.conf.
+1717630312: Opening ipv4 listen socket on port 8883.
+1717630312: Opening ipv6 listen socket on port 8883.
+1717630312: mosquitto version 2.0.18 running
+1717630314: mosquitto version 2.0.18 terminating
+1717630314: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717632257: mosquitto version 2.0.18 starting
+1717632257: Config loaded from /mosquitto/config/mosquitto.conf.
+1717632257: Opening ipv4 listen socket on port 8883.
+1717632257: Opening ipv6 listen socket on port 8883.
+1717632257: mosquitto version 2.0.18 running
+1717632259: New connection from ::1:33644 on port 8883.
+1717632259: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632259: Client <unknown> disconnected: Protocol error.
+1717632259: New connection from ::1:33648 on port 8883.
+1717632259: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632259: Client <unknown> disconnected: Protocol error.
+1717632259: New connection from ::1:33664 on port 8883.
+1717632259: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632259: Client <unknown> disconnected: Protocol error.
+1717632259: New connection from ::1:33672 on port 8883.
+1717632259: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632259: Client <unknown> disconnected: Protocol error.
+1717632259: New connection from ::1:33678 on port 8883.
+1717632259: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632259: Client <unknown> disconnected: Protocol error.
+1717632259: New connection from ::1:33692 on port 8883.
+1717632259: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632259: Client <unknown> disconnected: Protocol error.
+1717632294: mosquitto version 2.0.18 starting
+1717632294: Config loaded from /mosquitto/config/mosquitto.conf.
+1717632294: Opening ipv4 listen socket on port 8883.
+1717632294: Opening ipv6 listen socket on port 8883.
+1717632294: mosquitto version 2.0.18 running
+1717632296: New connection from ::1:52326 on port 8883.
+1717632296: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632296: Client <unknown> disconnected: Protocol error.
+1717632296: New connection from ::1:52342 on port 8883.
+1717632296: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632296: Client <unknown> disconnected: Protocol error.
+1717632296: New connection from ::1:52352 on port 8883.
+1717632296: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632296: Client <unknown> disconnected: Protocol error.
+1717632296: New connection from ::1:52356 on port 8883.
+1717632296: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632296: Client <unknown> disconnected: Protocol error.
+1717632296: New connection from ::1:52372 on port 8883.
+1717632296: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632296: Client <unknown> disconnected: Protocol error.
+1717632296: New connection from ::1:52384 on port 8883.
+1717632296: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632296: Client <unknown> disconnected: Protocol error.
+1717632382: mosquitto version 2.0.18 starting
+1717632382: Config loaded from /mosquitto/config/mosquitto.conf.
+1717632382: Opening ipv4 listen socket on port 8883.
+1717632382: Opening ipv6 listen socket on port 8883.
+1717632382: mosquitto version 2.0.18 running
+1717632384: New connection from ::1:58422 on port 8883.
+1717632384: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632384: Client <unknown> disconnected: Protocol error.
+1717632384: New connection from ::1:58434 on port 8883.
+1717632384: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632384: Client <unknown> disconnected: Protocol error.
+1717632384: New connection from ::1:58448 on port 8883.
+1717632384: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632384: Client <unknown> disconnected: Protocol error.
+1717632384: New connection from ::1:58452 on port 8883.
+1717632384: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632384: Client <unknown> disconnected: Protocol error.
+1717632384: New connection from ::1:58462 on port 8883.
+1717632384: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632384: Client <unknown> disconnected: Protocol error.
+1717632384: New connection from ::1:58470 on port 8883.
+1717632384: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632384: Client <unknown> disconnected: Protocol error.
+1717632416: mosquitto version 2.0.18 starting
+1717632416: Config loaded from /mosquitto/config/mosquitto.conf.
+1717632416: Opening ipv4 listen socket on port 8883.
+1717632416: Opening ipv6 listen socket on port 8883.
+1717632416: mosquitto version 2.0.18 running
+1717632417: New connection from ::1:46850 on port 8883.
+1717632417: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632417: Client <unknown> disconnected: Protocol error.
+1717632417: New connection from ::1:46854 on port 8883.
+1717632417: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632417: Client <unknown> disconnected: Protocol error.
+1717632417: New connection from ::1:46860 on port 8883.
+1717632417: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632417: Client <unknown> disconnected: Protocol error.
+1717632417: New connection from ::1:46876 on port 8883.
+1717632417: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632417: Client <unknown> disconnected: Protocol error.
+1717632417: New connection from ::1:46892 on port 8883.
+1717632417: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632417: Client <unknown> disconnected: Protocol error.
+1717632417: New connection from ::1:46896 on port 8883.
+1717632417: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632417: Client <unknown> disconnected: Protocol error.
+1717632449: mosquitto version 2.0.18 starting
+1717632449: Config loaded from /mosquitto/config/mosquitto.conf.
+1717632449: Opening ipv4 listen socket on port 8883.
+1717632449: Opening ipv6 listen socket on port 8883.
+1717632449: mosquitto version 2.0.18 running
+1717632451: New connection from ::1:55764 on port 8883.
+1717632451: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632451: Client <unknown> disconnected: Protocol error.
+1717632451: New connection from ::1:55766 on port 8883.
+1717632451: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632451: Client <unknown> disconnected: Protocol error.
+1717632451: New connection from ::1:55778 on port 8883.
+1717632451: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632451: Client <unknown> disconnected: Protocol error.
+1717632451: New connection from ::1:55784 on port 8883.
+1717632451: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632451: Client <unknown> disconnected: Protocol error.
+1717632451: New connection from ::1:55792 on port 8883.
+1717632451: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632451: Client <unknown> disconnected: Protocol error.
+1717632451: New connection from ::1:55796 on port 8883.
+1717632451: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632451: Client <unknown> disconnected: Protocol error.
+1717632508: mosquitto version 2.0.18 starting
+1717632508: Config loaded from /mosquitto/config/mosquitto.conf.
+1717632508: Opening ipv4 listen socket on port 8883.
+1717632508: Opening ipv6 listen socket on port 8883.
+1717632508: mosquitto version 2.0.18 running
+1717632510: New connection from ::1:37314 on port 8883.
+1717632510: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632510: Client <unknown> disconnected: Protocol error.
+1717632510: New connection from ::1:37322 on port 8883.
+1717632510: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632510: Client <unknown> disconnected: Protocol error.
+1717632510: New connection from ::1:37332 on port 8883.
+1717632510: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632510: Client <unknown> disconnected: Protocol error.
+1717632510: New connection from ::1:37334 on port 8883.
+1717632510: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632510: Client <unknown> disconnected: Protocol error.
+1717632510: New connection from ::1:37336 on port 8883.
+1717632510: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632510: Client <unknown> disconnected: Protocol error.
+1717632510: New connection from ::1:37340 on port 8883.
+1717632510: OpenSSL Error[0]: error:02FFF068:system library:func(4095):Connection reset by peer
+1717632510: Client <unknown> disconnected: Protocol error.
+1717632612: mosquitto version 2.0.18 starting
+1717632612: Config loaded from /mosquitto/config/mosquitto.conf.
+1717632612: Opening ipv4 listen socket on port 8883.
+1717632612: Opening ipv6 listen socket on port 8883.
+1717632612: mosquitto version 2.0.18 running
+1717632613: New connection from ::1:40208 on port 8883.
+1717632613: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632613: Client <unknown> disconnected: Protocol error.
+1717632613: New connection from ::1:40214 on port 8883.
+1717632613: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632613: Client <unknown> disconnected: Protocol error.
+1717632614: New connection from ::1:40228 on port 8883.
+1717632614: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632614: Client <unknown> disconnected: Protocol error.
+1717632614: New connection from ::1:40230 on port 8883.
+1717632614: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632614: Client <unknown> disconnected: Protocol error.
+1717632614: New connection from ::1:40234 on port 8883.
+1717632614: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632614: Client <unknown> disconnected: Protocol error.
+1717632614: New connection from ::1:40248 on port 8883.
+1717632614: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632614: Client <unknown> disconnected: Protocol error.
+1717632803: mosquitto version 2.0.18 starting
+1717632803: Config loaded from /mosquitto/config/mosquitto.conf.
+1717632803: Opening ipv4 listen socket on port 8883.
+1717632803: Opening ipv6 listen socket on port 8883.
+1717632803: mosquitto version 2.0.18 running
+1717632804: New connection from ::1:34044 on port 8883.
+1717632805: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632805: Client <unknown> disconnected: Protocol error.
+1717632805: New connection from ::1:34052 on port 8883.
+1717632805: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632805: Client <unknown> disconnected: Protocol error.
+1717632805: New connection from ::1:34058 on port 8883.
+1717632805: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632805: Client <unknown> disconnected: Protocol error.
+1717632805: New connection from ::1:34062 on port 8883.
+1717632805: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632805: Client <unknown> disconnected: Protocol error.
+1717632805: New connection from ::1:34072 on port 8883.
+1717632805: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632805: Client <unknown> disconnected: Protocol error.
+1717632805: New connection from ::1:34086 on port 8883.
+1717632805: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632805: Client <unknown> disconnected: Protocol error.
+1717632878: mosquitto version 2.0.18 starting
+1717632878: Config loaded from /mosquitto/config/mosquitto.conf.
+1717632878: Opening ipv4 listen socket on port 8883.
+1717632878: Opening ipv6 listen socket on port 8883.
+1717632878: mosquitto version 2.0.18 running
+1717632879: New connection from ::1:43998 on port 8883.
+1717632879: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632879: Client <unknown> disconnected: Protocol error.
+1717632879: New connection from ::1:44006 on port 8883.
+1717632879: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632879: Client <unknown> disconnected: Protocol error.
+1717632879: New connection from ::1:44018 on port 8883.
+1717632879: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632879: Client <unknown> disconnected: Protocol error.
+1717632879: New connection from ::1:44022 on port 8883.
+1717632879: OpenSSL Error[0]: error:1403F418:SSL routines:ACCEPT_SR_FINISHED:tlsv1 alert unknown ca
+1717632879: Client <unknown> disconnected: Protocol error.
+1717632880: New connection from ::1:44024 on port 8883.
+1717632880: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632880: Client <unknown> disconnected: Protocol error.
+1717632880: New connection from ::1:44040 on port 8883.
+1717632880: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632880: Client <unknown> disconnected: Protocol error.
+1717632964: mosquitto version 2.0.18 starting
+1717632964: Config loaded from /mosquitto/config/mosquitto.conf.
+1717632964: Opening ipv4 listen socket on port 8883.
+1717632964: Opening ipv6 listen socket on port 8883.
+1717632964: mosquitto version 2.0.18 running
+1717632965: New connection from ::1:35668 on port 8883.
+1717632966: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632966: Client <unknown> disconnected: Protocol error.
+1717632966: New connection from ::1:35670 on port 8883.
+1717632966: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632966: Client <unknown> disconnected: Protocol error.
+1717632966: New connection from ::1:35684 on port 8883.
+1717632966: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717632966: Client <unknown> disconnected: Protocol error.
+1717675420: mosquitto version 2.0.18 starting
+1717675420: Config loaded from /mosquitto/config/mosquitto.conf.
+1717675420: Opening ipv4 listen socket on port 8883.
+1717675420: Opening ipv6 listen socket on port 8883.
+1717675420: mosquitto version 2.0.18 running
+1717675490: mosquitto version 2.0.18 terminating
+1717675490: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717675608: mosquitto version 2.0.18 starting
+1717675608: Config loaded from /mosquitto/config/mosquitto.conf.
+1717675608: Opening ipv4 listen socket on port 8883.
+1717675608: Opening ipv6 listen socket on port 8883.
+1717675608: mosquitto version 2.0.18 running
+1717675610: New connection from 172.20.0.3:38804 on port 8883.
+1717675610: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717675610: Client <unknown> disconnected: Protocol error.
+1717675610: New connection from 172.20.0.3:41770 on port 8883.
+1717675610: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717675610: Client <unknown> disconnected: Protocol error.
+1717675611: New connection from 172.20.0.3:41772 on port 8883.
+1717675611: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717675611: Client <unknown> disconnected: Protocol error.
+1717675672: mosquitto version 2.0.18 terminating
+1717675672: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717675804: mosquitto version 2.0.18 starting
+1717675804: Config loaded from /mosquitto/config/mosquitto.conf.
+1717675804: Opening ipv4 listen socket on port 8883.
+1717675804: Opening ipv6 listen socket on port 8883.
+1717675804: mosquitto version 2.0.18 running
+1717675806: New connection from 172.20.0.2:39732 on port 8883.
+1717675806: OpenSSL Error[0]: error:1403F3F2:SSL routines:ACCEPT_SR_FINISHED:sslv3 alert unexpected message
+1717675806: Client <unknown> disconnected: Protocol error.
+1717675806: New connection from 172.20.0.2:39746 on port 8883.
+1717675806: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717675806: Client <unknown> disconnected: Protocol error.
+1717675806: New connection from 172.20.0.2:39752 on port 8883.
+1717675806: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717675806: Client <unknown> disconnected: Protocol error.
+1717675883: mosquitto version 2.0.18 terminating
+1717675883: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717675913: mosquitto version 2.0.18 starting
+1717675913: Config loaded from /mosquitto/config/mosquitto.conf.
+1717675913: Opening ipv4 listen socket on port 8883.
+1717675913: Opening ipv6 listen socket on port 8883.
+1717675913: mosquitto version 2.0.18 running
+1717675915: New connection from 172.20.0.3:49680 on port 8883.
+1717675915: OpenSSL Error[0]: error:02FFF068:system library:func(4095):Connection reset by peer
+1717675915: Client <unknown> disconnected: Protocol error.
+1717675915: New connection from 172.20.0.3:49684 on port 8883.
+1717675915: OpenSSL Error[0]: error:02FFF068:system library:func(4095):Connection reset by peer
+1717675915: Client <unknown> disconnected: Protocol error.
+1717675915: New connection from 172.20.0.3:49696 on port 8883.
+1717675915: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717675915: Client <unknown> disconnected: Protocol error.
+1717676023: mosquitto version 2.0.18 terminating
+1717676023: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717676065: mosquitto version 2.0.18 starting
+1717676065: Config loaded from /mosquitto/config/mosquitto.conf.
+1717676065: Opening ipv4 listen socket on port 8883.
+1717676065: Opening ipv6 listen socket on port 8883.
+1717676065: mosquitto version 2.0.18 running
+1717676068: New connection from 172.20.0.3:60524 on port 8883.
+1717676068: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717676068: Client <unknown> disconnected: Protocol error.
+1717676069: Client connection from 172.20.0.3 failed: error:02FFF020:system library:func(4095):Broken pipe.
+1717676069: New connection from 172.20.0.3:60554 on port 8883.
+1717676069: OpenSSL Error[0]: error:1403F3F2:SSL routines:ACCEPT_SR_FINISHED:sslv3 alert unexpected message
+1717676069: Client <unknown> disconnected: Protocol error.
+1717676224: mosquitto version 2.0.18 terminating
+1717676224: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717676251: mosquitto version 2.0.18 starting
+1717676251: Config loaded from /mosquitto/config/mosquitto.conf.
+1717676251: Opening ipv4 listen socket on port 8883.
+1717676251: Opening ipv6 listen socket on port 8883.
+1717676251: mosquitto version 2.0.18 running
+1717676253: New connection from 172.20.0.2:58250 on port 8883.
+1717676253: OpenSSL Error[0]: error:02FFF068:system library:func(4095):Connection reset by peer
+1717676253: Client <unknown> disconnected: Protocol error.
+1717676253: New connection from 172.20.0.2:58266 on port 8883.
+1717676253: OpenSSL Error[0]: error:02FFF068:system library:func(4095):Connection reset by peer
+1717676253: Client <unknown> disconnected: Protocol error.
+1717676253: New connection from 172.20.0.2:58272 on port 8883.
+1717676253: OpenSSL Error[0]: error:02FFF068:system library:func(4095):Connection reset by peer
+1717676253: Client <unknown> disconnected: Protocol error.
+1717676314: New connection from 172.20.0.2:60224 on port 8883.
+1717676314: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717676314: Client <unknown> disconnected: Protocol error.
+1717676428: New connection from 172.20.0.2:43886 on port 8883.
+1717676428: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717676428: Client <unknown> disconnected: Protocol error.
+1717676481: mosquitto version 2.0.18 terminating
+1717676481: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717676511: mosquitto version 2.0.18 starting
+1717676511: Config loaded from /mosquitto/config/mosquitto.conf.
+1717676511: Opening ipv4 listen socket on port 8883.
+1717676511: Opening ipv6 listen socket on port 8883.
+1717676511: mosquitto version 2.0.18 running
+1717676512: New connection from 172.20.0.2:42732 on port 8883.
+1717676512: Client <unknown> disconnected due to protocol error.
+1717676513: New connection from 172.20.0.2:42744 on port 8883.
+1717676513: Client <unknown> disconnected due to protocol error.
+1717676513: New connection from 172.20.0.2:42758 on port 8883.
+1717676513: Client <unknown> disconnected due to protocol error.
+1717676548: New connection from 172.20.0.2:41118 on port 8883.
+1717676549: Client <unknown> disconnected due to protocol error.
+1717676580: New connection from 172.20.0.2:47054 on port 8883.
+1717676580: Client <unknown> disconnected due to protocol error.
+1717678003: New connection from 172.20.0.2:48482 on port 8883.
+1717678003: Client <unknown> disconnected due to protocol error.
+1717678066: New connection from 172.20.0.2:39090 on port 8883.
+1717678066: Client <unknown> disconnected due to protocol error.
+1717678216: New connection from 172.20.0.2:54674 on port 8883.
+1717678216: Client <unknown> disconnected due to protocol error.
+1717678312: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717678356: New connection from 172.20.0.2:43512 on port 8883.
+1717678356: Client <unknown> disconnected due to protocol error.
+1717678390: New connection from 172.20.0.2:47090 on port 8883.
+1717678390: Client <unknown> disconnected due to protocol error.
+1717678535: mosquitto version 2.0.18 terminating
+1717678535: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717678559: mosquitto version 2.0.18 starting
+1717678559: Config loaded from /mosquitto/config/mosquitto.conf.
+1717678559: Opening ipv4 listen socket on port 8883.
+1717678559: Opening ipv6 listen socket on port 8883.
+1717678559: mosquitto version 2.0.18 running
+1717678560: New connection from 172.20.0.2:35046 on port 8883.
+1717678560: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717678560: Client <unknown> disconnected: Protocol error.
+1717678560: New connection from 172.20.0.2:52098 on port 8883.
+1717678560: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717678560: Client <unknown> disconnected: Protocol error.
+1717678560: New connection from 172.20.0.2:52110 on port 8883.
+1717678561: OpenSSL Error[0]: error:02FFF068:system library:func(4095):Connection reset by peer
+1717678561: Client <unknown> disconnected: Protocol error.
+1717678605: New connection from 172.20.0.2:53248 on port 8883.
+1717678634: Client <unknown> closed its connection.
+1717678757: New connection from 172.20.0.2:50740 on port 8883.
+1717678757: OpenSSL Error[0]: error:02FFF020:system library:func(4095):Broken pipe
+1717678757: Client <unknown> disconnected: Protocol error.
+1717678777: New connection from 172.20.0.2:38750 on port 8883.
+1717678777: New client connected from 172.20.0.2:38750 as auto-F5D04CD2-DEF6-BA14-5319-E230BCACB163 (p2, c1, k60).
+1717678777: Client auto-F5D04CD2-DEF6-BA14-5319-E230BCACB163 disconnected.
+1717678826: New connection from 172.20.0.2:42742 on port 8883.
+1717678826: New client connected from 172.20.0.2:42742 as auto-5655B9DE-40D1-6325-69B4-1DB4CDC39074 (p2, c1, k60).
+1717678838: Client auto-5655B9DE-40D1-6325-69B4-1DB4CDC39074 disconnected.
+1717679019: mosquitto version 2.0.18 terminating
+1717679019: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717679066: mosquitto version 2.0.18 starting
+1717679066: Config loaded from /mosquitto/config/mosquitto.conf.
+1717679066: Opening ipv4 listen socket on port 8883.
+1717679066: Opening ipv6 listen socket on port 8883.
+1717679066: mosquitto version 2.0.18 running
+1717679067: New connection from 172.20.0.2:56042 on port 8883.
+1717679067: New client connected from 172.20.0.2:56042 as auto-0F701BED-411B-4778-E447-A7CA193017CB (p2, c1, k60).
+1717679067: Client auto-0F701BED-411B-4778-E447-A7CA193017CB disconnected.
+1717679067: New connection from 172.20.0.2:56052 on port 8883.
+1717679067: New client connected from 172.20.0.2:56052 as auto-8FED9927-DCFD-F736-4512-888B8C32FC35 (p2, c1, k60).
+1717679067: Client auto-8FED9927-DCFD-F736-4512-888B8C32FC35 disconnected.
+1717679067: New connection from 172.20.0.2:56068 on port 8883.
+1717679067: New client connected from 172.20.0.2:56068 as auto-AC1E88A2-4165-E256-A6F5-5B2377FDF318 (p2, c1, k60).
+1717679067: Client auto-AC1E88A2-4165-E256-A6F5-5B2377FDF318 disconnected.
+1717679067: New connection from 172.20.0.2:56072 on port 8883.
+1717679067: New client connected from 172.20.0.2:56072 as auto-19B62E64-DC7A-C3F8-6985-2B8ADA74A86E (p2, c1, k60).
+1717679067: Client auto-19B62E64-DC7A-C3F8-6985-2B8ADA74A86E disconnected.
+1717679067: New connection from 172.20.0.2:56076 on port 8883.
+1717679068: New client connected from 172.20.0.2:56076 as auto-A1A4D26D-FF60-F5D2-DA06-A78946F5A6FC (p2, c1, k60).
+1717679068: Client auto-A1A4D26D-FF60-F5D2-DA06-A78946F5A6FC disconnected.
+1717679068: New connection from 172.20.0.2:56088 on port 8883.
+1717679068: New client connected from 172.20.0.2:56088 as auto-EFAE6DF4-CC49-5B4A-6F86-BF08E4D3784C (p2, c1, k60).
+1717679068: Client auto-EFAE6DF4-CC49-5B4A-6F86-BF08E4D3784C disconnected.
+1717679452: New connection from 172.20.0.3:51638 on port 8883.
+1717679452: New client connected from 172.20.0.3:51638 as auto-3827468C-EB13-7C2B-45EE-55E48B24BE65 (p2, c1, k60).
+1717679520: New connection from 172.20.0.2:36014 on port 8883.
+1717679520: New client connected from 172.20.0.2:36014 as auto-919D3135-0A42-BEA2-9C30-EAC78C3D7B56 (p2, c1, k60).
+1717679520: Client auto-919D3135-0A42-BEA2-9C30-EAC78C3D7B56 disconnected.
+1717679537: Client auto-3827468C-EB13-7C2B-45EE-55E48B24BE65 disconnected.
+1717680777: New connection from 172.20.0.3:55578 on port 8883.
+1717680777: New client connected from 172.20.0.3:55578 as auto-0649A705-3D74-080C-2A7C-42D09611BF78 (p2, c1, k60).
+1717680854: New connection from 172.20.0.2:33518 on port 8883.
+1717680855: New client connected from 172.20.0.2:33518 as auto-E2D574A2-8C15-03BA-65CC-D29C1038FE5A (p2, c1, k60).
+1717680855: Client auto-E2D574A2-8C15-03BA-65CC-D29C1038FE5A disconnected.
+1717680867: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717682668: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717684469: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717685145: New connection from 172.20.0.2:32990 on port 8883.
+1717685145: New client connected from 172.20.0.2:32990 as auto-0E8A9FFD-99B2-00A2-BE82-D44C5857A957 (p2, c1, k60).
+1717685145: Client auto-0E8A9FFD-99B2-00A2-BE82-D44C5857A957 disconnected.
+1717685150: Client auto-0649A705-3D74-080C-2A7C-42D09611BF78 disconnected.
+1717685152: New connection from 172.20.0.3:39048 on port 8883.
+1717685152: New client connected from 172.20.0.3:39048 as auto-F384F691-35CD-2C91-133C-76A75EC9FFC0 (p2, c1, k60).
+1717685154: Client auto-F384F691-35CD-2C91-133C-76A75EC9FFC0 disconnected.
+1717685155: New connection from 172.20.0.3:39054 on port 8883.
+1717685155: New client connected from 172.20.0.3:39054 as auto-96417FC5-8677-677F-2F12-2024DC6E262A (p2, c1, k60).
+1717685164: Client auto-96417FC5-8677-677F-2F12-2024DC6E262A disconnected.
+1717685206: mosquitto version 2.0.18 terminating
+1717685206: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717685226: mosquitto version 2.0.18 starting
+1717685226: Config loaded from /mosquitto/config/mosquitto.conf.
+1717685226: Opening ipv4 listen socket on port 8883.
+1717685226: Opening ipv6 listen socket on port 8883.
+1717685226: mosquitto version 2.0.18 running
+1717685227: New connection from 172.20.0.3:51606 on port 8883.
+1717685227: New client connected from 172.20.0.3:51606 as auto-FBAB28F9-73BA-3E7E-7D74-6464CF43D518 (p2, c1, k60).
+1717685227: Client auto-FBAB28F9-73BA-3E7E-7D74-6464CF43D518 disconnected.
+1717685227: New connection from 172.20.0.3:51608 on port 8883.
+1717685227: New client connected from 172.20.0.3:51608 as auto-03598FAA-42C6-A3E1-B385-0BB23B670C08 (p2, c1, k60).
+1717685227: Client auto-03598FAA-42C6-A3E1-B385-0BB23B670C08 disconnected.
+1717685228: New connection from 172.20.0.3:51616 on port 8883.
+1717685228: New client connected from 172.20.0.3:51616 as auto-FE73CB3B-601D-08F5-909A-107F3AEAB2C3 (p2, c1, k60).
+1717685228: Client auto-FE73CB3B-601D-08F5-909A-107F3AEAB2C3 disconnected.
+1717685228: New connection from 172.20.0.3:51630 on port 8883.
+1717685228: New client connected from 172.20.0.3:51630 as auto-1BF375A0-D68F-1D61-082C-7DC4459C6B13 (p2, c1, k60).
+1717685228: Client auto-1BF375A0-D68F-1D61-082C-7DC4459C6B13 disconnected.
+1717685228: New connection from 172.20.0.3:51644 on port 8883.
+1717685228: New client connected from 172.20.0.3:51644 as auto-3190CE91-CB4B-F477-979A-EBB06A317241 (p2, c1, k60).
+1717685228: Client auto-3190CE91-CB4B-F477-979A-EBB06A317241 disconnected.
+1717685228: New connection from 172.20.0.3:51646 on port 8883.
+1717685228: New client connected from 172.20.0.3:51646 as auto-5340FAE9-54BD-19FC-5BC1-AADA50963A35 (p2, c1, k60).
+1717685228: Client auto-5340FAE9-54BD-19FC-5BC1-AADA50963A35 disconnected.
+1717685252: New connection from 172.20.0.2:38766 on port 8883.
+1717685252: New client connected from 172.20.0.2:38766 as auto-F228669C-F189-7867-D323-6C9057F50482 (p2, c1, k60).
+1717685263: Client auto-F228669C-F189-7867-D323-6C9057F50482 disconnected.
+1717685413: mosquitto version 2.0.18 terminating
+1717685413: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717685431: mosquitto version 2.0.18 starting
+1717685431: Config loaded from /mosquitto/config/mosquitto.conf.
+1717685431: Opening ipv4 listen socket on port 8883.
+1717685431: Opening ipv6 listen socket on port 8883.
+1717685431: mosquitto version 2.0.18 running
+1717685431: New connection from 172.20.0.2:43168 on port 8883.
+1717685432: New client connected from 172.20.0.2:43168 as auto-42B4AB37-479C-9F86-21E7-60CAB8B059B2 (p2, c1, k60).
+1717685432: Client auto-42B4AB37-479C-9F86-21E7-60CAB8B059B2 disconnected.
+1717685432: New connection from 172.20.0.2:43176 on port 8883.
+1717685432: New client connected from 172.20.0.2:43176 as auto-EC2424A0-3C8B-EDD3-4387-0559671A49D9 (p2, c1, k60).
+1717685432: Client auto-EC2424A0-3C8B-EDD3-4387-0559671A49D9 disconnected.
+1717685432: New connection from 172.20.0.2:43182 on port 8883.
+1717685432: New client connected from 172.20.0.2:43182 as auto-5E7D9697-9D45-D0E5-3029-5CC38084EDA5 (p2, c1, k60).
+1717685432: Client auto-5E7D9697-9D45-D0E5-3029-5CC38084EDA5 disconnected.
+1717685432: New connection from 172.20.0.2:43196 on port 8883.
+1717685432: New client connected from 172.20.0.2:43196 as auto-3B970107-C5ED-14CF-BDD4-C512264B8D95 (p2, c1, k60).
+1717685432: Client auto-3B970107-C5ED-14CF-BDD4-C512264B8D95 disconnected.
+1717685432: New connection from 172.20.0.2:43206 on port 8883.
+1717685432: New client connected from 172.20.0.2:43206 as auto-AEFECD93-1E00-D702-DFA4-3E4D7CC92B10 (p2, c1, k60).
+1717685432: Client auto-AEFECD93-1E00-D702-DFA4-3E4D7CC92B10 disconnected.
+1717685432: New connection from 172.20.0.2:43216 on port 8883.
+1717685432: New client connected from 172.20.0.2:43216 as auto-44A8A843-891A-1803-7B91-546824124E36 (p2, c1, k60).
+1717685432: Client auto-44A8A843-891A-1803-7B91-546824124E36 disconnected.
+1717685462: New connection from 172.20.0.3:49570 on port 8883.
+1717685462: New client connected from 172.20.0.3:49570 as auto-33C9B4B3-2AC5-42E1-3220-F7726C5E4427 (p2, c1, k60).
+1717685478: Client auto-33C9B4B3-2AC5-42E1-3220-F7726C5E4427 disconnected.
+1717685540: New connection from 172.20.0.3:41358 on port 8883.
+1717685540: New client connected from 172.20.0.3:41358 as auto-3E9E97F1-83D0-5774-3B6C-92480A1EC0EC (p2, c1, k60).
+1717685540: Client auto-3E9E97F1-83D0-5774-3B6C-92480A1EC0EC disconnected.
+1717685543: New connection from 172.20.0.3:54898 on port 8883.
+1717685544: New client connected from 172.20.0.3:54898 as auto-4F42C287-A08F-DD3D-19D1-FFE2099DCC55 (p2, c1, k60).
+1717685556: Client auto-4F42C287-A08F-DD3D-19D1-FFE2099DCC55 disconnected.
+1717685580: New connection from 172.20.0.3:38292 on port 8883.
+1717685580: New client connected from 172.20.0.3:38292 as auto-CF5BC21A-BD5D-DD99-EFBD-600616C931BF (p2, c1, k60).
+1717685580: Client auto-CF5BC21A-BD5D-DD99-EFBD-600616C931BF disconnected.
+1717685581: New connection from 172.20.0.3:41418 on port 8883.
+1717685582: New client connected from 172.20.0.3:41418 as auto-FB2EE30C-3E0D-4DEA-006C-02BD1F202F25 (p2, c1, k60).
+1717685596: Client auto-FB2EE30C-3E0D-4DEA-006C-02BD1F202F25 disconnected.
+1717685633: mosquitto version 2.0.18 terminating
+1717685633: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717685650: mosquitto version 2.0.18 starting
+1717685650: Config loaded from /mosquitto/config/mosquitto.conf.
+1717685650: Opening ipv4 listen socket on port 8883.
+1717685650: Opening ipv6 listen socket on port 8883.
+1717685650: mosquitto version 2.0.18 running
+1717685651: New connection from 172.20.0.2:50208 on port 8883.
+1717685651: New client connected from 172.20.0.2:50208 as auto-AFDDBACA-BFB6-DAF0-6022-85AEB879DF01 (p2, c1, k60).
+1717685651: Client auto-AFDDBACA-BFB6-DAF0-6022-85AEB879DF01 disconnected.
+1717685651: New connection from 172.20.0.2:50218 on port 8883.
+1717685651: New client connected from 172.20.0.2:50218 as auto-B2F2262B-5077-6D4C-B862-DE88E82379D9 (p2, c1, k60).
+1717685651: Client auto-B2F2262B-5077-6D4C-B862-DE88E82379D9 disconnected.
+1717685651: New connection from 172.20.0.2:50232 on port 8883.
+1717685651: New client connected from 172.20.0.2:50232 as auto-1F27456B-8AFC-75A8-E38A-A3B879561175 (p2, c1, k60).
+1717685651: Client auto-1F27456B-8AFC-75A8-E38A-A3B879561175 disconnected.
+1717685651: New connection from 172.20.0.2:50246 on port 8883.
+1717685651: New client connected from 172.20.0.2:50246 as auto-10591301-5545-0F49-DB69-1DDD5F1D89BD (p2, c1, k60).
+1717685651: Client auto-10591301-5545-0F49-DB69-1DDD5F1D89BD disconnected.
+1717685651: New connection from 172.20.0.2:50250 on port 8883.
+1717685651: New client connected from 172.20.0.2:50250 as auto-4A8A15AE-6E2D-CA17-E185-76AD02126DAF (p2, c1, k60).
+1717685651: Client auto-4A8A15AE-6E2D-CA17-E185-76AD02126DAF disconnected.
+1717685651: New connection from 172.20.0.2:50262 on port 8883.
+1717685651: New client connected from 172.20.0.2:50262 as auto-EAE9BADA-6F6A-CC0E-B070-6C853ECB10FA (p2, c1, k60).
+1717685651: Client auto-EAE9BADA-6F6A-CC0E-B070-6C853ECB10FA disconnected.
+1717685664: New connection from 172.20.0.3:36400 on port 8883.
+1717685664: New client connected from 172.20.0.3:36400 as auto-CC486C0B-26F9-8F61-3B81-3FCC7FAA414B (p2, c1, k60).
+1717685677: Client auto-CC486C0B-26F9-8F61-3B81-3FCC7FAA414B disconnected.
+1717685954: mosquitto version 2.0.18 terminating
+1717685954: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717685974: mosquitto version 2.0.18 starting
+1717685974: Config loaded from /mosquitto/config/mosquitto.conf.
+1717685974: Opening ipv4 listen socket on port 8883.
+1717685974: Opening ipv6 listen socket on port 8883.
+1717685974: mosquitto version 2.0.18 running
+1717685974: New connection from 172.20.0.2:39004 on port 8883.
+1717685974: New client connected from 172.20.0.2:39004 as auto-92BDE583-C014-1357-2D69-2534A449D70B (p2, c1, k60).
+1717685974: Client auto-92BDE583-C014-1357-2D69-2534A449D70B disconnected.
+1717685975: New connection from 172.20.0.2:39020 on port 8883.
+1717685975: New client connected from 172.20.0.2:39020 as auto-8AF92121-056F-4910-136F-31FB941CBDF5 (p2, c1, k60).
+1717685975: Client auto-8AF92121-056F-4910-136F-31FB941CBDF5 disconnected.
+1717685975: New connection from 172.20.0.2:39030 on port 8883.
+1717685975: New client connected from 172.20.0.2:39030 as auto-0E579849-2AEA-DAFE-61EF-D18AE0AEA08D (p2, c1, k60).
+1717685975: Client auto-0E579849-2AEA-DAFE-61EF-D18AE0AEA08D disconnected.
+1717685975: New connection from 172.20.0.2:39042 on port 8883.
+1717685975: New client connected from 172.20.0.2:39042 as auto-690567D6-37B7-6DF1-F07B-AB5FF5C37FCD (p2, c1, k60).
+1717685975: Client auto-690567D6-37B7-6DF1-F07B-AB5FF5C37FCD disconnected.
+1717685975: New connection from 172.20.0.2:39046 on port 8883.
+1717685975: New client connected from 172.20.0.2:39046 as auto-5331519D-9AC9-9848-50BB-98CF7A1D8C1D (p2, c1, k60).
+1717685975: Client auto-5331519D-9AC9-9848-50BB-98CF7A1D8C1D disconnected.
+1717685975: New connection from 172.20.0.2:39048 on port 8883.
+1717685975: New client connected from 172.20.0.2:39048 as auto-7DC3572D-72FA-3A31-BCC9-A009F7E5AB56 (p2, c1, k60).
+1717685975: Client auto-7DC3572D-72FA-3A31-BCC9-A009F7E5AB56 disconnected.
+1717685999: New connection from 172.20.0.3:55352 on port 8883.
+1717686000: New client connected from 172.20.0.3:55352 as auto-D49A70FD-09FE-44B1-648F-E0B9AEB75507 (p2, c1, k60).
+1717686022: Client auto-D49A70FD-09FE-44B1-648F-E0B9AEB75507 disconnected.
+1717686032: New connection from 172.20.0.3:46050 on port 8883.
+1717686032: New client connected from 172.20.0.3:46050 as auto-00DBBCC8-39AA-E113-CEC6-CE885644D0A7 (p2, c1, k60).
+1717686128: mosquitto version 2.0.18 terminating
+1717686128: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717686145: mosquitto version 2.0.18 starting
+1717686145: Config loaded from /mosquitto/config/mosquitto.conf.
+1717686145: Opening ipv4 listen socket on port 8883.
+1717686145: Opening ipv6 listen socket on port 8883.
+1717686145: mosquitto version 2.0.18 running
+1717686146: New connection from 172.20.0.3:38770 on port 8883.
+1717686146: New client connected from 172.20.0.3:38770 as auto-F60EE4C4-3C4A-854E-C810-199329E3F576 (p2, c1, k60).
+1717686146: Client auto-F60EE4C4-3C4A-854E-C810-199329E3F576 disconnected.
+1717686146: New connection from 172.20.0.3:38776 on port 8883.
+1717686146: New client connected from 172.20.0.3:38776 as auto-A06F615A-FB73-2D2C-72C1-DD9EA65FC488 (p2, c1, k60).
+1717686146: Client auto-A06F615A-FB73-2D2C-72C1-DD9EA65FC488 disconnected.
+1717686146: New connection from 172.20.0.3:38792 on port 8883.
+1717686146: New client connected from 172.20.0.3:38792 as auto-1C048F31-C242-F869-3D2D-30785B442DA2 (p2, c1, k60).
+1717686146: Client auto-1C048F31-C242-F869-3D2D-30785B442DA2 disconnected.
+1717686146: New connection from 172.20.0.3:38804 on port 8883.
+1717686146: New client connected from 172.20.0.3:38804 as auto-DFF5A427-E5C8-9004-8FE9-8A8C7AEB27B4 (p2, c1, k60).
+1717686146: Client auto-DFF5A427-E5C8-9004-8FE9-8A8C7AEB27B4 disconnected.
+1717686146: New connection from 172.20.0.3:38812 on port 8883.
+1717686146: New client connected from 172.20.0.3:38812 as auto-B26900A8-3FC6-3D7F-CAEF-0A8E17D5EA9B (p2, c1, k60).
+1717686146: Client auto-B26900A8-3FC6-3D7F-CAEF-0A8E17D5EA9B disconnected.
+1717686146: New connection from 172.20.0.3:38820 on port 8883.
+1717686147: New client connected from 172.20.0.3:38820 as auto-FE4F51E9-1D9A-97C7-9590-A7D227259A8C (p2, c1, k60).
+1717686147: Client auto-FE4F51E9-1D9A-97C7-9590-A7D227259A8C disconnected.
+1717686438: mosquitto version 2.0.18 terminating
+1717686438: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717686483: mosquitto version 2.0.18 starting
+1717686483: Config loaded from /mosquitto/config/mosquitto.conf.
+1717686483: Opening ipv4 listen socket on port 8883.
+1717686483: Opening ipv6 listen socket on port 8883.
+1717686483: mosquitto version 2.0.18 running
+1717686484: New connection from 172.20.0.3:39128 on port 8883.
+1717686484: New client connected from 172.20.0.3:39128 as auto-ED26FDE6-5E8E-F479-A403-7F5F53008513 (p2, c1, k60).
+1717686484: Client auto-ED26FDE6-5E8E-F479-A403-7F5F53008513 disconnected.
+1717686484: New connection from 172.20.0.3:39136 on port 8883.
+1717686484: New client connected from 172.20.0.3:39136 as auto-B01796BC-514E-8E54-DD4E-9175402BEBB6 (p2, c1, k60).
+1717686484: Client auto-B01796BC-514E-8E54-DD4E-9175402BEBB6 disconnected.
+1717686485: New connection from 172.20.0.3:39148 on port 8883.
+1717686485: New client connected from 172.20.0.3:39148 as auto-57EF9F67-38C0-550F-7BD0-D4D0AE1D9501 (p2, c1, k60).
+1717686485: Client auto-57EF9F67-38C0-550F-7BD0-D4D0AE1D9501 disconnected.
+1717686485: New connection from 172.20.0.3:39160 on port 8883.
+1717686485: New client connected from 172.20.0.3:39160 as auto-0E2CBB58-8EF9-DBCE-9D30-C8ED98222598 (p2, c1, k60).
+1717686485: Client auto-0E2CBB58-8EF9-DBCE-9D30-C8ED98222598 disconnected.
+1717686485: New connection from 172.20.0.3:39172 on port 8883.
+1717686485: New client connected from 172.20.0.3:39172 as auto-1CBA70DB-04A3-4A88-E63D-D5986C0A1EBA (p2, c1, k60).
+1717686485: Client auto-1CBA70DB-04A3-4A88-E63D-D5986C0A1EBA disconnected.
+1717686485: New connection from 172.20.0.3:39188 on port 8883.
+1717686485: New client connected from 172.20.0.3:39188 as auto-F3CDE33E-CBE7-8FF8-FC71-DE2E385950E5 (p2, c1, k60).
+1717686485: Client auto-F3CDE33E-CBE7-8FF8-FC71-DE2E385950E5 disconnected.
+1717686580: mosquitto version 2.0.18 terminating
+1717686580: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717686599: mosquitto version 2.0.18 starting
+1717686599: Config loaded from /mosquitto/config/mosquitto.conf.
+1717686599: Opening ipv4 listen socket on port 8883.
+1717686599: Opening ipv6 listen socket on port 8883.
+1717686599: mosquitto version 2.0.18 running
+1717686600: New connection from 172.20.0.2:35452 on port 8883.
+1717686600: New client connected from 172.20.0.2:35452 as auto-06071DFF-6E73-8828-B492-6DA9D5F14715 (p2, c1, k60).
+1717686600: Client auto-06071DFF-6E73-8828-B492-6DA9D5F14715 disconnected.
+1717686600: New connection from 172.20.0.2:35454 on port 8883.
+1717686601: New client connected from 172.20.0.2:35454 as auto-0B80FD00-40B9-F11D-F64A-59777781D702 (p2, c1, k60).
+1717686601: Client auto-0B80FD00-40B9-F11D-F64A-59777781D702 disconnected.
+1717686601: New connection from 172.20.0.2:35462 on port 8883.
+1717686601: New client connected from 172.20.0.2:35462 as auto-A448B0AD-AA5C-0FF4-BFD3-FF0F6758B736 (p2, c1, k60).
+1717686601: Client auto-A448B0AD-AA5C-0FF4-BFD3-FF0F6758B736 disconnected.
+1717686601: New connection from 172.20.0.2:35476 on port 8883.
+1717686601: New client connected from 172.20.0.2:35476 as auto-A8DC10C2-2203-C0DB-B4AA-11E3B9728801 (p2, c1, k60).
+1717686601: Client auto-A8DC10C2-2203-C0DB-B4AA-11E3B9728801 disconnected.
+1717686601: New connection from 172.20.0.2:35492 on port 8883.
+1717686601: New client connected from 172.20.0.2:35492 as auto-54C188C9-6793-7E59-CCFE-1CCF0B3338EB (p2, c1, k60).
+1717686601: Client auto-54C188C9-6793-7E59-CCFE-1CCF0B3338EB disconnected.
+1717686601: New connection from 172.20.0.2:35494 on port 8883.
+1717686601: New client connected from 172.20.0.2:35494 as auto-BEBB5458-AA37-E5C8-B9B7-A1ECFDDF9092 (p2, c1, k60).
+1717686601: Client auto-BEBB5458-AA37-E5C8-B9B7-A1ECFDDF9092 disconnected.
+1717686640: mosquitto version 2.0.18 terminating
+1717686640: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717686657: mosquitto version 2.0.18 starting
+1717686657: Config loaded from /mosquitto/config/mosquitto.conf.
+1717686657: Opening ipv4 listen socket on port 8883.
+1717686657: Opening ipv6 listen socket on port 8883.
+1717686657: mosquitto version 2.0.18 running
+1717686658: New connection from 172.20.0.2:57552 on port 8883.
+1717686658: New client connected from 172.20.0.2:57552 as auto-05C3AC69-A031-FED9-48B4-4ED3C1847551 (p2, c1, k60).
+1717686658: Client auto-05C3AC69-A031-FED9-48B4-4ED3C1847551 disconnected.
+1717686658: New connection from 172.20.0.2:57558 on port 8883.
+1717686658: New client connected from 172.20.0.2:57558 as auto-78C2C30E-B5B3-1440-616B-BFEEF05806FE (p2, c1, k60).
+1717686658: Client auto-78C2C30E-B5B3-1440-616B-BFEEF05806FE disconnected.
+1717686658: New connection from 172.20.0.2:57574 on port 8883.
+1717686658: New client connected from 172.20.0.2:57574 as auto-E6FC0386-4E05-EAF0-CDFF-EE15AA3651F5 (p2, c1, k60).
+1717686658: Client auto-E6FC0386-4E05-EAF0-CDFF-EE15AA3651F5 disconnected.
+1717686658: New connection from 172.20.0.2:57576 on port 8883.
+1717686658: New client connected from 172.20.0.2:57576 as auto-2AC63408-3586-ED0A-FC65-BD62C2A72C84 (p2, c1, k60).
+1717686658: Client auto-2AC63408-3586-ED0A-FC65-BD62C2A72C84 disconnected.
+1717686658: New connection from 172.20.0.2:57582 on port 8883.
+1717686658: New client connected from 172.20.0.2:57582 as auto-6F54EB7C-1B00-3879-BB58-AA5B79FCC5CD (p2, c1, k60).
+1717686658: Client auto-6F54EB7C-1B00-3879-BB58-AA5B79FCC5CD disconnected.
+1717686658: New connection from 172.20.0.2:57598 on port 8883.
+1717686658: New client connected from 172.20.0.2:57598 as auto-34E7C0E4-6FEF-DDD5-3C35-958650F1CE0A (p2, c1, k60).
+1717686658: Client auto-34E7C0E4-6FEF-DDD5-3C35-958650F1CE0A disconnected.
+1717686674: New connection from 172.20.0.3:46296 on port 8883.
+1717686674: New client connected from 172.20.0.3:46296 as auto-5FC07500-750A-75E4-9EC2-174E9BC0F6E0 (p2, c1, k60).
+1717686709: Client auto-5FC07500-750A-75E4-9EC2-174E9BC0F6E0 disconnected.
+1717686865: mosquitto version 2.0.18 terminating
+1717686865: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717686882: mosquitto version 2.0.18 starting
+1717686882: Config loaded from /mosquitto/config/mosquitto.conf.
+1717686882: Opening ipv4 listen socket on port 8883.
+1717686882: Opening ipv6 listen socket on port 8883.
+1717686882: mosquitto version 2.0.18 running
+1717686883: New connection from 172.20.0.2:48062 on port 8883.
+1717686883: New client connected from 172.20.0.2:48062 as auto-1804CFF2-06AF-2F6B-B251-09A26CA9668F (p2, c1, k60).
+1717686883: Client auto-1804CFF2-06AF-2F6B-B251-09A26CA9668F disconnected.
+1717686883: New connection from 172.20.0.2:48064 on port 8883.
+1717686883: New client connected from 172.20.0.2:48064 as auto-494968B5-1CF5-6CD9-0050-ABBDDE877DEA (p2, c1, k60).
+1717686883: Client auto-494968B5-1CF5-6CD9-0050-ABBDDE877DEA disconnected.
+1717686883: New connection from 172.20.0.2:48066 on port 8883.
+1717686883: New client connected from 172.20.0.2:48066 as auto-A13EEE9A-6353-EAF1-52DB-9FF8B15EB9DE (p2, c1, k60).
+1717686883: Client auto-A13EEE9A-6353-EAF1-52DB-9FF8B15EB9DE disconnected.
+1717686883: New connection from 172.20.0.2:48080 on port 8883.
+1717686883: New client connected from 172.20.0.2:48080 as auto-884EDEF7-9A0B-29F5-E5B6-B5126AF30E61 (p2, c1, k60).
+1717686883: Client auto-884EDEF7-9A0B-29F5-E5B6-B5126AF30E61 disconnected.
+1717686883: New connection from 172.20.0.2:48086 on port 8883.
+1717686883: New client connected from 172.20.0.2:48086 as auto-855AE79F-C68B-DDA3-6194-91B4B311BE15 (p2, c1, k60).
+1717686883: Client auto-855AE79F-C68B-DDA3-6194-91B4B311BE15 disconnected.
+1717686883: New connection from 172.20.0.2:48102 on port 8883.
+1717686883: New client connected from 172.20.0.2:48102 as auto-4DF368E0-8E79-CAEF-C877-7B548EA822C9 (p2, c1, k60).
+1717686883: Client auto-4DF368E0-8E79-CAEF-C877-7B548EA822C9 disconnected.
+1717686911: New connection from 172.20.0.3:54892 on port 8883.
+1717686911: New client connected from 172.20.0.3:54892 as auto-AE725038-2BED-7247-02EC-E595122F16D0 (p2, c1, k60).
+1717687082: mosquitto version 2.0.18 terminating
+1717687082: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717687109: mosquitto version 2.0.18 starting
+1717687109: Config loaded from /mosquitto/config/mosquitto.conf.
+1717687109: Opening ipv4 listen socket on port 8883.
+1717687109: Opening ipv6 listen socket on port 8883.
+1717687109: mosquitto version 2.0.18 running
+1717687110: New connection from 172.20.0.2:48478 on port 8883.
+1717687110: New client connected from 172.20.0.2:48478 as auto-8823E114-6D83-76AC-62C7-78AA3474E444 (p2, c1, k60).
+1717687110: Client auto-8823E114-6D83-76AC-62C7-78AA3474E444 disconnected.
+1717687110: New connection from 172.20.0.2:48482 on port 8883.
+1717687110: New client connected from 172.20.0.2:48482 as auto-5553DD23-4704-5C6D-C508-8BF6BBDC1F1C (p2, c1, k60).
+1717687110: Client auto-5553DD23-4704-5C6D-C508-8BF6BBDC1F1C disconnected.
+1717687110: New connection from 172.20.0.2:48492 on port 8883.
+1717687110: New client connected from 172.20.0.2:48492 as auto-73FACF89-4491-BEE7-10DA-6A88F6F407ED (p2, c1, k60).
+1717687110: Client auto-73FACF89-4491-BEE7-10DA-6A88F6F407ED disconnected.
+1717687110: New connection from 172.20.0.2:48494 on port 8883.
+1717687110: New client connected from 172.20.0.2:48494 as auto-281389CE-C4C3-5A31-09B1-C2AB1E8412C4 (p2, c1, k60).
+1717687110: Client auto-281389CE-C4C3-5A31-09B1-C2AB1E8412C4 disconnected.
+1717687110: New connection from 172.20.0.2:54750 on port 8883.
+1717687111: New client connected from 172.20.0.2:54750 as auto-B9C33F91-F2A9-BEB6-A07A-3958F37C4C7C (p2, c1, k60).
+1717687111: Client auto-B9C33F91-F2A9-BEB6-A07A-3958F37C4C7C disconnected.
+1717687111: New connection from 172.20.0.2:54756 on port 8883.
+1717687111: New client connected from 172.20.0.2:54756 as auto-8D500873-D597-02A4-C587-0D6F22FAAB22 (p2, c1, k60).
+1717687111: Client auto-8D500873-D597-02A4-C587-0D6F22FAAB22 disconnected.
+1717687126: New connection from 172.20.0.3:47764 on port 8883.
+1717687126: New client connected from 172.20.0.3:47764 as auto-08455EFA-C179-CD98-AF72-1CF0B55DD13E (p2, c1, k60).
+1717687140: Client auto-08455EFA-C179-CD98-AF72-1CF0B55DD13E disconnected.
+1717687141: New connection from 172.20.0.3:39814 on port 8883.
+1717687141: New client connected from 172.20.0.3:39814 as auto-A6C3A59C-7A45-030A-8964-D03050291D8E (p2, c1, k60).
+1717687148: Client auto-A6C3A59C-7A45-030A-8964-D03050291D8E disconnected.
+1717687156: mosquitto version 2.0.18 terminating
+1717687156: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717687169: mosquitto version 2.0.18 starting
+1717687169: Config loaded from /mosquitto/config/mosquitto.conf.
+1717687169: Opening ipv4 listen socket on port 8883.
+1717687169: Opening ipv6 listen socket on port 8883.
+1717687169: mosquitto version 2.0.18 running
+1717687170: New connection from 172.20.0.2:34040 on port 8883.
+1717687170: New client connected from 172.20.0.2:34040 as auto-E576C245-1CB4-071E-A6B9-52B3C6F78BE5 (p2, c1, k60).
+1717687170: Client auto-E576C245-1CB4-071E-A6B9-52B3C6F78BE5 disconnected.
+1717687170: New connection from 172.20.0.2:34052 on port 8883.
+1717687170: New client connected from 172.20.0.2:34052 as auto-D03879DA-1AD5-D306-60B5-B403BF3F593E (p2, c1, k60).
+1717687170: Client auto-D03879DA-1AD5-D306-60B5-B403BF3F593E disconnected.
+1717687170: New connection from 172.20.0.2:34068 on port 8883.
+1717687170: New client connected from 172.20.0.2:34068 as auto-BE21C2E4-F7FB-9954-5F6D-46616AE5871D (p2, c1, k60).
+1717687170: Client auto-BE21C2E4-F7FB-9954-5F6D-46616AE5871D disconnected.
+1717687170: New connection from 172.20.0.2:34072 on port 8883.
+1717687170: New client connected from 172.20.0.2:34072 as auto-0A892C4F-44D3-EB58-D3C1-69EE7143D755 (p2, c1, k60).
+1717687170: Client auto-0A892C4F-44D3-EB58-D3C1-69EE7143D755 disconnected.
+1717687170: New connection from 172.20.0.2:56712 on port 8883.
+1717687170: New client connected from 172.20.0.2:56712 as auto-290BB16C-2012-5A9D-7B34-FFB0AC699866 (p2, c1, k60).
+1717687170: Client auto-290BB16C-2012-5A9D-7B34-FFB0AC699866 disconnected.
+1717687171: New connection from 172.20.0.2:56724 on port 8883.
+1717687171: New client connected from 172.20.0.2:56724 as auto-5A614371-63A9-006C-53D4-FE2CB9664EAD (p2, c1, k60).
+1717687171: Client auto-5A614371-63A9-006C-53D4-FE2CB9664EAD disconnected.
+1717687180: New connection from 172.20.0.3:44380 on port 8883.
+1717687180: New client connected from 172.20.0.3:44380 as auto-A5D6FC2E-74A4-F0B6-5763-87DAD0178E6C (p2, c1, k60).
+1717687184: Client auto-A5D6FC2E-74A4-F0B6-5763-87DAD0178E6C disconnected.
+1717687546: New connection from 172.20.0.3:47718 on port 8883.
+1717687546: New client connected from 172.20.0.3:47718 as auto-76324D89-E151-2F9E-AF58-F5270EB03FB6 (p2, c1, k60).
+1717687551: Client auto-76324D89-E151-2F9E-AF58-F5270EB03FB6 disconnected.
+1717687594: mosquitto version 2.0.18 terminating
+1717687594: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717687614: mosquitto version 2.0.18 starting
+1717687614: Config loaded from /mosquitto/config/mosquitto.conf.
+1717687614: Opening ipv4 listen socket on port 8883.
+1717687614: Opening ipv6 listen socket on port 8883.
+1717687614: mosquitto version 2.0.18 running
+1717687615: New connection from 172.20.0.3:47386 on port 8883.
+1717687615: New client connected from 172.20.0.3:47386 as auto-D5BBE052-E8FE-8DD7-B9C2-7DB8C04E9E7D (p2, c1, k60).
+1717687615: Client auto-D5BBE052-E8FE-8DD7-B9C2-7DB8C04E9E7D disconnected.
+1717687616: New connection from 172.20.0.3:47394 on port 8883.
+1717687616: New client connected from 172.20.0.3:47394 as auto-ABC3E4AD-3F22-1B04-7BE2-44BE33A1170C (p2, c1, k60).
+1717687616: Client auto-ABC3E4AD-3F22-1B04-7BE2-44BE33A1170C disconnected.
+1717687616: New connection from 172.20.0.3:47406 on port 8883.
+1717687616: New client connected from 172.20.0.3:47406 as auto-61217040-7682-B771-D8C6-1F9C337DAD8A (p2, c1, k60).
+1717687616: Client auto-61217040-7682-B771-D8C6-1F9C337DAD8A disconnected.
+1717687616: New connection from 172.20.0.3:47416 on port 8883.
+1717687616: New client connected from 172.20.0.3:47416 as auto-A8104D62-A0EC-EE43-E3AB-856595A9FD02 (p2, c1, k60).
+1717687616: Client auto-A8104D62-A0EC-EE43-E3AB-856595A9FD02 disconnected.
+1717687616: New connection from 172.20.0.3:47426 on port 8883.
+1717687616: New client connected from 172.20.0.3:47426 as auto-0AC7C609-B19D-00C9-3AC2-8B2AEDE30801 (p2, c1, k60).
+1717687616: Client auto-0AC7C609-B19D-00C9-3AC2-8B2AEDE30801 disconnected.
+1717687616: New connection from 172.20.0.3:47442 on port 8883.
+1717687616: New client connected from 172.20.0.3:47442 as auto-C7D44060-1AFE-BFD6-2C64-82BA119A2CBB (p2, c1, k60).
+1717687616: Client auto-C7D44060-1AFE-BFD6-2C64-82BA119A2CBB disconnected.
+1717687626: New connection from 172.20.0.2:50684 on port 8883.
+1717687626: New client connected from 172.20.0.2:50684 as auto-DA8FCA50-A333-6BF6-12F6-D8B15DE1D048 (p2, c1, k60).
+1717687633: Client auto-DA8FCA50-A333-6BF6-12F6-D8B15DE1D048 disconnected.
+1717687682: New connection from 172.20.0.2:33454 on port 8883.
+1717687682: New client connected from 172.20.0.2:33454 as auto-ACBB77E2-D126-2122-A7CC-CBF5E13D3E51 (p2, c1, k60).
+1717687687: Client auto-ACBB77E2-D126-2122-A7CC-CBF5E13D3E51 disconnected.
+1717687924: mosquitto version 2.0.18 terminating
+1717687924: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717690005: mosquitto version 2.0.18 starting
+1717690005: Config loaded from /mosquitto/config/mosquitto.conf.
+1717690005: Opening ipv4 listen socket on port 8883.
+1717690005: Opening ipv6 listen socket on port 8883.
+1717690005: mosquitto version 2.0.18 running
+1717690006: New connection from 172.20.0.2:53090 on port 8883.
+1717690006: New client connected from 172.20.0.2:53090 as auto-9ABEDF10-366D-4A7B-A30B-14083C37599A (p2, c1, k60).
+1717690006: Client auto-9ABEDF10-366D-4A7B-A30B-14083C37599A disconnected.
+1717690006: New connection from 172.20.0.2:53100 on port 8883.
+1717690006: New client connected from 172.20.0.2:53100 as auto-6FCB4488-58CA-6B83-C9F9-80391267F0E0 (p2, c1, k60).
+1717690006: Client auto-6FCB4488-58CA-6B83-C9F9-80391267F0E0 disconnected.
+1717690006: New connection from 172.20.0.2:53112 on port 8883.
+1717690006: New client connected from 172.20.0.2:53112 as auto-D5A8DB09-2707-49D9-02F9-C7EE0895BA4E (p2, c1, k60).
+1717690006: Client auto-D5A8DB09-2707-49D9-02F9-C7EE0895BA4E disconnected.
+1717690006: New connection from 172.20.0.2:53114 on port 8883.
+1717690006: New client connected from 172.20.0.2:53114 as auto-2D1187BC-4FAC-C038-6FDD-96F9722BC82C (p2, c1, k60).
+1717690006: Client auto-2D1187BC-4FAC-C038-6FDD-96F9722BC82C disconnected.
+1717690006: New connection from 172.20.0.2:53120 on port 8883.
+1717690006: New client connected from 172.20.0.2:53120 as auto-C8636093-19EA-B870-00BA-4E1B6949CA86 (p2, c1, k60).
+1717690006: Client auto-C8636093-19EA-B870-00BA-4E1B6949CA86 disconnected.
+1717690006: New connection from 172.20.0.2:53124 on port 8883.
+1717690006: New client connected from 172.20.0.2:53124 as auto-159AC614-7DD2-30B5-BFE7-3F6C2D877E82 (p2, c1, k60).
+1717690006: Client auto-159AC614-7DD2-30B5-BFE7-3F6C2D877E82 disconnected.
+1717690359: New connection from 172.20.0.1:57608 on port 8883.
+1717690366: Client <unknown> closed its connection.
+1717690368: New connection from 172.20.0.1:38426 on port 8883.
+1717690369: New client connected from 172.20.0.1:38426 as auto-9F7E9731-EAFB-70FC-D694-8834B0A7E224 (p2, c1, k60).
+1717690369: Client auto-9F7E9731-EAFB-70FC-D694-8834B0A7E224 disconnected.
+1717690409: New connection from 172.20.0.1:43880 on port 8883.
+1717690411: New client connected from 172.20.0.1:43880 as auto-B11FC5FE-7563-20D5-3627-166B609D14CA (p2, c1, k60).
+1717690415: Client auto-B11FC5FE-7563-20D5-3627-166B609D14CA disconnected.
+1717690626: New connection from 172.20.0.3:46004 on port 8883.
+1717690626: New client connected from 172.20.0.3:46004 as auto-B12FFF83-4190-62AA-3071-5F234C90A9DF (p2, c1, k60).
+1717691805: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717691864: Client auto-B12FFF83-4190-62AA-3071-5F234C90A9DF disconnected.
