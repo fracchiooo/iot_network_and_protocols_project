@@ -10,3 +10,27 @@ void calculateSHA256Hash(unsigned char * msg, size_t msg_size, unsigned char * o
   }
 #endif
 }
+
+int initRandomGen(mbedtls_ctr_drbg_context * ctr_ctx) {
+// Init mbed tls entropy systemd
+  mbedtls_entropy_context entrpy;
+  mbedtls_entropy_init(&entrpy);
+
+  char * pers = "iotnp";
+
+  mbedtls_ctr_drbg_init(ctr_ctx);
+
+  ret = mbedtls_ctr_drbg_seed(ctr_ctx, mbedtls_entropy_func, &entropy,
+		  (const unsigned char *) pers,
+		  strlen(pers));
+
+  if (ret != 0) {
+	  ESP_LOGI("UTILS_DEBUG", "failed to init RNG system");
+  }
+
+  return 1;
+}
+
+void generateNonce(mbedtls_ctr_drbg_context * rng, unsigned char * nonce_buffer, size_t nonce_len) {
+  mbedtls_ctr_drbg_random(rng, nonce_buffer, nonce_len);
+}

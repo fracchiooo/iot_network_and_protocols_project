@@ -3,11 +3,16 @@
 #include "sdkconfig.h"
 #include "wifi_wrapper.h"
 #include "mqtt_wrapper.h"
+#include "com_node_utils.h"
 #include "freertos/queue.h"
 #include "esp_mac.h"
 
+#define RECEIVER 0
+#define NONCE_LEN 8
+
 
 QueueHandle_t queue;
+  mbedtls_ctr_drbg_context * rng;
   
   
 char* get_unique_MAC_address(){
@@ -30,12 +35,20 @@ char* get_unique_MAC_address(){
   
 }
 
+void request_public_keys(char * key_buffer, char * keylen)
+{
+  // Send mqtt general message that requests key resend?
+  printf("not implem yet");
+}
+
 void establish_connection(char* MAC_identity_dest){
 
 //establishing key = true
 
 //generate the nounce N, half session key k, rsa encrypt key with dest public key (you have in certs list) and sign the total message with my private key
 //send the total message to topic /MAC_identity_dest
+ unsigned char nonce[NONCE_LEN] = {0};
+ generateNonce(rng, nonce, NONCE_LEN);
 
 //wait for answer in my /My_MAC_identity topic
 
@@ -55,14 +68,14 @@ void request_establish_connection(char* MAC_identity_src, char* src_mess){
 //establishing key = true
 
 //generate the nounce N', half session key k', rsa encrypt key with src public key (you have in certs list) and sign the total message with my private key considering src_mess nounce N
+ unsigned char nonce2[NONCE_LEN] = {0};
+ generateNonce(rng, nonce2, NONCE_LEN);
 
 //concatenate the keys
 
 //send AES 128 encrypted message on the /MAC_identity_src, responding to its messages 
 
 }
-
-
 
 void app_main(void)
 {
@@ -84,6 +97,8 @@ void app_main(void)
     }
   }
 
+  initRandomGen(rng);
+
   vTaskDelay(400/ portTICK_PERIOD_MS);
   }
 
@@ -96,8 +111,6 @@ void app_main(void)
   char** certs = mqtt_get_node_certificates(client);
   
   mqtt_get_my_messages(client, get_unique_MAC_address());
-
-
 
   disconnect_mqtt_client(client);
   disconnect_wifi(); 
