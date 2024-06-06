@@ -96,6 +96,7 @@ void app_main(void)
   
   mqtt_get_my_messages(client, get_unique_MAC_address());
 
+  
 
 
   disconnect_mqtt_client(client);
