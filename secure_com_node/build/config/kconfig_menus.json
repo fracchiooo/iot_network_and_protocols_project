@@ -5981,6 +5981,44 @@
     {
         "children": [
             {
+                "children": [],
+                "depends_on": null,
+                "help": null,
+                "id": "WIFI_SSID",
+                "name": "WIFI_SSID",
+                "range": null,
+                "title": "ID WiFi",
+                "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": null,
+                "id": "WIFI_PASS",
+                "name": "WIFI_PASS",
+                "range": null,
+                "title": "WiFi password",
+                "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": null,
+                "id": "BROKER_URI",
+                "name": "BROKER_URI",
+                "range": null,
+                "title": "MQTT broker URI",
+                "type": "string"
+            }
+        ],
+        "depends_on": null,
+        "id": "project-configuration-options",
+        "title": "Project Configuration Options",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
                 "children": [
                     {
                         "children": [],
@@ -24042,10 +24080,7 @@
                                         "help": "This config helps to set the interrupt priority level for the AES peripheral.\nValue 0 (default) means that there is no preference regarding the interrupt\npriority level and any level from 1 to 3 can be selected (based on the availability).\nNote: Higher value indicates high interrupt priority.",
                                         "id": "MBEDTLS_AES_INTERRUPT_LEVEL",
                                         "name": "MBEDTLS_AES_INTERRUPT_LEVEL",
-                                        "range": [
-                                            0,
-                                            3
-                                        ],
+                                        "range": null,
                                         "title": "AES hardware interrupt level",
                                         "type": "int"
                                     }
@@ -24087,10 +24122,7 @@
                                         "help": "This config helps to set the interrupt priority level for the MPI peripheral.\nValue 0 (default) means that there is no preference regarding the interrupt\npriority level and any level from 1 to 3 can be selected (based on the availability).\nNote: Higher value indicates high interrupt priority.",
                                         "id": "MBEDTLS_MPI_INTERRUPT_LEVEL",
                                         "name": "MBEDTLS_MPI_INTERRUPT_LEVEL",
-                                        "range": [
-                                            0,
-                                            3
-                                        ],
+                                        "range": null,
                                         "title": "MPI hardware interrupt level",
                                         "type": "int"
                                     }

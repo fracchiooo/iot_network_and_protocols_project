@@ -64,3 +64,5 @@ $<TARGET_FILE:__idf_touch_element>
 $<TARGET_FILE:__idf_usb>
 $<TARGET_FILE:__idf_wifi_provisioning>
 $<TARGET_FILE:__idf_main>
+$<TARGET_FILE:__idf_mqtt_wrapper>
+$<TARGET_FILE:__idf_wifi_wrapper>

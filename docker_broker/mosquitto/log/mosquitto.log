@@ -927,3 +927,31 @@
 1717690626: New client connected from 172.20.0.3:46004 as auto-B12FFF83-4190-62AA-3071-5F234C90A9DF (p2, c1, k60).
 1717691805: Saving in-memory database to /mosquitto/data//mosquitto.db.
 1717691864: Client auto-B12FFF83-4190-62AA-3071-5F234C90A9DF disconnected.
+1717693113: mosquitto version 2.0.18 terminating
+1717693113: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717694923: mosquitto version 2.0.18 starting
+1717694923: Config loaded from /mosquitto/config/mosquitto.conf.
+1717694923: Opening ipv4 listen socket on port 8883.
+1717694923: Opening ipv6 listen socket on port 8883.
+1717694923: mosquitto version 2.0.18 running
+1717694924: New connection from 172.20.0.2:51160 on port 8883.
+1717694924: New client connected from 172.20.0.2:51160 as auto-2B4A2F05-33B6-4079-1C52-90AF88D08BE1 (p2, c1, k60).
+1717694924: Client auto-2B4A2F05-33B6-4079-1C52-90AF88D08BE1 disconnected.
+1717694924: New connection from 172.20.0.2:51174 on port 8883.
+1717694924: New client connected from 172.20.0.2:51174 as auto-D41250BA-2D40-5662-3DEB-027971FE523B (p2, c1, k60).
+1717694924: Client auto-D41250BA-2D40-5662-3DEB-027971FE523B disconnected.
+1717694924: New connection from 172.20.0.2:51176 on port 8883.
+1717694924: New client connected from 172.20.0.2:51176 as auto-AAA7433C-9082-DCFA-8026-4C253D45E799 (p2, c1, k60).
+1717694924: Client auto-AAA7433C-9082-DCFA-8026-4C253D45E799 disconnected.
+1717694924: New connection from 172.20.0.2:51188 on port 8883.
+1717694924: New client connected from 172.20.0.2:51188 as auto-4E63E7F5-F0E4-5119-B182-80050309A698 (p2, c1, k60).
+1717694924: Client auto-4E63E7F5-F0E4-5119-B182-80050309A698 disconnected.
+1717694924: New connection from 172.20.0.2:51200 on port 8883.
+1717694925: New client connected from 172.20.0.2:51200 as auto-0ADB6BFF-0EC6-B774-3C8D-64F39B071CCC (p2, c1, k60).
+1717694925: Client auto-0ADB6BFF-0EC6-B774-3C8D-64F39B071CCC disconnected.
+1717694925: New connection from 172.20.0.2:51202 on port 8883.
+1717694925: New client connected from 172.20.0.2:51202 as auto-BCD6B443-1FE6-E985-4A61-D57140253755 (p2, c1, k60).
+1717694925: Client auto-BCD6B443-1FE6-E985-4A61-D57140253755 disconnected.
+1717695075: New connection from 172.20.0.1:52030 on port 8883.
+1717695078: New client connected from 172.20.0.1:52030 as auto-4853A152-DFB8-DA69-EAD9-7C2C1CD08DA7 (p2, c1, k60).
+1717695224: Client auto-4853A152-DFB8-DA69-EAD9-7C2C1CD08DA7 disconnected.

@@ -646,3 +646,17 @@
 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/main/CMakeFiles/install.dir
 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/main/CMakeFiles/install/local.dir
 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/main/CMakeFiles/install/strip.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/mqtt_wrapper/CMakeFiles/__idf_mqtt_wrapper.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/mqtt_wrapper/CMakeFiles/edit_cache.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/mqtt_wrapper/CMakeFiles/rebuild_cache.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/mqtt_wrapper/CMakeFiles/list_install_components.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/mqtt_wrapper/CMakeFiles/install.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/mqtt_wrapper/CMakeFiles/install/local.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/mqtt_wrapper/CMakeFiles/install/strip.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/wifi_wrapper/CMakeFiles/__idf_wifi_wrapper.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/wifi_wrapper/CMakeFiles/edit_cache.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/wifi_wrapper/CMakeFiles/rebuild_cache.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/wifi_wrapper/CMakeFiles/list_install_components.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/wifi_wrapper/CMakeFiles/install.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/wifi_wrapper/CMakeFiles/install/local.dir
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/wifi_wrapper/CMakeFiles/install/strip.dir
