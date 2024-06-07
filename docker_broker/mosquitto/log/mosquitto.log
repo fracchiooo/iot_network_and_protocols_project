@@ -955,3 +955,28 @@
 1717695075: New connection from 172.20.0.1:52030 on port 8883.
 1717695078: New client connected from 172.20.0.1:52030 as auto-4853A152-DFB8-DA69-EAD9-7C2C1CD08DA7 (p2, c1, k60).
 1717695224: Client auto-4853A152-DFB8-DA69-EAD9-7C2C1CD08DA7 disconnected.
+1717769575: mosquitto version 2.0.18 starting
+1717769575: Config loaded from /mosquitto/config/mosquitto.conf.
+1717769575: Opening ipv4 listen socket on port 8883.
+1717769575: Opening ipv6 listen socket on port 8883.
+1717769575: mosquitto version 2.0.18 running
+1717769577: New connection from 172.20.0.3:34972 on port 8883.
+1717769577: New client connected from 172.20.0.3:34972 as auto-5BD972DA-6A0C-CBC7-8EB7-2C237CC51729 (p2, c1, k60).
+1717769577: Client auto-5BD972DA-6A0C-CBC7-8EB7-2C237CC51729 disconnected.
+1717769577: New connection from 172.20.0.3:34982 on port 8883.
+1717769577: New client connected from 172.20.0.3:34982 as auto-B3C450BC-4773-681F-C422-D20CB157E20B (p2, c1, k60).
+1717769577: Client auto-B3C450BC-4773-681F-C422-D20CB157E20B disconnected.
+1717769577: New connection from 172.20.0.3:34988 on port 8883.
+1717769577: New client connected from 172.20.0.3:34988 as auto-AAE98A7F-2421-69E6-E913-04052FE1C664 (p2, c1, k60).
+1717769577: Client auto-AAE98A7F-2421-69E6-E913-04052FE1C664 disconnected.
+1717769577: New connection from 172.20.0.3:35000 on port 8883.
+1717769577: New client connected from 172.20.0.3:35000 as auto-6B0D09C1-E69D-F0AB-E2E4-7C99D6D836FE (p2, c1, k60).
+1717769577: Client auto-6B0D09C1-E69D-F0AB-E2E4-7C99D6D836FE disconnected.
+1717769577: New connection from 172.20.0.3:35002 on port 8883.
+1717769577: New client connected from 172.20.0.3:35002 as auto-95D77123-4006-2993-AA16-95CA540B7956 (p2, c1, k60).
+1717769577: Client auto-95D77123-4006-2993-AA16-95CA540B7956 disconnected.
+1717769577: New connection from 172.20.0.3:35014 on port 8883.
+1717769577: New client connected from 172.20.0.3:35014 as auto-E9CF0C65-5D74-024C-0375-7138A6B883A7 (p2, c1, k60).
+1717769577: Client auto-E9CF0C65-5D74-024C-0375-7138A6B883A7 disconnected.
+1717770431: New connection from 172.20.0.2:43956 on port 8883.
+1717770431: New client connected from 172.20.0.2:43956 as auto-B1897270-F24C-1688-D205-CE18A89C2D29 (p2, c1, k60).

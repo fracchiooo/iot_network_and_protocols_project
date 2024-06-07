@@ -511,9 +511,9 @@ CONFIG_PARTITION_TABLE_MD5=y
 #
 # Project Configuration Options
 #
-CONFIG_WIFI_SSID="OnePlus Nord"
-CONFIG_WIFI_PASS="123456789"
-CONFIG_BROKER_URI="mqtts://uri_to_broker"
+CONFIG_WIFI_SSID="TIM-69567495"
+CONFIG_WIFI_PASS="AREGx2k5Z5dckDHyNCRucTcN"
+CONFIG_BROKER_URI="mqtts://mosquitto-cont"
 # end of Project Configuration Options
 
 #

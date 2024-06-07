@@ -1,4 +1,7 @@
 # ninja log v5
-102	4205	1717693164439272482	build.ninja	84c57f839e185e2a
-19	3663	0	CMakeFiles/menuconfig	3d6a0e0c14db61f8
-19	3663	0	/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/CMakeFiles/menuconfig	3d6a0e0c14db61f8
+81	98	1717771091352192236	project_elf_src_esp32s3.c	5b469cc311137c3
+81	98	1717771091352192236	/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/project_elf_src_esp32s3.c	5b469cc311137c3
+83	100	1717771091355525534	esp-idf/esp_system/ld/memory.ld	8149623fbe54319d
+83	100	1717771091355525534	/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/esp_system/ld/memory.ld	8149623fbe54319d
+82	438	1717771091402191717	partition_table/partition-table.bin	b0ce1ae03d34a7f4
+82	438	1717771091402191717	/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/partition_table/partition-table.bin	b0ce1ae03d34a7f4
