@@ -10,4 +10,6 @@ int addHashToBlockchain(unsigned char * msg, size_t msg_size) {
 
   // cleanup
   free(hash_buffer);
+
+  return 0;
 }

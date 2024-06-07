@@ -35,7 +35,7 @@ static int mqtt_publish_message(esp_mqtt_client_handle_t client, char* message, 
 
 static char** mqtt_get_node_certificates(esp_mqtt_client_handle_t client){
   int msg_id = esp_mqtt_client_subscribe(client, "/certificates", 1);
-  ESP_LOGI(TAG, "sent subscribe successful, msg_id=%d", msg_id);
+  ESP_LOGI(TAG_mqtt, "sent subscribe successful, msg_id=%d", msg_id);
   
   return NULL;
   
@@ -48,7 +48,7 @@ static char** mqtt_get_node_certificates(esp_mqtt_client_handle_t client){
 
 static int mqtt_get_my_messages(esp_mqtt_client_handle_t client, char* topic){
   int msg_id = esp_mqtt_client_subscribe(client, topic, 1);
-  ESP_LOGI(TAG, "sent subscribe successful, msg_id=%d", msg_id);
+  ESP_LOGI(TAG_mqtt, "sent subscribe successful, msg_id=%d", msg_id);
   return msg_id;
 }
 

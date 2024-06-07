@@ -3,7 +3,8 @@
 #include "sdkconfig.h"
 #include "wifi_wrapper.h"
 #include "mqtt_wrapper.h"
-#include "com_node_utils.h"
+#include "iota_wrapper.h"
+#include "com_node_utils.h"ù
 #include "freertos/queue.h"
 #include "esp_mac.h"
 
@@ -88,31 +89,35 @@ void app_main(void)
   xTaskCreatePinnedToCore(wifi_start_connection, "WiFi Task", 4096, queue, 0, NULL, 1);
 
   // TODO questa parte va rifatta meglio, per ora blocco qua per non far andare in errore mwtt client    
-  while(1){
-  if(xQueueReceive(queue, &value, (TickType_t)5)){
-    if(value==true){
-      printf("mqtt could proceed, connection established and ip address received\n");
-      fflush(stdout);
-      break;
-    }
-  }
+  //while(1){
+  //if(xQueueReceive(queue, &value, (TickType_t)5)){
+  //  if(value==true){
+  //    printf("mqtt could proceed, connection established and ip address received\n");
+  //    fflush(stdout);
+  //    break;
+  //  }
+  //}
 
-  initRandomGen(rng);
+  //initRandomGen(rng);
 
-  vTaskDelay(400/ portTICK_PERIOD_MS);
-  }
+  //vTaskDelay(400/ portTICK_PERIOD_MS);
+  //}
+  init_iota_module();
+
+  char tips[16][80];
+  iota_testnet_get_tips(tips);
 
 
   // connecting the esp to the broker
-  esp_mqtt_client_handle_t client= mqtt_app_start(CONFIG_BROKER_URI, queue);
+  //esp_mqtt_client_handle_t client= mqtt_app_start(CONFIG_BROKER_URI, queue);
   
   //TODO parte solo indicativa, cosi ancora non funziona
 
-  char** certs = mqtt_get_node_certificates(client);
+  //char** certs = mqtt_get_node_certificates(client);
   
-  mqtt_get_my_messages(client, get_unique_MAC_address());
+  //mqtt_get_my_messages(client, get_unique_MAC_address());
 
-  disconnect_mqtt_client(client);
+  //disconnect_mqtt_client(client);
   disconnect_wifi(); 
   vQueueDelete(queue);
   return;
