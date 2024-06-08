@@ -1,0 +1,37 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375a0e: panic_abort at /home/fracchio/esp/esp-idf/components/esp_system/panic.c:472
+0x4037c085: esp_system_abort at /home/fracchio/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40383c75: __assert_func at /home/fracchio/esp/esp-idf/components/newlib/assert.c:81
+0x40381f16: tlsf_free at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf.c:1120 (discriminator 1)
+0x40381d9c: multi_heap_free_impl at /home/fracchio/esp/esp-idf/components/heap/multi_heap.c:234
+0x40376252: heap_caps_free at /home/fracchio/esp/esp-idf/components/heap/heap_caps.c:393
+0x40383ca5: free at /home/fracchio/esp/esp-idf/components/newlib/heap.c:39
+0x4209577f: post_instance_delete at /home/fracchio/esp/esp-idf/components/esp_event/esp_event.c:439
+ (inlined by) esp_event_loop_run at /home/fracchio/esp/esp-idf/components/esp_event/esp_event.c:615
+0x4200a3c6: esp_mqtt_dispatch_event at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1013
+0x4200af7c: deliver_publish at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1080
+0x4200b0cf: mqtt_process_receive at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1347
+0x4200b620: esp_mqtt_task at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1626
+0x4037cb91: vPortTaskWrapper at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375a0e: panic_abort at /home/fracchio/esp/esp-idf/components/esp_system/panic.c:472
+0x4037c085: esp_system_abort at /home/fracchio/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40383c75: __assert_func at /home/fracchio/esp/esp-idf/components/newlib/assert.c:81
+0x40381f16: tlsf_free at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf.c:1120 (discriminator 1)
+0x40381d9c: multi_heap_free_impl at /home/fracchio/esp/esp-idf/components/heap/multi_heap.c:234
+0x40376252: heap_caps_free at /home/fracchio/esp/esp-idf/components/heap/heap_caps.c:393
+0x40383ca5: free at /home/fracchio/esp/esp-idf/components/newlib/heap.c:39
+0x4209577f: post_instance_delete at /home/fracchio/esp/esp-idf/components/esp_event/esp_event.c:439
+ (inlined by) esp_event_loop_run at /home/fracchio/esp/esp-idf/components/esp_event/esp_event.c:615
+0x4200a3c6: esp_mqtt_dispatch_event at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1013
+0x4200af7c: deliver_publish at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1080
+0x4200b0cf: mqtt_process_receive at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1347
+0x4200b620: esp_mqtt_task at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1626
+0x4037cb91: vPortTaskWrapper at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0m

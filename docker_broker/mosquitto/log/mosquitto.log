@@ -980,3 +980,1137 @@
 1717769577: Client auto-E9CF0C65-5D74-024C-0375-7138A6B883A7 disconnected.
 1717770431: New connection from 172.20.0.2:43956 on port 8883.
 1717770431: New client connected from 172.20.0.2:43956 as auto-B1897270-F24C-1688-D205-CE18A89C2D29 (p2, c1, k60).
+1717771376: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717772360: mosquitto version 2.0.18 terminating
+1717772360: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717772491: mosquitto version 2.0.18 starting
+1717772491: Config loaded from /mosquitto/config/mosquitto.conf.
+1717772491: Opening ipv4 listen socket on port 8883.
+1717772491: Opening ipv6 listen socket on port 8883.
+1717772491: mosquitto version 2.0.18 running
+1717772746: New connection from 192.168.100.1:58636 on port 8883.
+1717772746: OpenSSL Error[0]: error:140393F2:SSL routines:ACCEPT_SR_CERT_VRFY:sslv3 alert unexpected message
+1717772746: Client <unknown> disconnected: Protocol error.
+1717772752: New connection from 192.168.100.1:58646 on port 8883.
+1717772752: OpenSSL Error[0]: error:140393F2:SSL routines:ACCEPT_SR_CERT_VRFY:sslv3 alert unexpected message
+1717772752: Client <unknown> disconnected: Protocol error.
+1717772786: New connection from 192.168.100.1:55836 on port 8883.
+1717772786: OpenSSL Error[0]: error:140393F2:SSL routines:ACCEPT_SR_CERT_VRFY:sslv3 alert unexpected message
+1717772786: Client <unknown> disconnected: Protocol error.
+1717773098: mosquitto version 2.0.18 terminating
+1717773098: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717773132: mosquitto version 2.0.18 starting
+1717773132: Config loaded from /mosquitto/config/mosquitto.conf.
+1717773132: Opening ipv4 listen socket on port 8883.
+1717773132: Opening ipv6 listen socket on port 8883.
+1717773132: mosquitto version 2.0.18 running
+1717773150: mosquitto version 2.0.18 terminating
+1717773150: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717773180: mosquitto version 2.0.18 starting
+1717773180: Config loaded from /mosquitto/config/mosquitto.conf.
+1717773180: Opening ipv4 listen socket on port 8883.
+1717773180: Opening ipv6 listen socket on port 8883.
+1717773180: mosquitto version 2.0.18 running
+1717773181: New connection from 192.168.100.2:34716 on port 8883.
+1717773181: New client connected from 192.168.100.2:34716 as auto-799508E4-900F-2ADD-A824-494DEC5C1A27 (p2, c1, k60).
+1717773181: Client auto-799508E4-900F-2ADD-A824-494DEC5C1A27 disconnected.
+1717773181: New connection from 192.168.100.2:34732 on port 8883.
+1717773181: New client connected from 192.168.100.2:34732 as auto-0F63F0FA-C556-1CDE-1A74-32B4D3A0F193 (p2, c1, k60).
+1717773181: Client auto-0F63F0FA-C556-1CDE-1A74-32B4D3A0F193 disconnected.
+1717773182: New connection from 192.168.100.2:34746 on port 8883.
+1717773182: New client connected from 192.168.100.2:34746 as auto-073DD126-971B-6252-AB40-0E049FF0BC85 (p2, c1, k60).
+1717773182: Client auto-073DD126-971B-6252-AB40-0E049FF0BC85 disconnected.
+1717773182: New connection from 192.168.100.2:34760 on port 8883.
+1717773182: New client connected from 192.168.100.2:34760 as auto-447BDD80-E6F5-B5E9-A4E8-9BE0592A831B (p2, c1, k60).
+1717773182: Client auto-447BDD80-E6F5-B5E9-A4E8-9BE0592A831B disconnected.
+1717773182: New connection from 192.168.100.2:34768 on port 8883.
+1717773182: New client connected from 192.168.100.2:34768 as auto-6DB49407-FAAD-A91B-AF11-9566B5B444F5 (p2, c1, k60).
+1717773182: Client auto-6DB49407-FAAD-A91B-AF11-9566B5B444F5 disconnected.
+1717773182: New connection from 192.168.100.2:34782 on port 8883.
+1717773182: New client connected from 192.168.100.2:34782 as auto-33E565BF-FE10-9A6D-045E-08D11965DDA2 (p2, c1, k60).
+1717773182: Client auto-33E565BF-FE10-9A6D-045E-08D11965DDA2 disconnected.
+1717773220: New connection from 192.168.100.1:56480 on port 8883.
+1717773222: New client connected from 192.168.100.1:56480 as auto-84AAF842-7759-8227-94C2-111CD454D9F0 (p2, c1, k60).
+1717773236: Client auto-84AAF842-7759-8227-94C2-111CD454D9F0 disconnected.
+1717773864: mosquitto version 2.0.18 terminating
+1717773864: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717773886: mosquitto version 2.0.18 starting
+1717773886: Config loaded from /mosquitto/config/mosquitto.conf.
+1717773886: Opening ipv4 listen socket on port 8883.
+1717773886: mosquitto version 2.0.18 running
+1717773888: New connection from 192.168.100.2:32918 on port 8883.
+1717773888: New client connected from 192.168.100.2:32918 as auto-E86B3AC5-FD46-1B21-898B-58408CA320C5 (p2, c1, k60).
+1717773888: Client auto-E86B3AC5-FD46-1B21-898B-58408CA320C5 disconnected.
+1717773888: New connection from 192.168.100.2:32928 on port 8883.
+1717773888: New client connected from 192.168.100.2:32928 as auto-0CA4DBD3-AEC5-2C11-B0FE-7EF8086D418D (p2, c1, k60).
+1717773888: Client auto-0CA4DBD3-AEC5-2C11-B0FE-7EF8086D418D disconnected.
+1717773888: New connection from 192.168.100.2:32942 on port 8883.
+1717773888: New client connected from 192.168.100.2:32942 as auto-CC3DE43C-154E-6BEC-6C2B-F0FA5F3F8D95 (p2, c1, k60).
+1717773888: Client auto-CC3DE43C-154E-6BEC-6C2B-F0FA5F3F8D95 disconnected.
+1717773888: New connection from 192.168.100.2:32954 on port 8883.
+1717773888: New client connected from 192.168.100.2:32954 as auto-DBBFC6B0-D802-0D21-35B8-FB979CC5E387 (p2, c1, k60).
+1717773888: Client auto-DBBFC6B0-D802-0D21-35B8-FB979CC5E387 disconnected.
+1717773888: New connection from 192.168.100.2:32966 on port 8883.
+1717773888: New client connected from 192.168.100.2:32966 as auto-4B47B75C-4EAE-B012-1885-724103D11532 (p2, c1, k60).
+1717773888: Client auto-4B47B75C-4EAE-B012-1885-724103D11532 disconnected.
+1717773888: New connection from 192.168.100.2:32980 on port 8883.
+1717773888: New client connected from 192.168.100.2:32980 as auto-20F8963A-3F32-CEF3-481E-49BAF7AF4500 (p2, c1, k60).
+1717773888: Client auto-20F8963A-3F32-CEF3-481E-49BAF7AF4500 disconnected.
+1717775687: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717776704: mosquitto version 2.0.18 terminating
+1717776704: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717776962: mosquitto version 2.0.18 starting
+1717776962: Config loaded from /mosquitto/config/mosquitto.conf.
+1717776962: Opening ipv4 listen socket on port 8883.
+1717776962: mosquitto version 2.0.18 running
+1717776966: New connection from 192.168.100.2:46458 on port 8883.
+1717776966: New client connected from 192.168.100.2:46458 as auto-FB5699DD-30CE-5333-07EE-33F407616622 (p2, c1, k60).
+1717776966: Client auto-FB5699DD-30CE-5333-07EE-33F407616622 disconnected.
+1717776966: New connection from 192.168.100.2:46466 on port 8883.
+1717776966: New client connected from 192.168.100.2:46466 as auto-60CA96FA-62FF-26F2-CFE2-D3DF82312C5E (p2, c1, k60).
+1717776966: Client auto-60CA96FA-62FF-26F2-CFE2-D3DF82312C5E disconnected.
+1717776966: New connection from 192.168.100.2:46474 on port 8883.
+1717776966: New client connected from 192.168.100.2:46474 as auto-68F0CAA6-FC8D-BAC7-F906-92D8B9428995 (p2, c1, k60).
+1717776966: Client auto-68F0CAA6-FC8D-BAC7-F906-92D8B9428995 disconnected.
+1717776966: New connection from 192.168.100.2:46484 on port 8883.
+1717776966: New client connected from 192.168.100.2:46484 as auto-C8AD2B16-0101-E570-29B9-680126337061 (p2, c1, k60).
+1717776966: Client auto-C8AD2B16-0101-E570-29B9-680126337061 disconnected.
+1717776966: New connection from 192.168.100.2:46500 on port 8883.
+1717776967: New client connected from 192.168.100.2:46500 as auto-268D48B2-C3E4-C410-49E2-83BC685AE84F (p2, c1, k60).
+1717776967: Client auto-268D48B2-C3E4-C410-49E2-83BC685AE84F disconnected.
+1717776967: New connection from 192.168.100.2:46514 on port 8883.
+1717776967: New client connected from 192.168.100.2:46514 as auto-D9D0FDA7-A6B6-7268-418A-1FAA6E1EBBA6 (p2, c1, k60).
+1717776967: Client auto-D9D0FDA7-A6B6-7268-418A-1FAA6E1EBBA6 disconnected.
+1717778036: mosquitto version 2.0.18 terminating
+1717778036: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717778139: mosquitto version 2.0.18 starting
+1717778139: Config loaded from /mosquitto/config/mosquitto.conf.
+1717778139: Opening ipv4 listen socket on port 8883.
+1717778139: Opening ipv4 listen socket on port 1883.
+1717778139: mosquitto version 2.0.18 running
+1717778140: New connection from 192.168.100.3:50236 on port 8883.
+1717778140: Client <unknown> disconnected due to protocol error.
+1717778140: New connection from 192.168.100.3:50244 on port 8883.
+1717778140: Client <unknown> disconnected due to protocol error.
+1717778140: New connection from 192.168.100.3:50254 on port 8883.
+1717778140: Client <unknown> disconnected due to protocol error.
+1717778140: New connection from 192.168.100.3:50258 on port 8883.
+1717778140: Client <unknown> disconnected due to protocol error.
+1717778140: New connection from 192.168.100.3:50266 on port 8883.
+1717778140: Client <unknown> disconnected due to protocol error.
+1717778140: New connection from 192.168.100.3:50272 on port 8883.
+1717778140: Client <unknown> disconnected due to protocol error.
+1717778182: New connection from 192.168.100.1:59664 on port 1883.
+1717778182: OpenSSL Error[0]: error:1402542E:SSL routines:ACCEPT_SR_CLNT_HELLO:tlsv1 alert protocol version
+1717778182: Client <unknown> disconnected: Protocol error.
+1717778195: Client connection from 192.168.100.1 failed: error:1402542E:SSL routines:ACCEPT_SR_CLNT_HELLO:tlsv1 alert protocol version.
+1717778208: mosquitto version 2.0.18 terminating
+1717778208: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717778226: mosquitto version 2.0.18 starting
+1717778226: Config loaded from /mosquitto/config/mosquitto.conf.
+1717778226: Opening ipv4 listen socket on port 1883.
+1717778226: mosquitto version 2.0.18 running
+1717778234: New connection from 192.168.100.1:47758 on port 1883.
+1717778234: OpenSSL Error[0]: error:1402542E:SSL routines:ACCEPT_SR_CLNT_HELLO:tlsv1 alert protocol version
+1717778234: Client <unknown> disconnected: Protocol error.
+1717778236: New connection from 192.168.100.1:47760 on port 1883.
+1717778236: OpenSSL Error[0]: error:1402542E:SSL routines:ACCEPT_SR_CLNT_HELLO:tlsv1 alert protocol version
+1717778236: Client <unknown> disconnected: Protocol error.
+1717778239: Client connection from 192.168.100.1 failed: error:1402542E:SSL routines:ACCEPT_SR_CLNT_HELLO:tlsv1 alert protocol version.
+1717778289: mosquitto version 2.0.18 terminating
+1717778289: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717778306: mosquitto version 2.0.18 starting
+1717778306: Config loaded from /mosquitto/config/mosquitto.conf.
+1717778306: Opening ipv4 listen socket on port 1883.
+1717778306: mosquitto version 2.0.18 running
+1717778312: New connection from 192.168.100.1:47576 on port 1883.
+1717778312: New client connected from 192.168.100.1:47576 as auto-D98401BC-9203-A092-179D-490DECD23302 (p2, c1, k60).
+1717778312: Client auto-D98401BC-9203-A092-179D-490DECD23302 disconnected.
+1717778325: New connection from 192.168.100.1:57584 on port 1883.
+1717778325: New client connected from 192.168.100.1:57584 as auto-9B38BFFD-AA23-DFF1-8E57-433EB80D0E3F (p2, c1, k60).
+1717778379: New connection from 192.168.1.18:50739 on port 1883.
+1717778379: New client connected from 192.168.1.18:50739 as auto-4A9F9F2B-3A85-D0D4-4F44-300ECE9714F2 (p2, c1, k60).
+1717778389: Client auto-9B38BFFD-AA23-DFF1-8E57-433EB80D0E3F disconnected.
+1717778703: New connection from 192.168.1.10:56172 on port 1883.
+1717778703: Client <unknown> closed its connection.
+1717778831: New connection from 192.168.1.10:57859 on port 1883.
+1717778831: Client <unknown> disconnected due to protocol error.
+1717778948: New connection from 192.168.1.10:54485 on port 1883.
+1717778948: New client connected from 192.168.1.10:54485 as ESP32_e2E5E4 (p2, c1, k120).
+1717778948: Client ESP32_e2E5E4 disconnected.
+1717779140: Client auto-4A9F9F2B-3A85-D0D4-4F44-300ECE9714F2 disconnected.
+1717779147: mosquitto version 2.0.18 terminating
+1717779147: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717779319: mosquitto version 2.0.18 starting
+1717779319: Config loaded from /mosquitto/config/mosquitto.conf.
+1717779319: Opening ipv4 listen socket on port 8883.
+1717779319: mosquitto version 2.0.18 running
+1717779320: New connection from 192.168.100.3:44420 on port 8883.
+1717779320: New client connected from 192.168.100.3:44420 as auto-893737DA-B4E0-419D-0525-6E566CCE40C7 (p2, c1, k60).
+1717779320: Client auto-893737DA-B4E0-419D-0525-6E566CCE40C7 disconnected.
+1717779320: New connection from 192.168.100.3:44422 on port 8883.
+1717779320: New client connected from 192.168.100.3:44422 as auto-C1FD7670-D58B-6196-D59E-A09C2C700CEC (p2, c1, k60).
+1717779320: Client auto-C1FD7670-D58B-6196-D59E-A09C2C700CEC disconnected.
+1717779320: New connection from 192.168.100.3:44424 on port 8883.
+1717779320: New client connected from 192.168.100.3:44424 as auto-E652B05B-4B06-E718-8512-08A5C70E5289 (p2, c1, k60).
+1717779320: Client auto-E652B05B-4B06-E718-8512-08A5C70E5289 disconnected.
+1717779321: New connection from 192.168.100.3:44428 on port 8883.
+1717779321: New client connected from 192.168.100.3:44428 as auto-7A368FE5-9670-6CFE-B4A5-C0CD8D7FDBC8 (p2, c1, k60).
+1717779321: Client auto-7A368FE5-9670-6CFE-B4A5-C0CD8D7FDBC8 disconnected.
+1717779321: New connection from 192.168.100.3:44432 on port 8883.
+1717779321: New client connected from 192.168.100.3:44432 as auto-ACD5D0AA-31E7-4B9B-8051-86888F5CB610 (p2, c1, k60).
+1717779321: Client auto-ACD5D0AA-31E7-4B9B-8051-86888F5CB610 disconnected.
+1717779321: New connection from 192.168.100.3:44438 on port 8883.
+1717779321: New client connected from 192.168.100.3:44438 as auto-AF4910B7-AAE9-F3DF-6B94-FFF0E567D33A (p2, c1, k60).
+1717779321: Client auto-AF4910B7-AAE9-F3DF-6B94-FFF0E567D33A disconnected.
+1717779419: New connection from 192.168.1.10:53234 on port 8883.
+1717779419: Client <unknown> closed its connection.
+1717779720: New connection from 192.168.1.18:50981 on port 8883.
+1717779721: OpenSSL Error[0]: error:1403F3F2:SSL routines:ACCEPT_SR_FINISHED:sslv3 alert unexpected message
+1717779721: Client <unknown> disconnected: Protocol error.
+1717779756: New connection from 192.168.1.18:50982 on port 8883.
+1717779757: OpenSSL Error[0]: error:1403F3F2:SSL routines:ACCEPT_SR_FINISHED:sslv3 alert unexpected message
+1717779757: Client <unknown> disconnected: Protocol error.
+1717779761: New connection from 192.168.1.18:50983 on port 8883.
+1717779762: OpenSSL Error[0]: error:1403F3F2:SSL routines:ACCEPT_SR_FINISHED:sslv3 alert unexpected message
+1717779762: Client <unknown> disconnected: Protocol error.
+1717779789: New connection from 192.168.1.18:50986 on port 8883.
+1717779790: New client connected from 192.168.1.18:50986 as auto-B03594E6-FD2A-2767-98C9-EA4863C02D36 (p2, c1, k60).
+1717780033: Client auto-B03594E6-FD2A-2767-98C9-EA4863C02D36 disconnected.
+1717780551: New connection from 192.168.1.10:64731 on port 8883.
+1717780551: OpenSSL Error[0]: error:14037412:SSL routines:ACCEPT_SR_KEY_EXCH:sslv3 alert bad certificate
+1717780551: OpenSSL Error[1]: error:140370E5:SSL routines:ACCEPT_SR_KEY_EXCH:ssl handshake failure
+1717780551: Client <unknown> disconnected: Protocol error.
+1717780676: New connection from 192.168.1.10:60653 on port 8883.
+1717780770: Client <unknown> has exceeded timeout, disconnecting.
+1717780882: New connection from 192.168.100.2:38058 on port 8883.
+1717780882: New client connected from 192.168.100.2:38058 as auto-CEE1E67B-5C40-DFB1-E1AE-60BFBFA97FA3 (p2, c1, k60).
+1717780917: New connection from 192.168.1.10:49739 on port 8883.
+1717781010: Client <unknown> has exceeded timeout, disconnecting.
+1717781033: New connection from 192.168.1.18:51055 on port 8883.
+1717781034: New client connected from 192.168.1.18:51055 as auto-833EE85C-0C98-70A0-3415-544E942F087A (p2, c1, k60).
+1717781039: Client auto-833EE85C-0C98-70A0-3415-544E942F087A disconnected.
+1717781044: New connection from 192.168.1.18:51056 on port 8883.
+1717781045: New client connected from 192.168.1.18:51056 as auto-B6D4EB27-2507-CB28-BB29-E61648FE1F95 (p2, c1, k60).
+1717781076: New connection from 192.168.1.10:58364 on port 8883.
+1717781076: New client connected from 192.168.1.10:58364 as ESP32_e2E5E4 (p2, c1, k120).
+1717781076: Client ESP32_e2E5E4 disconnected.
+1717781112: Client auto-CEE1E67B-5C40-DFB1-E1AE-60BFBFA97FA3 disconnected.
+1717781119: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717781131: New connection from 192.168.1.10:58356 on port 8883.
+1717781131: New client connected from 192.168.1.10:58356 as ESP32_e2E5E4 (p2, c1, k120).
+1717781131: Client ESP32_e2E5E4 disconnected.
+1717781507: New connection from 192.168.1.10:55807 on port 8883.
+1717781510: New client connected from 192.168.1.10:55807 as ESP32_e2E5E4 (p2, c1, k120).
+1717781510: Client ESP32_e2E5E4 disconnected.
+1717781524: New connection from 192.168.1.10:57160 on port 8883.
+1717781524: New client connected from 192.168.1.10:57160 as ESP32_e2E5E4 (p2, c1, k120).
+1717781524: Client ESP32_e2E5E4 disconnected.
+1717782920: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717784721: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717786522: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717788323: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717788353: New connection from 192.168.1.10:56942 on port 8883.
+1717788358: New client connected from 192.168.1.10:56942 as ESP32_e2E5E4 (p2, c1, k120).
+1717788628: New connection from 192.168.1.10:59653 on port 8883.
+1717788628: Client ESP32_e2E5E4 already connected, closing old connection.
+1717788628: New client connected from 192.168.1.10:59653 as ESP32_e2E5E4 (p2, c1, k120).
+1717788769: New connection from 192.168.1.10:54619 on port 8883.
+1717788769: Client ESP32_e2E5E4 already connected, closing old connection.
+1717788769: New client connected from 192.168.1.10:54619 as ESP32_e2E5E4 (p2, c1, k120).
+1717789028: New connection from 192.168.1.10:55179 on port 8883.
+1717789028: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789028: New client connected from 192.168.1.10:55179 as ESP32_e2E5E4 (p2, c1, k120).
+1717789035: New connection from 192.168.1.10:51550 on port 8883.
+1717789036: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789036: New client connected from 192.168.1.10:51550 as ESP32_e2E5E4 (p2, c1, k120).
+1717789043: New connection from 192.168.1.10:53511 on port 8883.
+1717789043: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789043: New client connected from 192.168.1.10:53511 as ESP32_e2E5E4 (p2, c1, k120).
+1717789050: New connection from 192.168.1.10:56157 on port 8883.
+1717789050: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789050: New client connected from 192.168.1.10:56157 as ESP32_e2E5E4 (p2, c1, k120).
+1717789057: New connection from 192.168.1.10:52558 on port 8883.
+1717789058: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789058: New client connected from 192.168.1.10:52558 as ESP32_e2E5E4 (p2, c1, k120).
+1717789067: New connection from 192.168.1.10:55083 on port 8883.
+1717789067: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789067: New client connected from 192.168.1.10:55083 as ESP32_e2E5E4 (p2, c1, k120).
+1717789074: New connection from 192.168.1.10:51982 on port 8883.
+1717789074: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789074: New client connected from 192.168.1.10:51982 as ESP32_e2E5E4 (p2, c1, k120).
+1717789081: New connection from 192.168.1.10:63479 on port 8883.
+1717789082: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789082: New client connected from 192.168.1.10:63479 as ESP32_e2E5E4 (p2, c1, k120).
+1717789088: New connection from 192.168.1.10:59210 on port 8883.
+1717789089: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789089: New client connected from 192.168.1.10:59210 as ESP32_e2E5E4 (p2, c1, k120).
+1717789096: New connection from 192.168.1.10:61316 on port 8883.
+1717789096: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789096: New client connected from 192.168.1.10:61316 as ESP32_e2E5E4 (p2, c1, k120).
+1717789103: New connection from 192.168.1.10:63752 on port 8883.
+1717789104: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789104: New client connected from 192.168.1.10:63752 as ESP32_e2E5E4 (p2, c1, k120).
+1717789111: New connection from 192.168.1.10:60604 on port 8883.
+1717789111: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789111: New client connected from 192.168.1.10:60604 as ESP32_e2E5E4 (p2, c1, k120).
+1717789118: New connection from 192.168.1.10:65126 on port 8883.
+1717789119: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789119: New client connected from 192.168.1.10:65126 as ESP32_e2E5E4 (p2, c1, k120).
+1717789126: New connection from 192.168.1.10:62908 on port 8883.
+1717789126: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789126: New client connected from 192.168.1.10:62908 as ESP32_e2E5E4 (p2, c1, k120).
+1717789134: New connection from 192.168.1.10:65406 on port 8883.
+1717789134: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789134: New client connected from 192.168.1.10:65406 as ESP32_e2E5E4 (p2, c1, k120).
+1717789142: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789142: New connection from 192.168.1.10:54533 on port 8883.
+1717789142: New client connected from 192.168.1.10:54533 as ESP32_e2E5E4 (p2, c1, k120).
+1717789154: New connection from 192.168.1.10:54605 on port 8883.
+1717789154: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789154: New client connected from 192.168.1.10:54605 as ESP32_e2E5E4 (p2, c1, k120).
+1717789161: New connection from 192.168.1.10:53158 on port 8883.
+1717789162: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789162: New client connected from 192.168.1.10:53158 as ESP32_e2E5E4 (p2, c1, k120).
+1717789168: New connection from 192.168.1.10:52195 on port 8883.
+1717789169: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789169: New client connected from 192.168.1.10:52195 as ESP32_e2E5E4 (p2, c1, k120).
+1717789176: New connection from 192.168.1.10:61182 on port 8883.
+1717789177: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789177: New client connected from 192.168.1.10:61182 as ESP32_e2E5E4 (p2, c1, k120).
+1717789184: New connection from 192.168.1.10:49574 on port 8883.
+1717789185: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789185: New client connected from 192.168.1.10:49574 as ESP32_e2E5E4 (p2, c1, k120).
+1717789192: New connection from 192.168.1.10:62994 on port 8883.
+1717789192: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789192: New client connected from 192.168.1.10:62994 as ESP32_e2E5E4 (p2, c1, k120).
+1717789199: New connection from 192.168.1.10:52670 on port 8883.
+1717789200: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789200: New client connected from 192.168.1.10:52670 as ESP32_e2E5E4 (p2, c1, k120).
+1717789207: New connection from 192.168.1.10:54585 on port 8883.
+1717789207: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789207: New client connected from 192.168.1.10:54585 as ESP32_e2E5E4 (p2, c1, k120).
+1717789216: New connection from 192.168.1.10:62021 on port 8883.
+1717789217: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789217: New client connected from 192.168.1.10:62021 as ESP32_e2E5E4 (p2, c1, k120).
+1717789224: New connection from 192.168.1.10:59487 on port 8883.
+1717789224: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789224: New client connected from 192.168.1.10:59487 as ESP32_e2E5E4 (p2, c1, k120).
+1717789232: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789232: New connection from 192.168.1.10:59678 on port 8883.
+1717789232: New client connected from 192.168.1.10:59678 as ESP32_e2E5E4 (p2, c1, k120).
+1717789239: New connection from 192.168.1.10:54038 on port 8883.
+1717789239: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789239: New client connected from 192.168.1.10:54038 as ESP32_e2E5E4 (p2, c1, k120).
+1717789246: New connection from 192.168.1.10:56986 on port 8883.
+1717789247: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789247: New client connected from 192.168.1.10:56986 as ESP32_e2E5E4 (p2, c1, k120).
+1717789254: New connection from 192.168.1.10:58144 on port 8883.
+1717789254: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789254: New client connected from 192.168.1.10:58144 as ESP32_e2E5E4 (p2, c1, k120).
+1717789261: New connection from 192.168.1.10:59437 on port 8883.
+1717789262: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789262: New client connected from 192.168.1.10:59437 as ESP32_e2E5E4 (p2, c1, k120).
+1717789269: New connection from 192.168.1.10:54853 on port 8883.
+1717789269: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789269: New client connected from 192.168.1.10:54853 as ESP32_e2E5E4 (p2, c1, k120).
+1717789278: New connection from 192.168.1.10:60445 on port 8883.
+1717789279: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789279: New client connected from 192.168.1.10:60445 as ESP32_e2E5E4 (p2, c1, k120).
+1717789285: New connection from 192.168.1.10:55870 on port 8883.
+1717789286: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789286: New client connected from 192.168.1.10:55870 as ESP32_e2E5E4 (p2, c1, k120).
+1717789293: New connection from 192.168.1.10:55643 on port 8883.
+1717789293: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789293: New client connected from 192.168.1.10:55643 as ESP32_e2E5E4 (p2, c1, k120).
+1717789300: New connection from 192.168.1.10:63837 on port 8883.
+1717789301: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789301: New client connected from 192.168.1.10:63837 as ESP32_e2E5E4 (p2, c1, k120).
+1717789308: New connection from 192.168.1.10:60322 on port 8883.
+1717789308: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789308: New client connected from 192.168.1.10:60322 as ESP32_e2E5E4 (p2, c1, k120).
+1717789315: New connection from 192.168.1.10:49426 on port 8883.
+1717789316: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789316: New client connected from 192.168.1.10:49426 as ESP32_e2E5E4 (p2, c1, k120).
+1717789323: New connection from 192.168.1.10:52051 on port 8883.
+1717789323: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789323: New client connected from 192.168.1.10:52051 as ESP32_e2E5E4 (p2, c1, k120).
+1717789330: New connection from 192.168.1.10:53708 on port 8883.
+1717789331: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789331: New client connected from 192.168.1.10:53708 as ESP32_e2E5E4 (p2, c1, k120).
+1717789338: New connection from 192.168.1.10:55340 on port 8883.
+1717789338: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789338: New client connected from 192.168.1.10:55340 as ESP32_e2E5E4 (p2, c1, k120).
+1717789364: New connection from 192.168.1.10:62671 on port 8883.
+1717789364: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789364: New client connected from 192.168.1.10:62671 as ESP32_e2E5E4 (p2, c1, k120).
+1717789371: New connection from 192.168.1.10:65510 on port 8883.
+1717789372: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789372: New client connected from 192.168.1.10:65510 as ESP32_e2E5E4 (p2, c1, k120).
+1717789379: New connection from 192.168.1.10:61041 on port 8883.
+1717789379: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789379: New client connected from 192.168.1.10:61041 as ESP32_e2E5E4 (p2, c1, k120).
+1717789386: New connection from 192.168.1.10:59416 on port 8883.
+1717789386: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789386: New client connected from 192.168.1.10:59416 as ESP32_e2E5E4 (p2, c1, k120).
+1717789394: New connection from 192.168.1.10:61867 on port 8883.
+1717789394: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789394: New client connected from 192.168.1.10:61867 as ESP32_e2E5E4 (p2, c1, k120).
+1717789401: New connection from 192.168.1.10:49975 on port 8883.
+1717789402: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789402: New client connected from 192.168.1.10:49975 as ESP32_e2E5E4 (p2, c1, k120).
+1717789412: New connection from 192.168.1.10:61081 on port 8883.
+1717789412: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789412: New client connected from 192.168.1.10:61081 as ESP32_e2E5E4 (p2, c1, k120).
+1717789420: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789420: New connection from 192.168.1.10:63792 on port 8883.
+1717789420: New client connected from 192.168.1.10:63792 as ESP32_e2E5E4 (p2, c1, k120).
+1717789427: New connection from 192.168.1.10:54704 on port 8883.
+1717789427: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789427: New client connected from 192.168.1.10:54704 as ESP32_e2E5E4 (p2, c1, k120).
+1717789435: New connection from 192.168.1.10:53166 on port 8883.
+1717789435: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789435: New client connected from 192.168.1.10:53166 as ESP32_e2E5E4 (p2, c1, k120).
+1717789442: New connection from 192.168.1.10:51421 on port 8883.
+1717789442: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789442: New client connected from 192.168.1.10:51421 as ESP32_e2E5E4 (p2, c1, k120).
+1717789449: New connection from 192.168.1.10:62870 on port 8883.
+1717789450: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789450: New client connected from 192.168.1.10:62870 as ESP32_e2E5E4 (p2, c1, k120).
+1717789456: New connection from 192.168.1.10:55602 on port 8883.
+1717789457: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789457: New client connected from 192.168.1.10:55602 as ESP32_e2E5E4 (p2, c1, k120).
+1717789464: New connection from 192.168.1.10:52514 on port 8883.
+1717789464: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789464: New client connected from 192.168.1.10:52514 as ESP32_e2E5E4 (p2, c1, k120).
+1717789471: New connection from 192.168.1.10:53835 on port 8883.
+1717789472: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789472: New client connected from 192.168.1.10:53835 as ESP32_e2E5E4 (p2, c1, k120).
+1717789479: New connection from 192.168.1.10:60695 on port 8883.
+1717789479: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789479: New client connected from 192.168.1.10:60695 as ESP32_e2E5E4 (p2, c1, k120).
+1717789487: New connection from 192.168.1.10:62171 on port 8883.
+1717789487: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789487: New client connected from 192.168.1.10:62171 as ESP32_e2E5E4 (p2, c1, k120).
+1717789494: New connection from 192.168.1.10:52108 on port 8883.
+1717789495: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789495: New client connected from 192.168.1.10:52108 as ESP32_e2E5E4 (p2, c1, k120).
+1717789501: New connection from 192.168.1.10:64967 on port 8883.
+1717789502: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789502: New client connected from 192.168.1.10:64967 as ESP32_e2E5E4 (p2, c1, k120).
+1717789509: New connection from 192.168.1.10:51446 on port 8883.
+1717789509: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789509: New client connected from 192.168.1.10:51446 as ESP32_e2E5E4 (p2, c1, k120).
+1717789516: New connection from 192.168.1.10:53625 on port 8883.
+1717789516: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789516: New client connected from 192.168.1.10:53625 as ESP32_e2E5E4 (p2, c1, k120).
+1717789523: New connection from 192.168.1.10:57364 on port 8883.
+1717789524: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789524: New client connected from 192.168.1.10:57364 as ESP32_e2E5E4 (p2, c1, k120).
+1717789531: New connection from 192.168.1.10:52666 on port 8883.
+1717789531: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789531: New client connected from 192.168.1.10:52666 as ESP32_e2E5E4 (p2, c1, k120).
+1717789538: New connection from 192.168.1.10:51845 on port 8883.
+1717789539: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789539: New client connected from 192.168.1.10:51845 as ESP32_e2E5E4 (p2, c1, k120).
+1717789545: New connection from 192.168.1.10:56880 on port 8883.
+1717789546: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789546: New client connected from 192.168.1.10:56880 as ESP32_e2E5E4 (p2, c1, k120).
+1717789553: New connection from 192.168.1.10:54516 on port 8883.
+1717789554: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789554: New client connected from 192.168.1.10:54516 as ESP32_e2E5E4 (p2, c1, k120).
+1717789561: New connection from 192.168.1.10:60097 on port 8883.
+1717789561: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789561: New client connected from 192.168.1.10:60097 as ESP32_e2E5E4 (p2, c1, k120).
+1717789568: New connection from 192.168.1.10:55193 on port 8883.
+1717789568: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789568: New client connected from 192.168.1.10:55193 as ESP32_e2E5E4 (p2, c1, k120).
+1717789575: New connection from 192.168.1.10:57266 on port 8883.
+1717789576: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789576: New client connected from 192.168.1.10:57266 as ESP32_e2E5E4 (p2, c1, k120).
+1717789583: New connection from 192.168.1.10:64122 on port 8883.
+1717789583: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789583: New client connected from 192.168.1.10:64122 as ESP32_e2E5E4 (p2, c1, k120).
+1717789590: New connection from 192.168.1.10:58571 on port 8883.
+1717789591: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789591: New client connected from 192.168.1.10:58571 as ESP32_e2E5E4 (p2, c1, k120).
+1717789598: New connection from 192.168.1.10:63326 on port 8883.
+1717789598: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789598: New client connected from 192.168.1.10:63326 as ESP32_e2E5E4 (p2, c1, k120).
+1717789605: New connection from 192.168.1.10:53755 on port 8883.
+1717789606: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789606: New client connected from 192.168.1.10:53755 as ESP32_e2E5E4 (p2, c1, k120).
+1717789613: New connection from 192.168.1.10:55217 on port 8883.
+1717789613: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789613: New client connected from 192.168.1.10:55217 as ESP32_e2E5E4 (p2, c1, k120).
+1717789620: New connection from 192.168.1.10:61341 on port 8883.
+1717789621: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789621: New client connected from 192.168.1.10:61341 as ESP32_e2E5E4 (p2, c1, k120).
+1717789627: New connection from 192.168.1.10:64042 on port 8883.
+1717789628: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789628: New client connected from 192.168.1.10:64042 as ESP32_e2E5E4 (p2, c1, k120).
+1717789634: New connection from 192.168.1.10:53423 on port 8883.
+1717789635: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789635: New client connected from 192.168.1.10:53423 as ESP32_e2E5E4 (p2, c1, k120).
+1717789642: New connection from 192.168.1.10:49625 on port 8883.
+1717789642: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789642: New client connected from 192.168.1.10:49625 as ESP32_e2E5E4 (p2, c1, k120).
+1717789649: New connection from 192.168.1.10:65534 on port 8883.
+1717789650: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789650: New client connected from 192.168.1.10:65534 as ESP32_e2E5E4 (p2, c1, k120).
+1717789657: New connection from 192.168.1.10:54913 on port 8883.
+1717789657: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789657: New client connected from 192.168.1.10:54913 as ESP32_e2E5E4 (p2, c1, k120).
+1717789664: New connection from 192.168.1.10:59842 on port 8883.
+1717789664: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789665: New client connected from 192.168.1.10:59842 as ESP32_e2E5E4 (p2, c1, k120).
+1717789672: New connection from 192.168.1.10:52013 on port 8883.
+1717789672: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789672: New client connected from 192.168.1.10:52013 as ESP32_e2E5E4 (p2, c1, k120).
+1717789679: New connection from 192.168.1.10:59110 on port 8883.
+1717789679: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789681: New client connected from 192.168.1.10:59110 as ESP32_e2E5E4 (p2, c1, k120).
+1717789689: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789689: New connection from 192.168.1.10:49782 on port 8883.
+1717789689: New client connected from 192.168.1.10:49782 as ESP32_e2E5E4 (p2, c1, k120).
+1717789713: New connection from 192.168.1.10:56357 on port 8883.
+1717789714: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789714: New client connected from 192.168.1.10:56357 as ESP32_e2E5E4 (p2, c1, k120).
+1717789721: New connection from 192.168.1.10:49351 on port 8883.
+1717789722: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789722: New client connected from 192.168.1.10:49351 as ESP32_e2E5E4 (p2, c1, k120).
+1717789729: New connection from 192.168.1.10:56295 on port 8883.
+1717789729: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789729: New client connected from 192.168.1.10:56295 as ESP32_e2E5E4 (p2, c1, k120).
+1717789737: New connection from 192.168.1.10:50319 on port 8883.
+1717789737: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789737: New client connected from 192.168.1.10:50319 as ESP32_e2E5E4 (p2, c1, k120).
+1717789744: New connection from 192.168.1.10:52648 on port 8883.
+1717789744: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789744: New client connected from 192.168.1.10:52648 as ESP32_e2E5E4 (p2, c1, k120).
+1717789751: New connection from 192.168.1.10:53723 on port 8883.
+1717789752: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789752: New client connected from 192.168.1.10:53723 as ESP32_e2E5E4 (p2, c1, k120).
+1717789759: New connection from 192.168.1.10:51291 on port 8883.
+1717789759: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789759: New client connected from 192.168.1.10:51291 as ESP32_e2E5E4 (p2, c1, k120).
+1717789766: New connection from 192.168.1.10:53920 on port 8883.
+1717789766: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789766: New client connected from 192.168.1.10:53920 as ESP32_e2E5E4 (p2, c1, k120).
+1717789773: New connection from 192.168.1.10:54310 on port 8883.
+1717789774: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789774: New client connected from 192.168.1.10:54310 as ESP32_e2E5E4 (p2, c1, k120).
+1717789781: New connection from 192.168.1.10:60056 on port 8883.
+1717789783: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789783: New client connected from 192.168.1.10:60056 as ESP32_e2E5E4 (p2, c1, k120).
+1717789790: New connection from 192.168.1.10:52121 on port 8883.
+1717789790: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789790: New client connected from 192.168.1.10:52121 as ESP32_e2E5E4 (p2, c1, k120).
+1717789798: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789798: New connection from 192.168.1.10:62581 on port 8883.
+1717789800: New client connected from 192.168.1.10:62581 as ESP32_e2E5E4 (p2, c1, k120).
+1717789809: New connection from 192.168.1.10:59699 on port 8883.
+1717789809: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789809: New client connected from 192.168.1.10:59699 as ESP32_e2E5E4 (p2, c1, k120).
+1717789820: New connection from 192.168.1.10:60409 on port 8883.
+1717789820: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789820: New client connected from 192.168.1.10:60409 as ESP32_e2E5E4 (p2, c1, k120).
+1717789827: New connection from 192.168.1.10:55136 on port 8883.
+1717789828: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789828: New client connected from 192.168.1.10:55136 as ESP32_e2E5E4 (p2, c1, k120).
+1717789835: New connection from 192.168.1.10:53269 on port 8883.
+1717789835: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789835: New client connected from 192.168.1.10:53269 as ESP32_e2E5E4 (p2, c1, k120).
+1717789843: New connection from 192.168.1.10:58355 on port 8883.
+1717789844: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717789844: New client connected from 192.168.1.10:58355 as ESP32_e2E5E4 (p2, c1, k120).
+1717789857: New connection from 192.168.1.10:52797 on port 8883.
+1717789858: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789858: New client connected from 192.168.1.10:52797 as ESP32_e2E5E4 (p2, c1, k120).
+1717789865: New connection from 192.168.1.10:59010 on port 8883.
+1717789865: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789865: New client connected from 192.168.1.10:59010 as ESP32_e2E5E4 (p2, c1, k120).
+1717789890: New connection from 192.168.1.10:53306 on port 8883.
+1717789890: Client ESP32_e2E5E4 already connected, closing old connection.
+1717789890: New client connected from 192.168.1.10:53306 as ESP32_e2E5E4 (p2, c1, k120).
+1717790082: Client ESP32_e2E5E4 has exceeded timeout, disconnecting.
+1717790124: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717790289: New connection from 192.168.1.10:56169 on port 8883.
+1717790289: New client connected from 192.168.1.10:56169 as ESP32_e2E5E4 (p2, c1, k120).
+1717790299: Client ESP32_e2E5E4 disconnected.
+1717791925: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717793726: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717793891: New connection from 192.168.1.10:57787 on port 8883.
+1717793892: New client connected from 192.168.1.10:57787 as ESP32_e2E5E4 (p2, c1, k120).
+1717794123: New connection from 192.168.1.10:49608 on port 8883.
+1717794124: Client ESP32_e2E5E4 already connected, closing old connection.
+1717794124: New client connected from 192.168.1.10:49608 as ESP32_e2E5E4 (p2, c1, k120).
+1717794138: mosquitto version 2.0.18 terminating
+1717794138: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717843894: mosquitto version 2.0.18 starting
+1717843894: Config loaded from /mosquitto/config/mosquitto.conf.
+1717843894: Opening ipv4 listen socket on port 8883.
+1717843894: mosquitto version 2.0.18 running
+1717843897: New connection from 192.168.100.3:33594 on port 8883.
+1717843897: New connection from 192.168.1.10:64911 on port 8883.
+1717843897: New client connected from 192.168.100.3:33594 as auto-4E135B2C-7484-07B5-63B7-4CA048CF40AC (p2, c1, k60).
+1717843897: Client auto-4E135B2C-7484-07B5-63B7-4CA048CF40AC disconnected.
+1717843897: New connection from 192.168.100.3:33596 on port 8883.
+1717843897: New client connected from 192.168.100.3:33596 as auto-5542ABD8-C4E1-27C1-1357-CB8CE1ECDD59 (p2, c1, k60).
+1717843897: Client auto-5542ABD8-C4E1-27C1-1357-CB8CE1ECDD59 disconnected.
+1717843897: New connection from 192.168.100.3:33604 on port 8883.
+1717843897: New client connected from 192.168.100.3:33604 as auto-D15EA687-2134-4951-9987-918952DBA02C (p2, c1, k60).
+1717843897: Client auto-D15EA687-2134-4951-9987-918952DBA02C disconnected.
+1717843897: New connection from 192.168.100.3:33618 on port 8883.
+1717843897: New client connected from 192.168.100.3:33618 as auto-3117FB95-5679-8194-CA42-0ACEB09558C9 (p2, c1, k60).
+1717843897: Client auto-3117FB95-5679-8194-CA42-0ACEB09558C9 disconnected.
+1717843897: New connection from 192.168.100.3:33632 on port 8883.
+1717843898: New client connected from 192.168.100.3:33632 as auto-2A5A8800-1AB3-5C60-8CBB-06D70C225A94 (p2, c1, k60).
+1717843898: Client auto-2A5A8800-1AB3-5C60-8CBB-06D70C225A94 disconnected.
+1717843898: New client connected from 192.168.1.10:64911 as ESP32_e2E5E4 (p2, c1, k120).
+1717843898: New connection from 192.168.100.3:33634 on port 8883.
+1717843898: New client connected from 192.168.100.3:33634 as auto-BEA8A659-044F-A4B6-07E1-A65D9644E18A (p2, c1, k60).
+1717843898: Client auto-BEA8A659-044F-A4B6-07E1-A65D9644E18A disconnected.
+1717843898: New connection from 192.168.100.3:33644 on port 8883.
+1717843898: New client connected from 192.168.100.3:33644 as auto-3369D350-9877-DF7F-7C2A-7325E2B77BA6 (p2, c1, k60).
+1717843898: Client auto-3369D350-9877-DF7F-7C2A-7325E2B77BA6 disconnected.
+1717843925: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717843949: New connection from 192.168.1.10:51972 on port 8883.
+1717843951: New client connected from 192.168.1.10:51972 as ESP32_e2E5E4 (p2, c1, k120).
+1717844016: New connection from 192.168.1.10:60572 on port 8883.
+1717844016: Client ESP32_e2E5E4 already connected, closing old connection.
+1717844016: New client connected from 192.168.1.10:60572 as ESP32_e2E5E4 (p2, c1, k120).
+1717844219: New connection from 192.168.1.10:64979 on port 8883.
+1717844219: Client ESP32_e2E5E4 already connected, closing old connection.
+1717844219: New client connected from 192.168.1.10:64979 as ESP32_e2E5E4 (p2, c1, k120).
+1717844438: New connection from 192.168.1.10:52206 on port 8883.
+1717844438: Client ESP32_e2E5E4 already connected, closing old connection.
+1717844438: New client connected from 192.168.1.10:52206 as ESP32_e2E5E4 (p2, c1, k120).
+1717844446: New connection from 192.168.1.10:62835 on port 8883.
+1717844472: New connection from 192.168.1.10:62836 on port 8883.
+1717844473: Client ESP32_e2E5E4 already connected, closing old connection.
+1717844473: New client connected from 192.168.1.10:62836 as ESP32_e2E5E4 (p2, c1, k120).
+1717844520: New connection from 192.168.1.10:53895 on port 8883.
+1717844520: Client ESP32_e2E5E4 already connected, closing old connection.
+1717844520: New client connected from 192.168.1.10:53895 as ESP32_e2E5E4 (p2, c1, k120).
+1717844542: Client <unknown> has exceeded timeout, disconnecting.
+1717844636: New connection from 192.168.1.10:56025 on port 8883.
+1717844637: Client ESP32_e2E5E4 already connected, closing old connection.
+1717844637: New client connected from 192.168.1.10:56025 as ESP32_e2E5E4 (p2, c1, k120).
+1717845037: New connection from 192.168.1.10:59416 on port 8883.
+1717845038: Client ESP32_e2E5E4 already connected, closing old connection.
+1717845038: New client connected from 192.168.1.10:59416 as ESP32_e2E5E4 (p2, c1, k120).
+1717845047: New connection from 192.168.1.10:57252 on port 8883.
+1717845047: Client ESP32_e2E5E4 already connected, closing old connection.
+1717845047: New client connected from 192.168.1.10:57252 as ESP32_e2E5E4 (p2, c1, k120).
+1717845058: New connection from 192.168.1.10:65397 on port 8883.
+1717845058: Client ESP32_e2E5E4 already connected, closing old connection.
+1717845058: New client connected from 192.168.1.10:65397 as ESP32_e2E5E4 (p2, c1, k120).
+1717845068: New connection from 192.168.1.10:60894 on port 8883.
+1717845068: Client ESP32_e2E5E4 already connected, closing old connection.
+1717845068: New client connected from 192.168.1.10:60894 as ESP32_e2E5E4 (p2, c1, k120).
+1717845076: New connection from 192.168.1.10:60724 on port 8883.
+1717845076: Client ESP32_e2E5E4 already connected, closing old connection.
+1717845076: New client connected from 192.168.1.10:60724 as ESP32_e2E5E4 (p2, c1, k120).
+1717845084: New connection from 192.168.1.10:59281 on port 8883.
+1717845104: Client <unknown> closed its connection.
+1717845109: New connection from 192.168.1.10:59282 on port 8883.
+1717845141: New connection from 192.168.1.10:53778 on port 8883.
+1717845160: Client <unknown> closed its connection.
+1717845172: New connection from 192.168.1.10:51750 on port 8883.
+1717845173: Client ESP32_e2E5E4 already connected, closing old connection.
+1717845173: New client connected from 192.168.1.10:51750 as ESP32_e2E5E4 (p2, c1, k120).
+1717845202: Client <unknown> has exceeded timeout, disconnecting.
+1717845695: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717845739: New connection from 192.168.1.10:59777 on port 8883.
+1717845739: Client ESP32_e2E5E4 already connected, closing old connection.
+1717845739: New client connected from 192.168.1.10:59777 as ESP32_e2E5E4 (p2, c1, k120).
+1717845940: New connection from 192.168.1.10:57819 on port 8883.
+1717845941: Client ESP32_e2E5E4 already connected, closing old connection.
+1717845941: New client connected from 192.168.1.10:57819 as ESP32_e2E5E4 (p2, c1, k120).
+1717846082: New connection from 192.168.1.10:64542 on port 8883.
+1717846082: Client ESP32_e2E5E4 already connected, closing old connection.
+1717846082: New client connected from 192.168.1.10:64542 as ESP32_e2E5E4 (p2, c1, k120).
+1717846190: New connection from 192.168.1.10:60566 on port 8883.
+1717846216: New connection from 192.168.1.10:60567 on port 8883.
+1717846239: New connection from 192.168.1.10:57904 on port 8883.
+1717846247: Client ESP32_e2E5E4 already connected, closing old connection.
+1717846247: New client connected from 192.168.1.10:57904 as ESP32_e2E5E4 (p2, c1, k120).
+1717846282: Client <unknown> has exceeded timeout, disconnecting.
+1717846312: Client <unknown> has exceeded timeout, disconnecting.
+1717846504: New connection from 192.168.1.10:49911 on port 8883.
+1717846529: New connection from 192.168.1.10:49912 on port 8883.
+1717846530: Client ESP32_e2E5E4 already connected, closing old connection.
+1717846530: New client connected from 192.168.1.10:49912 as ESP32_e2E5E4 (p2, c1, k120).
+1717846600: Client <unknown> has exceeded timeout, disconnecting.
+1717846630: New connection from 192.168.1.10:60542 on port 8883.
+1717846630: Client ESP32_e2E5E4 already connected, closing old connection.
+1717846630: New client connected from 192.168.1.10:60542 as ESP32_e2E5E4 (p2, c1, k120).
+1717846918: mosquitto version 2.0.18 terminating
+1717846918: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717847267: mosquitto version 2.0.18 starting
+1717847267: Config loaded from /mosquitto/config/mosquitto.conf.
+1717847267: Opening ipv4 listen socket on port 8883.
+1717847267: mosquitto version 2.0.18 running
+1717847269: New connection from 192.168.100.2:45048 on port 8883.
+1717847269: New client connected from 192.168.100.2:45048 as auto-ACCE9BC1-70E4-847F-5543-BBC34459A625 (p2, c1, k60).
+1717847269: Client auto-ACCE9BC1-70E4-847F-5543-BBC34459A625 disconnected.
+1717847269: New connection from 192.168.100.2:45052 on port 8883.
+1717847269: New client connected from 192.168.100.2:45052 as auto-7BCEA063-9C0A-66C6-D704-676376C79360 (p2, c1, k60).
+1717847269: Client auto-7BCEA063-9C0A-66C6-D704-676376C79360 disconnected.
+1717847269: New connection from 192.168.100.2:45066 on port 8883.
+1717847269: New client connected from 192.168.100.2:45066 as auto-620F4FED-11C3-953D-2212-98948AF0774F (p2, c1, k60).
+1717847269: Client auto-620F4FED-11C3-953D-2212-98948AF0774F disconnected.
+1717847269: New connection from 192.168.100.2:45080 on port 8883.
+1717847269: New client connected from 192.168.100.2:45080 as auto-26DFA17B-F0E9-B6E3-0FDD-8B1AE0F840D1 (p2, c1, k60).
+1717847269: Client auto-26DFA17B-F0E9-B6E3-0FDD-8B1AE0F840D1 disconnected.
+1717847269: New connection from 192.168.100.2:45092 on port 8883.
+1717847269: New client connected from 192.168.100.2:45092 as auto-09DE29C1-5EB2-2E5F-549D-8D563C6E7AFB (p2, c1, k60).
+1717847269: Client auto-09DE29C1-5EB2-2E5F-549D-8D563C6E7AFB disconnected.
+1717847269: New connection from 192.168.100.2:45098 on port 8883.
+1717847269: New client connected from 192.168.100.2:45098 as auto-B3D75124-5829-FF0F-EE0B-903B42448CAA (p2, c1, k60).
+1717847269: Client auto-B3D75124-5829-FF0F-EE0B-903B42448CAA disconnected.
+1717847269: New connection from 192.168.100.2:45104 on port 8883.
+1717847269: New client connected from 192.168.100.2:45104 as auto-B5FACF74-8999-945A-79AF-3D9801792DCB (p2, c1, k60).
+1717847269: Client auto-B5FACF74-8999-945A-79AF-3D9801792DCB disconnected.
+1717847313: New connection from 192.168.1.10:56073 on port 8883.
+1717847313: New client connected from 192.168.1.10:56073 as ESP32_e2E5E4 (p2, c1, k120).
+1717847418: mosquitto version 2.0.18 terminating
+1717847418: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1717847439: mosquitto version 2.0.18 starting
+1717847439: Config loaded from /mosquitto/config/mosquitto.conf.
+1717847439: Opening ipv4 listen socket on port 8883.
+1717847439: mosquitto version 2.0.18 running
+1717847439: New connection from 192.168.1.10:56074 on port 8883.
+1717847440: New connection from 192.168.100.2:37266 on port 8883.
+1717847440: New client connected from 192.168.100.2:37266 as auto-4DE305E7-430C-9919-CD9E-08E50094B7DE (p2, c1, k60).
+1717847440: Client auto-4DE305E7-430C-9919-CD9E-08E50094B7DE disconnected.
+1717847440: New connection from 192.168.100.2:37280 on port 8883.
+1717847440: New client connected from 192.168.1.10:56074 as ESP32_e2E5E4 (p2, c1, k120).
+1717847440: New client connected from 192.168.100.2:37280 as auto-B092E73C-3F45-A212-3EF4-CDF95889A63D (p2, c1, k60).
+1717847440: Client auto-B092E73C-3F45-A212-3EF4-CDF95889A63D disconnected.
+1717847440: New connection from 192.168.100.2:37286 on port 8883.
+1717847440: New client connected from 192.168.100.2:37286 as auto-15B6D416-F39A-8DFA-8E3B-7C7EE7A27A85 (p2, c1, k60).
+1717847440: Client auto-15B6D416-F39A-8DFA-8E3B-7C7EE7A27A85 disconnected.
+1717847440: New connection from 192.168.100.2:37298 on port 8883.
+1717847440: New client connected from 192.168.100.2:37298 as auto-2CC465C0-6601-34A1-96D6-D6979EB558BD (p2, c1, k60).
+1717847440: Client auto-2CC465C0-6601-34A1-96D6-D6979EB558BD disconnected.
+1717847440: New connection from 192.168.100.2:37310 on port 8883.
+1717847440: New client connected from 192.168.100.2:37310 as auto-89A3AC0F-35A1-4713-353F-D69B41458A91 (p2, c1, k60).
+1717847440: Client auto-89A3AC0F-35A1-4713-353F-D69B41458A91 disconnected.
+1717847440: New connection from 192.168.100.2:37314 on port 8883.
+1717847440: New client connected from 192.168.100.2:37314 as auto-94991EA2-434D-8BED-FC64-CF718CF56E74 (p2, c1, k60).
+1717847440: Client auto-94991EA2-434D-8BED-FC64-CF718CF56E74 disconnected.
+1717847440: New connection from 192.168.100.2:37322 on port 8883.
+1717847440: New client connected from 192.168.100.2:37322 as auto-E1329405-6060-888C-B537-E0496104904C (p2, c1, k60).
+1717847440: Client auto-E1329405-6060-888C-B537-E0496104904C disconnected.
+1717847479: New connection from 192.168.1.10:50324 on port 8883.
+1717847479: Client ESP32_e2E5E4 already connected, closing old connection.
+1717847479: New client connected from 192.168.1.10:50324 as ESP32_e2E5E4 (p2, c1, k120).
+1717847502: mosquitto version 2.0.18 terminating
+1717847589: mosquitto version 2.0.18 starting
+1717847589: Config loaded from /mosquitto/config/mosquitto.conf.
+1717847589: Opening ipv4 listen socket on port 8883.
+1717847589: mosquitto version 2.0.18 running
+1717847591: New connection from 192.168.100.3:56474 on port 8883.
+1717847591: New client connected from 192.168.100.3:56474 as auto-D67BFF0E-8BA7-49AF-D1AC-E13B64FC56F6 (p2, c1, k60).
+1717847591: Client auto-D67BFF0E-8BA7-49AF-D1AC-E13B64FC56F6 disconnected.
+1717847591: New connection from 192.168.100.3:56484 on port 8883.
+1717847591: New client connected from 192.168.100.3:56484 as auto-B7F63E53-D94E-A6B5-69EF-E34E6F539726 (p2, c1, k60).
+1717847591: Client auto-B7F63E53-D94E-A6B5-69EF-E34E6F539726 disconnected.
+1717847591: New connection from 192.168.100.3:56500 on port 8883.
+1717847591: New client connected from 192.168.100.3:56500 as auto-B9D6CB75-E7EC-8BE6-858D-69749DEEF2D2 (p2, c1, k60).
+1717847591: Client auto-B9D6CB75-E7EC-8BE6-858D-69749DEEF2D2 disconnected.
+1717847591: New connection from 192.168.100.3:56512 on port 8883.
+1717847591: New client connected from 192.168.100.3:56512 as auto-ADD27582-9B34-97CD-DAA1-42B2FB19B5A6 (p2, c1, k60).
+1717847591: Client auto-ADD27582-9B34-97CD-DAA1-42B2FB19B5A6 disconnected.
+1717847592: New connection from 192.168.100.3:56528 on port 8883.
+1717847592: New client connected from 192.168.100.3:56528 as auto-52D69824-FA59-08C8-A1EB-A7FA909C5DD3 (p2, c1, k60).
+1717847592: Client auto-52D69824-FA59-08C8-A1EB-A7FA909C5DD3 disconnected.
+1717847592: New connection from 192.168.100.3:56538 on port 8883.
+1717847592: New client connected from 192.168.100.3:56538 as auto-048CB91E-A61C-5211-6DE6-CBC0F21D1ED9 (p2, c1, k60).
+1717847592: Client auto-048CB91E-A61C-5211-6DE6-CBC0F21D1ED9 disconnected.
+1717847592: New connection from 192.168.100.3:56554 on port 8883.
+1717847592: New client connected from 192.168.100.3:56554 as auto-C65F8F01-6CD9-9A3D-5676-701518A3C1AF (p2, c1, k60).
+1717847592: Client auto-C65F8F01-6CD9-9A3D-5676-701518A3C1AF disconnected.
+1717847597: New connection from 192.168.1.10:50329 on port 8883.
+1717847598: New client connected from 192.168.1.10:50329 as ESP32_e2E5E4 (p2, c1, k120).
+1717847611: New connection from 192.168.1.10:51760 on port 8883.
+1717847614: Client ESP32_e2E5E4 already connected, closing old connection.
+1717847614: New client connected from 192.168.1.10:51760 as ESP32_e2E5E4 (p2, c1, k120).
+1717847871: New connection from 192.168.1.18:52714 on port 8883.
+1717847871: OpenSSL Error[0]: error:1403F3F2:SSL routines:ACCEPT_SR_FINISHED:sslv3 alert unexpected message
+1717847871: Client <unknown> disconnected: Protocol error.
+1717847891: New connection from 192.168.1.18:52715 on port 8883.
+1717847892: New client connected from 192.168.1.18:52715 as auto-10C285AA-6268-450D-36F7-A436D513F3ED (p2, c1, k60).
+1717847909: Client auto-10C285AA-6268-450D-36F7-A436D513F3ED disconnected.
+1717847960: New connection from 192.168.1.18:52721 on port 8883.
+1717847960: OpenSSL Error[0]: error:1403F3F2:SSL routines:ACCEPT_SR_FINISHED:sslv3 alert unexpected message
+1717847960: Client <unknown> disconnected: Protocol error.
+1717847973: New connection from 192.168.1.18:52722 on port 8883.
+1717847973: OpenSSL Error[0]: error:1403F3F2:SSL routines:ACCEPT_SR_FINISHED:sslv3 alert unexpected message
+1717847973: Client <unknown> disconnected: Protocol error.
+1717847986: New connection from 192.168.1.18:52723 on port 8883.
+1717847986: New client connected from 192.168.1.18:52723 as auto-BD478185-C70E-AA9E-AF1F-79E6D0B96061 (p2, c1, k60).
+1717850259: New connection from 192.168.1.10:53417 on port 8883.
+1717850293: New connection from 192.168.1.10:51732 on port 8883.
+1717850325: New connection from 192.168.1.10:51296 on port 8883.
+1717850325: Client ESP32_e2E5E4 already connected, closing old connection.
+1717850325: New client connected from 192.168.1.10:51296 as ESP32_e2E5E4 (p2, c1, k120).
+1717850355: Client <unknown> has exceeded timeout, disconnecting.
+1717850385: Client <unknown> has exceeded timeout, disconnecting.
+1717850563: New connection from 192.168.1.10:54451 on port 8883.
+1717850563: Client ESP32_e2E5E4 already connected, closing old connection.
+1717850563: New client connected from 192.168.1.10:54451 as ESP32_e2E5E4 (p2, c1, k120).
+1717851043: New connection from 192.168.1.10:63964 on port 8883.
+1717851043: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851043: New client connected from 192.168.1.10:63964 as ESP32_e2E5E4 (p2, c1, k120).
+1717851050: New connection from 192.168.1.10:61904 on port 8883.
+1717851051: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851051: New client connected from 192.168.1.10:61904 as ESP32_e2E5E4 (p2, c1, k120).
+1717851058: New connection from 192.168.1.10:55375 on port 8883.
+1717851059: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851059: New client connected from 192.168.1.10:55375 as ESP32_e2E5E4 (p2, c1, k120).
+1717851066: New connection from 192.168.1.10:53495 on port 8883.
+1717851066: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851066: New client connected from 192.168.1.10:53495 as ESP32_e2E5E4 (p2, c1, k120).
+1717851074: New connection from 192.168.1.10:53321 on port 8883.
+1717851075: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851075: New client connected from 192.168.1.10:53321 as ESP32_e2E5E4 (p2, c1, k120).
+1717851083: New connection from 192.168.1.10:65020 on port 8883.
+1717851083: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851083: New client connected from 192.168.1.10:65020 as ESP32_e2E5E4 (p2, c1, k120).
+1717851091: New connection from 192.168.1.10:58184 on port 8883.
+1717851092: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851092: New client connected from 192.168.1.10:58184 as ESP32_e2E5E4 (p2, c1, k120).
+1717851099: New connection from 192.168.1.10:49157 on port 8883.
+1717851100: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851100: New client connected from 192.168.1.10:49157 as ESP32_e2E5E4 (p2, c1, k120).
+1717851107: New connection from 192.168.1.10:64530 on port 8883.
+1717851108: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851108: New client connected from 192.168.1.10:64530 as ESP32_e2E5E4 (p2, c1, k120).
+1717851115: New connection from 192.168.1.10:59214 on port 8883.
+1717851116: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851116: New client connected from 192.168.1.10:59214 as ESP32_e2E5E4 (p2, c1, k120).
+1717851124: New connection from 192.168.1.10:52910 on port 8883.
+1717851124: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851124: New client connected from 192.168.1.10:52910 as ESP32_e2E5E4 (p2, c1, k120).
+1717851132: New connection from 192.168.1.10:62715 on port 8883.
+1717851157: New connection from 192.168.1.10:49987 on port 8883.
+1717851158: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851158: New client connected from 192.168.1.10:49987 as ESP32_e2E5E4 (p2, c1, k120).
+1717851165: Client <unknown> disconnected: Protocol error.
+1717851350: New connection from 192.168.1.10:57577 on port 8883.
+1717851350: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851350: New client connected from 192.168.1.10:57577 as ESP32_e2E5E4 (p2, c1, k120).
+1717851442: New connection from 192.168.1.10:54914 on port 8883.
+1717851443: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851443: New client connected from 192.168.1.10:54914 as ESP32_e2E5E4 (p2, c1, k120).
+1717851538: New connection from 192.168.1.10:65227 on port 8883.
+1717851539: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851539: New client connected from 192.168.1.10:65227 as ESP32_e2E5E4 (p2, c1, k120).
+1717851547: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717851548: New connection from 192.168.1.10:53405 on port 8883.
+1717851556: New client connected from 192.168.1.10:53405 as ESP32_e2E5E4 (p2, c1, k120).
+1717851565: Client ESP32_e2E5E4 disconnected: Protocol error.
+1717851565: New connection from 192.168.1.10:57546 on port 8883.
+1717851566: New client connected from 192.168.1.10:57546 as ESP32_e2E5E4 (p2, c1, k120).
+1717851575: New connection from 192.168.1.10:62672 on port 8883.
+1717851575: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851575: New client connected from 192.168.1.10:62672 as ESP32_e2E5E4 (p2, c1, k120).
+1717851585: New connection from 192.168.1.10:56588 on port 8883.
+1717851585: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851585: New client connected from 192.168.1.10:56588 as ESP32_e2E5E4 (p2, c1, k120).
+1717851593: New connection from 192.168.1.10:53295 on port 8883.
+1717851618: New connection from 192.168.1.10:53296 on port 8883.
+1717851654: New connection from 192.168.1.10:62450 on port 8883.
+1717851654: Client ESP32_e2E5E4 already connected, closing old connection.
+1717851654: New client connected from 192.168.1.10:62450 as ESP32_e2E5E4 (p2, c1, k120).
+1717851656: Client ESP32_e2E5E4 disconnected.
+1717851687: Client <unknown> has exceeded timeout, disconnecting.
+1717851711: Client <unknown> has exceeded timeout, disconnecting.
+1717852168: New connection from 192.168.1.10:51417 on port 8883.
+1717852168: New client connected from 192.168.1.10:51417 as ESP32_e2E5E4 (p2, c1, k120).
+1717852353: Client ESP32_e2E5E4 has exceeded timeout, disconnecting.
+1717852459: New connection from 192.168.1.10:63028 on port 8883.
+1717852459: New client connected from 192.168.1.10:63028 as ESP32_e2E5E4 (p2, c1, k120).
+1717852466: New connection from 192.168.1.10:50755 on port 8883.
+1717852466: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852466: New client connected from 192.168.1.10:50755 as ESP32_e2E5E4 (p2, c1, k120).
+1717852473: New connection from 192.168.1.10:50820 on port 8883.
+1717852473: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852473: New client connected from 192.168.1.10:50820 as ESP32_e2E5E4 (p2, c1, k120).
+1717852480: New connection from 192.168.1.10:63923 on port 8883.
+1717852480: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852480: New client connected from 192.168.1.10:63923 as ESP32_e2E5E4 (p2, c1, k120).
+1717852487: New connection from 192.168.1.10:61238 on port 8883.
+1717852487: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852487: New client connected from 192.168.1.10:61238 as ESP32_e2E5E4 (p2, c1, k120).
+1717852494: New connection from 192.168.1.10:56613 on port 8883.
+1717852494: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852494: New client connected from 192.168.1.10:56613 as ESP32_e2E5E4 (p2, c1, k120).
+1717852501: New connection from 192.168.1.10:64546 on port 8883.
+1717852501: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852501: New client connected from 192.168.1.10:64546 as ESP32_e2E5E4 (p2, c1, k120).
+1717852508: New connection from 192.168.1.10:52212 on port 8883.
+1717852508: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852508: New client connected from 192.168.1.10:52212 as ESP32_e2E5E4 (p2, c1, k120).
+1717852514: New connection from 192.168.1.10:59179 on port 8883.
+1717852515: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852515: New client connected from 192.168.1.10:59179 as ESP32_e2E5E4 (p2, c1, k120).
+1717852522: New connection from 192.168.1.10:62974 on port 8883.
+1717852522: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852522: New client connected from 192.168.1.10:62974 as ESP32_e2E5E4 (p2, c1, k120).
+1717852529: New connection from 192.168.1.10:56830 on port 8883.
+1717852529: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852529: New client connected from 192.168.1.10:56830 as ESP32_e2E5E4 (p2, c1, k120).
+1717852535: New connection from 192.168.1.10:59769 on port 8883.
+1717852536: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852536: New client connected from 192.168.1.10:59769 as ESP32_e2E5E4 (p2, c1, k120).
+1717852542: New connection from 192.168.1.10:58326 on port 8883.
+1717852543: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852543: New client connected from 192.168.1.10:58326 as ESP32_e2E5E4 (p2, c1, k120).
+1717852550: New connection from 192.168.1.10:59398 on port 8883.
+1717852550: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852550: New client connected from 192.168.1.10:59398 as ESP32_e2E5E4 (p2, c1, k120).
+1717852580: New connection from 192.168.1.10:65244 on port 8883.
+1717852580: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852580: New client connected from 192.168.1.10:65244 as ESP32_e2E5E4 (p2, c1, k120).
+1717852587: New connection from 192.168.1.10:59466 on port 8883.
+1717852587: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852587: New client connected from 192.168.1.10:59466 as ESP32_e2E5E4 (p2, c1, k120).
+1717852594: New connection from 192.168.1.10:63001 on port 8883.
+1717852594: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852594: New client connected from 192.168.1.10:63001 as ESP32_e2E5E4 (p2, c1, k120).
+1717852601: New connection from 192.168.1.10:49981 on port 8883.
+1717852602: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852602: New client connected from 192.168.1.10:49981 as ESP32_e2E5E4 (p2, c1, k120).
+1717852608: New connection from 192.168.1.10:55498 on port 8883.
+1717852609: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852609: New client connected from 192.168.1.10:55498 as ESP32_e2E5E4 (p2, c1, k120).
+1717852616: New connection from 192.168.1.10:57709 on port 8883.
+1717852616: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852616: New client connected from 192.168.1.10:57709 as ESP32_e2E5E4 (p2, c1, k120).
+1717852623: New connection from 192.168.1.10:57422 on port 8883.
+1717852623: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852623: New client connected from 192.168.1.10:57422 as ESP32_e2E5E4 (p2, c1, k120).
+1717852634: New connection from 192.168.1.10:64652 on port 8883.
+1717852634: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852634: New client connected from 192.168.1.10:64652 as ESP32_e2E5E4 (p2, c1, k120).
+1717852640: New connection from 192.168.1.10:61102 on port 8883.
+1717852641: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852641: New client connected from 192.168.1.10:61102 as ESP32_e2E5E4 (p2, c1, k120).
+1717852647: New connection from 192.168.1.10:56335 on port 8883.
+1717852648: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852648: New client connected from 192.168.1.10:56335 as ESP32_e2E5E4 (p2, c1, k120).
+1717852654: New connection from 192.168.1.10:56276 on port 8883.
+1717852655: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852655: New client connected from 192.168.1.10:56276 as ESP32_e2E5E4 (p2, c1, k120).
+1717852661: New connection from 192.168.1.10:58621 on port 8883.
+1717852662: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852662: New client connected from 192.168.1.10:58621 as ESP32_e2E5E4 (p2, c1, k120).
+1717852668: New connection from 192.168.1.10:55561 on port 8883.
+1717852669: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852669: New client connected from 192.168.1.10:55561 as ESP32_e2E5E4 (p2, c1, k120).
+1717852675: New connection from 192.168.1.10:53311 on port 8883.
+1717852676: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852676: New client connected from 192.168.1.10:53311 as ESP32_e2E5E4 (p2, c1, k120).
+1717852683: New connection from 192.168.1.10:49531 on port 8883.
+1717852683: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852683: New client connected from 192.168.1.10:49531 as ESP32_e2E5E4 (p2, c1, k120).
+1717852690: New connection from 192.168.1.10:62827 on port 8883.
+1717852691: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852691: New client connected from 192.168.1.10:62827 as ESP32_e2E5E4 (p2, c1, k120).
+1717852697: New connection from 192.168.1.10:64447 on port 8883.
+1717852697: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852697: New client connected from 192.168.1.10:64447 as ESP32_e2E5E4 (p2, c1, k120).
+1717852704: New connection from 192.168.1.10:65513 on port 8883.
+1717852705: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852705: New client connected from 192.168.1.10:65513 as ESP32_e2E5E4 (p2, c1, k120).
+1717852711: New connection from 192.168.1.10:54964 on port 8883.
+1717852711: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852711: New client connected from 192.168.1.10:54964 as ESP32_e2E5E4 (p2, c1, k120).
+1717852718: New connection from 192.168.1.10:62463 on port 8883.
+1717852718: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852718: New client connected from 192.168.1.10:62463 as ESP32_e2E5E4 (p2, c1, k120).
+1717852725: New connection from 192.168.1.10:63357 on port 8883.
+1717852726: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852726: New client connected from 192.168.1.10:63357 as ESP32_e2E5E4 (p2, c1, k120).
+1717852733: New connection from 192.168.1.10:62962 on port 8883.
+1717852733: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852733: New client connected from 192.168.1.10:62962 as ESP32_e2E5E4 (p2, c1, k120).
+1717852740: New connection from 192.168.1.10:51373 on port 8883.
+1717852741: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852741: New client connected from 192.168.1.10:51373 as ESP32_e2E5E4 (p2, c1, k120).
+1717852748: New connection from 192.168.1.10:57633 on port 8883.
+1717852748: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852748: New client connected from 192.168.1.10:57633 as ESP32_e2E5E4 (p2, c1, k120).
+1717852755: New connection from 192.168.1.10:61087 on port 8883.
+1717852757: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852757: New client connected from 192.168.1.10:61087 as ESP32_e2E5E4 (p2, c1, k120).
+1717852764: New connection from 192.168.1.10:57192 on port 8883.
+1717852765: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852765: New client connected from 192.168.1.10:57192 as ESP32_e2E5E4 (p2, c1, k120).
+1717852772: New connection from 192.168.1.10:54347 on port 8883.
+1717852772: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852772: New client connected from 192.168.1.10:54347 as ESP32_e2E5E4 (p2, c1, k120).
+1717852779: New connection from 192.168.1.10:63060 on port 8883.
+1717852779: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852779: New client connected from 192.168.1.10:63060 as ESP32_e2E5E4 (p2, c1, k120).
+1717852786: New connection from 192.168.1.10:53004 on port 8883.
+1717852787: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852787: New client connected from 192.168.1.10:53004 as ESP32_e2E5E4 (p2, c1, k120).
+1717852794: New connection from 192.168.1.10:53357 on port 8883.
+1717852795: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852795: New client connected from 192.168.1.10:53357 as ESP32_e2E5E4 (p2, c1, k120).
+1717852802: New connection from 192.168.1.10:59166 on port 8883.
+1717852802: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852802: New client connected from 192.168.1.10:59166 as ESP32_e2E5E4 (p2, c1, k120).
+1717852809: New connection from 192.168.1.10:50148 on port 8883.
+1717852809: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852809: New client connected from 192.168.1.10:50148 as ESP32_e2E5E4 (p2, c1, k120).
+1717852817: New connection from 192.168.1.10:53765 on port 8883.
+1717852817: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852817: New client connected from 192.168.1.10:53765 as ESP32_e2E5E4 (p2, c1, k120).
+1717852830: New connection from 192.168.1.10:50005 on port 8883.
+1717852831: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852831: New client connected from 192.168.1.10:50005 as ESP32_e2E5E4 (p2, c1, k120).
+1717852837: New connection from 192.168.1.10:59469 on port 8883.
+1717852838: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852838: New client connected from 192.168.1.10:59469 as ESP32_e2E5E4 (p2, c1, k120).
+1717852844: New connection from 192.168.1.10:55931 on port 8883.
+1717852845: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852845: New client connected from 192.168.1.10:55931 as ESP32_e2E5E4 (p2, c1, k120).
+1717852852: New connection from 192.168.1.10:62624 on port 8883.
+1717852852: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852852: New client connected from 192.168.1.10:62624 as ESP32_e2E5E4 (p2, c1, k120).
+1717852859: New connection from 192.168.1.10:54606 on port 8883.
+1717852859: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852859: New client connected from 192.168.1.10:54606 as ESP32_e2E5E4 (p2, c1, k120).
+1717852866: New connection from 192.168.1.10:52007 on port 8883.
+1717852866: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852866: New client connected from 192.168.1.10:52007 as ESP32_e2E5E4 (p2, c1, k120).
+1717852873: New connection from 192.168.1.10:53846 on port 8883.
+1717852874: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852874: New client connected from 192.168.1.10:53846 as ESP32_e2E5E4 (p2, c1, k120).
+1717852881: New connection from 192.168.1.10:50337 on port 8883.
+1717852881: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852881: New client connected from 192.168.1.10:50337 as ESP32_e2E5E4 (p2, c1, k120).
+1717852888: New connection from 192.168.1.10:63572 on port 8883.
+1717852889: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852889: New client connected from 192.168.1.10:63572 as ESP32_e2E5E4 (p2, c1, k120).
+1717852895: New connection from 192.168.1.10:60233 on port 8883.
+1717852895: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852895: New client connected from 192.168.1.10:60233 as ESP32_e2E5E4 (p2, c1, k120).
+1717852902: New connection from 192.168.1.10:62960 on port 8883.
+1717852902: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852902: New client connected from 192.168.1.10:62960 as ESP32_e2E5E4 (p2, c1, k120).
+1717852909: New connection from 192.168.1.10:53406 on port 8883.
+1717852909: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852909: New client connected from 192.168.1.10:53406 as ESP32_e2E5E4 (p2, c1, k120).
+1717852916: New connection from 192.168.1.10:58803 on port 8883.
+1717852917: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852917: New client connected from 192.168.1.10:58803 as ESP32_e2E5E4 (p2, c1, k120).
+1717852923: New connection from 192.168.1.10:56206 on port 8883.
+1717852925: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852925: New client connected from 192.168.1.10:56206 as ESP32_e2E5E4 (p2, c1, k120).
+1717852932: New connection from 192.168.1.10:64529 on port 8883.
+1717852932: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852932: New client connected from 192.168.1.10:64529 as ESP32_e2E5E4 (p2, c1, k120).
+1717852939: New connection from 192.168.1.10:63747 on port 8883.
+1717852939: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852939: New client connected from 192.168.1.10:63747 as ESP32_e2E5E4 (p2, c1, k120).
+1717852945: New connection from 192.168.1.10:58402 on port 8883.
+1717852946: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852946: New client connected from 192.168.1.10:58402 as ESP32_e2E5E4 (p2, c1, k120).
+1717852952: New connection from 192.168.1.10:64193 on port 8883.
+1717852954: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852954: New client connected from 192.168.1.10:64193 as ESP32_e2E5E4 (p2, c1, k120).
+1717852960: New connection from 192.168.1.10:63303 on port 8883.
+1717852961: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852961: New client connected from 192.168.1.10:63303 as ESP32_e2E5E4 (p2, c1, k120).
+1717852967: New connection from 192.168.1.10:55924 on port 8883.
+1717852968: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852968: New client connected from 192.168.1.10:55924 as ESP32_e2E5E4 (p2, c1, k120).
+1717852975: New connection from 192.168.1.10:63473 on port 8883.
+1717852975: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852975: New client connected from 192.168.1.10:63473 as ESP32_e2E5E4 (p2, c1, k120).
+1717852982: New connection from 192.168.1.10:65045 on port 8883.
+1717852982: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852982: New client connected from 192.168.1.10:65045 as ESP32_e2E5E4 (p2, c1, k120).
+1717852989: New connection from 192.168.1.10:55858 on port 8883.
+1717852989: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852989: New client connected from 192.168.1.10:55858 as ESP32_e2E5E4 (p2, c1, k120).
+1717852997: New connection from 192.168.1.10:61323 on port 8883.
+1717852997: Client ESP32_e2E5E4 already connected, closing old connection.
+1717852997: New client connected from 192.168.1.10:61323 as ESP32_e2E5E4 (p2, c1, k120).
+1717853004: New connection from 192.168.1.10:51552 on port 8883.
+1717853004: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853004: New client connected from 192.168.1.10:51552 as ESP32_e2E5E4 (p2, c1, k120).
+1717853010: New connection from 192.168.1.10:49607 on port 8883.
+1717853011: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853011: New client connected from 192.168.1.10:49607 as ESP32_e2E5E4 (p2, c1, k120).
+1717853018: New connection from 192.168.1.10:57688 on port 8883.
+1717853019: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853019: New client connected from 192.168.1.10:57688 as ESP32_e2E5E4 (p2, c1, k120).
+1717853025: New connection from 192.168.1.10:57256 on port 8883.
+1717853026: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853026: New client connected from 192.168.1.10:57256 as ESP32_e2E5E4 (p2, c1, k120).
+1717853032: New connection from 192.168.1.10:51653 on port 8883.
+1717853032: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853032: New client connected from 192.168.1.10:51653 as ESP32_e2E5E4 (p2, c1, k120).
+1717853039: New connection from 192.168.1.10:59163 on port 8883.
+1717853040: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853040: New client connected from 192.168.1.10:59163 as ESP32_e2E5E4 (p2, c1, k120).
+1717853047: New connection from 192.168.1.10:60803 on port 8883.
+1717853047: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853047: New client connected from 192.168.1.10:60803 as ESP32_e2E5E4 (p2, c1, k120).
+1717853054: New connection from 192.168.1.10:63319 on port 8883.
+1717853054: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853054: New client connected from 192.168.1.10:63319 as ESP32_e2E5E4 (p2, c1, k120).
+1717853061: New connection from 192.168.1.10:62748 on port 8883.
+1717853061: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853061: New client connected from 192.168.1.10:62748 as ESP32_e2E5E4 (p2, c1, k120).
+1717853088: New connection from 192.168.1.10:52946 on port 8883.
+1717853088: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853088: New client connected from 192.168.1.10:52946 as ESP32_e2E5E4 (p2, c1, k120).
+1717853090: Client ESP32_e2E5E4 disconnected.
+1717853318: New connection from 192.168.1.10:59792 on port 8883.
+1717853319: New client connected from 192.168.1.10:59792 as ESP32_e2E5E4 (p2, c1, k120).
+1717853320: Client ESP32_e2E5E4 disconnected.
+1717853391: New connection from 192.168.1.10:61941 on port 8883.
+1717853391: New client connected from 192.168.1.10:61941 as ESP32_e2E5E4 (p2, c1, k120).
+1717853398: New connection from 192.168.1.10:50211 on port 8883.
+1717853398: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853398: New client connected from 192.168.1.10:50211 as ESP32_e2E5E4 (p2, c1, k120).
+1717853405: New connection from 192.168.1.10:59166 on port 8883.
+1717853406: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853406: New client connected from 192.168.1.10:59166 as ESP32_e2E5E4 (p2, c1, k120).
+1717853412: New connection from 192.168.1.10:49787 on port 8883.
+1717853413: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853413: New client connected from 192.168.1.10:49787 as ESP32_e2E5E4 (p2, c1, k120).
+1717853420: New connection from 192.168.1.10:58247 on port 8883.
+1717853421: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853421: New client connected from 192.168.1.10:58247 as ESP32_e2E5E4 (p2, c1, k120).
+1717853427: New connection from 192.168.1.10:63329 on port 8883.
+1717853428: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853428: New client connected from 192.168.1.10:63329 as ESP32_e2E5E4 (p2, c1, k120).
+1717853435: New connection from 192.168.1.10:49551 on port 8883.
+1717853435: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853435: New client connected from 192.168.1.10:49551 as ESP32_e2E5E4 (p2, c1, k120).
+1717853442: New connection from 192.168.1.10:54762 on port 8883.
+1717853442: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853442: New client connected from 192.168.1.10:54762 as ESP32_e2E5E4 (p2, c1, k120).
+1717853449: New connection from 192.168.1.10:53129 on port 8883.
+1717853449: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853449: New client connected from 192.168.1.10:53129 as ESP32_e2E5E4 (p2, c1, k120).
+1717853456: New connection from 192.168.1.10:58135 on port 8883.
+1717853456: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853456: New client connected from 192.168.1.10:58135 as ESP32_e2E5E4 (p2, c1, k120).
+1717853486: New connection from 192.168.1.10:50776 on port 8883.
+1717853486: Client ESP32_e2E5E4 already connected, closing old connection.
+1717853486: New client connected from 192.168.1.10:50776 as ESP32_e2E5E4 (p2, c1, k120).
+1717853488: Client ESP32_e2E5E4 disconnected.
+1717853650: New connection from 192.168.1.10:61844 on port 8883.
+1717853650: New client connected from 192.168.1.10:61844 as ESP32_e2E5E4 (p2, c1, k120).
+1717853652: Client ESP32_e2E5E4 disconnected.

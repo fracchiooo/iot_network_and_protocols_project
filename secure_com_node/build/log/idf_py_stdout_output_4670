@@ -1,0 +1,72 @@
+[1/5] cd /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/esptool_py && /home/fracchio/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/fracchio/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/partition_table/partition-table.bin /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/secure_com_node.bin
+secure_com_node.bin binary size 0xd4a10 bytes. Smallest app partition is 0x100000 bytes. 0x2b5f0 bytes (17%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/bootloader/esp-idf/esptool_py && /home/fracchio/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/fracchio/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/bootloader/bootloader.bin
+Bootloader binary size 0x5250 bytes. 0x2db0 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/fracchio/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/fracchio/esp/esp-idf -D "SERIAL_TOOL=/home/fracchio/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/fracchio/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build -P /home/fracchio/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 secure_com_node.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyUSB0
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded Flash 8MB (GD)
+Crystal is 40MHz
+MAC: 48:27:e2:e2:e5:e4
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000e4fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21072 bytes to 13078...
+Writing at 0x00000000... (100 %)
+Wrote 21072 bytes (13078 compressed) at 0x00000000 in 0.6 seconds (effective 292.7 kbit/s)...
+Hash of data verified.
+Compressed 870928 bytes to 532678...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001ce17... (6 %)
+Writing at 0x000270a6... (9 %)
+Writing at 0x0002fbe5... (12 %)
+Writing at 0x0003ad84... (15 %)
+Writing at 0x00040d70... (18 %)
+Writing at 0x00047157... (21 %)
+Writing at 0x0004d2fc... (24 %)
+Writing at 0x000535a2... (27 %)
+Writing at 0x000595f7... (30 %)
+Writing at 0x0005f2cd... (33 %)
+Writing at 0x00065417... (36 %)
+Writing at 0x0006bb93... (39 %)
+Writing at 0x00071920... (42 %)
+Writing at 0x00076da6... (45 %)
+Writing at 0x0007bdbf... (48 %)
+Writing at 0x00080e72... (51 %)
+Writing at 0x00085f14... (54 %)
+Writing at 0x0008b1cb... (57 %)
+Writing at 0x000905f7... (60 %)
+Writing at 0x0009648e... (63 %)
+Writing at 0x0009be29... (66 %)
+Writing at 0x000a189d... (69 %)
+Writing at 0x000a7458... (72 %)
+Writing at 0x000ad173... (75 %)
+Writing at 0x000b296f... (78 %)
+Writing at 0x000b8715... (81 %)
+Writing at 0x000be1c7... (84 %)
+Writing at 0x000c3a40... (87 %)
+Writing at 0x000ceabd... (90 %)
+Writing at 0x000d5536... (93 %)
+Writing at 0x000db790... (96 %)
+Writing at 0x000e1818... (100 %)
+Wrote 870928 bytes (532678 compressed) at 0x00010000 in 12.9 seconds (effective 541.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 427.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -77,8 +77,29 @@ void request_establish_connection(char* MAC_identity_src, char* src_mess){
 
 }
 
+
+void print_certificates(my_connection_data_pointer* cp){
+
+  my_connection_data* curr= cp->certs;
+
+  while(curr!=NULL){
+    printf("%s\n", curr->certificate);
+
+
+    curr=curr->next;
+  }
+
+
+}
+
 void app_main(void)
 {
+
+      my_connection_data_pointer* result=(my_connection_data_pointer*) malloc(sizeof(my_connection_data_pointer));
+      result->size=0;
+      result->end=false;
+      result->certs=NULL;
+
 
 
 // TODO trovare come deployare il codice su piu esp, ma facendogli usare diversi certificates
@@ -87,26 +108,24 @@ void app_main(void)
   queue = xQueueCreate(5, sizeof(bool));
   xTaskCreatePinnedToCore(wifi_start_connection, "WiFi Task", 4096, queue, 0, NULL, 1);
 
-  // TODO questa parte va rifatta meglio, per ora blocco qua per non far andare in errore mwtt client    
-  while(1){
-  if(xQueueReceive(queue, &value, (TickType_t)5)){
-    if(value==true){
-      printf("mqtt could proceed, connection established and ip address received\n");
-      fflush(stdout);
-      break;
-    }
-  }
-
-  //initRandomGen(rng);
-
-  vTaskDelay(400/ portTICK_PERIOD_MS);
-  }
+  initRandomGen(rng);
 
 
   // connecting the esp to the broker
-  esp_mqtt_client_handle_t client= mqtt_app_start(CONFIG_BROKER_URI, queue);
+  esp_mqtt_client_handle_t client= mqtt_app_start(CONFIG_BROKER_URI, queue, result);
 
-  mqtt_publish_message(client, "prova di connessione", "broker", 1);
+  mqtt_get_node_certificates(client, result);
+
+  printf("I am printing the certificates\n");
+  fflush(stdout);
+  print_certificates(result);
+
+  fflush(stdout);
+
+
+  free_certificate_data(result);
+
+  //mqtt_publish_message(client, "prova di connessione", "abcd", 1);
 
   
   //TODO parte solo indicativa, cosi ancora non funziona
@@ -114,6 +133,7 @@ void app_main(void)
   //char** certs = mqtt_get_node_certificates(client);
   
   //mqtt_get_my_messages(client, get_unique_MAC_address());
+
 
   disconnect_mqtt_client(client);
   disconnect_wifi(); 

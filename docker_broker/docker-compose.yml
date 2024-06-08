@@ -6,6 +6,8 @@ services:
     container_name: mosquitto-cont
     ports:
       - "8883:8883"
+    networks:
+      - mosquitto-net
     volumes:
       - ./mosquitto/config:/mosquitto/config:rw
       - ./mosquitto/data:/mosquitto/data:rw
@@ -20,6 +22,8 @@ services:
     volumes:
       - ./mosquitto/certs:/certs
       - ./curl:/entry_script
+    networks:
+      - mosquitto-net
     entrypoint: >
       /bin/sh -c "
       apk update &&
@@ -34,5 +38,5 @@ volumes:
    certs:
    
 networks:
-   default:
-      name: mosquitto-net
+   mosquitto-net:
+     driver: bridge

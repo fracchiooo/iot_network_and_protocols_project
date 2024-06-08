@@ -1,0 +1,23 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x4005706c: memmove in ROM
+[0m
+[0;33m0x400556d5: strlen in ROM
+0x400556e5: strlen in ROM
+[0m
+[0;33m0x40057069: memmove in ROM
+0x4208d5cb: __ssprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/svfiprintf.c:336
+0x42085bad: _svfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1766 (discriminator 1)
+0x42081eaf: snprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/snprintf.c:85
+0x42009f09: mqtt_event_handler at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:168
+0x42095d35: handler_execute at /home/fracchio/esp/esp-idf/components/esp_event/esp_event.c:137
+0x420957aa: esp_event_loop_run at /home/fracchio/esp/esp-idf/components/esp_event/esp_event.c:593
+0x4200a456: esp_mqtt_dispatch_event at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1013
+0x4200b00c: deliver_publish at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1080
+0x4200b15f: mqtt_process_receive at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1347
+0x4200b6b0: esp_mqtt_task at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1626
+0x4037cb91: vPortTaskWrapper at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0m

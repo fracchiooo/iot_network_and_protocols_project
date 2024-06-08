@@ -1,4 +1,4 @@
-/*#include "com_node_iota.h"
+#include "com_node_iota.h"
 
 int addHashToBlockchain(unsigned char * msg, size_t msg_size) {
   // Calculate SHA256 Hash
@@ -10,4 +10,4 @@ int addHashToBlockchain(unsigned char * msg, size_t msg_size) {
 
   // cleanup
   free(hash_buffer);
-}*/
+}

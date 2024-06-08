@@ -1,0 +1,197 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x9 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2da0
+entry 0x403c9914
+[0;32mI (27) boot: ESP-IDF v5.2.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun  8 2024 13:32:40[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=23758h (145240) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=00033780 vaddr=3fc97f00 size=04638h ( 17976) load[0m
+[0;32mI (130) esp_image: segment 2: paddr=00037dc0 vaddr=40374000 size=08258h ( 33368) load[0m
+[0;32mI (139) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=98d3ch (625980) map[0m
+[0;32mI (252) esp_image: segment 4: paddr=000d8d64 vaddr=4037c258 size=0bc30h ( 48176) load[0m
+[0;32mI (271) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (272) boot: Disabling RNG early entropy source...[0m
+[0;32mI (283) cpu_start: Multicore app[0m
+[0;32mI (293) cpu_start: Pro cpu start user code[0m
+[0;32mI (293) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (293) cpu_start: Application information:[0m
+[0;32mI (296) cpu_start: Project name:     secure_com_node[0m
+[0;32mI (302) cpu_start: App version:      f410512-dirty[0m
+[0;32mI (307) cpu_start: Compile time:     Jun  8 2024 13:31:57[0m
+[0;32mI (313) cpu_start: ELF file SHA256:  f921a43b2...[0m
+[0;32mI (319) cpu_start: ESP-IDF:          v5.2.1-dirty[0m
+[0;32mI (324) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (329) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (334) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (339) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (346) heap_init: At 3FCA04D8 len 00049238 (292 KiB): RAM[0m
+[0;32mI (352) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (358) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (364) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (371) spi_flash: detected chip: gd[0m
+[0;32mI (375) spi_flash: flash io: dio[0m
+[0;33mW (378) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (392) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (399) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (406) main_task: Started on CPU0[0m
+[0;32mI (416) main_task: Calling app_main()[0m
+[0;32mI (2456) pp: pp rom version: e7ae62f[0m
+[0;32mI (2456) net80211: net80211 rom version: e7ae62f[0m
+I (2486) wifi:wifi driver task: 3fcab94c, prio:23, stack:6656, core=0
+I (2496) wifi:wifi firmware version: a9f5b59
+I (2496) wifi:wifi certification version: v7.0
+I (2496) wifi:config NVS flash: enabled
+I (2506) wifi:config nano formating: disabled
+I (2506) wifi:Init data frame dynamic rx buffer num: 32
+I (2506) wifi:Init static rx mgmt buffer num: 5
+I (2516) wifi:Init management short buffer num: 32
+I (2516) wifi:Init dynamic tx buffer num: 32
+I (2526) wifi:Init static tx FG buffer num: 2
+I (2526) wifi:Init static rx buffer size: 1600
+I (2536) wifi:Init static rx buffer num: 10
+I (2536) wifi:Init dynamic rx buffer num: 32
+[0;32mI (2576) wifi_init: rx ba win: 6[0m
+[0;32mI (2576) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2576) wifi_init: udp mbox: 6[0m
+[0;32mI (2576) wifi_init: tcp mbox: 6[0m
+[0;32mI (2576) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2586) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2596) wifi_init: tcp mss: 1440[0m
+[0;32mI (2596) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2596) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2636) phy_init: phy_version 640,cd64a1a,Jan 24 2024,17:28:12[0m
+I (2676) wifi:mode : sta (48:27:e2:e2:e5:e4)
+I (2676) wifi:enable tsf
+I (2686) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1
+I (2686) wifi:state: init -> auth (b0)
+I (2686) wifi:state: auth -> assoc (0)
+I (2696) wifi:state: assoc -> run (10)
+W (2696) wifi:[ADDBA]rx delba, code:1, delete tid:0
+I (2706) wifi:connected with TIM-69567495, aid = 15, channel 10, BW20, bssid = ce:b1:01:33:36:34
+I (2706) wifi:security: WPA2-PSK, phy: bgn, rssi: -82
+I (2716) wifi:pm start, type: 1
+
+I (2716) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (2726) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+[0;32mI (2736) WIFI: Connesso al punto di accesso[0m
+I (2756) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (4806) wifi:<ba-add>idx:0 (ifx:0, ce:b1:01:33:36:34), tid:0, ssn:0, winSize:64
+[0;32mI (6226) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+got ip, proceeding to unblock mqttmqtt could proceed, connection established and ip address received
+[0;32mI (6276) MQTT: Other event id:7[0m
+the current size of certs is 0
+buffer is: retrieve_certificates/0
+[0;32mI (7976) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7986) MQTT: sent subscribe successful, msg_id=60661[0m
+[0;32mI (7996) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=60661[0m
+[0;32mI (7996) MQTT: sent publish successful, msg_id=-1000[0m
+[0;32mI (8046) MQTT: MQTT_EVENT_DATA[0m
+-----BEGIN CERTIFICATE-----
+MIICtDCCAZwCFBDR1fFgPc/95b2b/7gccbeI+9lBMA0GCSqGSIb3DQEBCwUAMBEx
+DzANBgNVBAMMBmJyb2tlcjAeFw0yNDA2MDYxNTQ5NDdaFw0zNDA2MDQxNTQ5NDda
+MBwxGjAYBgNVBAMMETQ4OjI3OkUyOkUyOkU1OkU0MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAprQWBbpej5wmpwG2jc8yj3M5cBKz+IadcmFEfBVDtcr1
+InoeJW/wLFRNiRc5NVgTCmF5nUZ2vXKXXNHdJVbM6RtxlIlDfFIFoBAA6xEvhAAU
+ihmKcogXpEUcECHXD3HhXaJuTiP4K5rBh+/D+GKraaNWiQ1Ll7bnZ4ZdF9DgZz4F
+Sa9PCZkURv5uIhUWjyXdpgBhF3VgqtWajuNke6zK6ZmNsa1qLHn7akQ7GxoBe1Iy
+UMto1Mcz5VE3GNKMt92mZUSCaZLy+Bqn6HSgzHxBQgV7M6s8eAcUoUz02gCZ1hTK
+3QWvYRAnPc24I9Q0ibFKV+kV0S8XGEOIzAh+Vrm9SwIDAQABMA0GCSqGSIb3DQEB
+CwUAA4IBAQB1MJxbTC98NJ19E2NFGUNgQcYOP1z7b89O8tE5oo6vKs5vSwtXgrSg
+pW7UJ+deDvN2CCWuZ9P4HOj20kOnY54ghpChl/bfgV7Nbq6s2wKzRDX3Avbe6/Es
+nAnrDoG5RHPoAcWmRvqbiGDWe2wgSkxbqR28i7zOWWNFdD45FcRbcd2C7v9i/U7n
+Dsg/M5IrD9DjrNZ8op1R2UuXI3BrfgxcxCojt4N4+MUNRZhOPbL69+WLUkCav+8H
+TSRY6BaQ7hmMU35JBkP/V05FCcV3xhZdUNyAiwyhDeGNSX1u7MdQBrFkGYgUhcNO
+cNW1ksk0OZerEuM7H/PkE/z6hflJxgNP
+-----END CERTIFICATE-----
+the current size of certs is 1
+buffer is: retrieve_certificates/1
+[0;32mI (8386) MQTT: sent subscribe successful, msg_id=31614[0m
+[0;32mI (8416) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=31614[0m
+[0;32mI (8416) MQTT: sent publish successful, msg_id=-1000[0m
+[0;32mI (8566) MQTT: MQTT_EVENT_DATA[0m
+-----BEGIN CERTIFICATE-----
+MIICtDCCAZwCFBDR1fFgPc/95b2b/7gccbeI+9lCMA0GCSqGSIb3DQEBCwUAMBEx
+DzANBgNVBAMMBmJyb2tlcjAeFw0yNDA2MDYxNTUwNTNaFw0zNDA2MDQxNTUwNTNa
+MBwxGjAYBgNVBAMMETM0OkI3OkRBOjU0OjM1OjI4MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEArpj3sn2f1kQu3+vCebGlQAgx7ClpegCZ6Nd1NElOujhS
+zQPMqcLX5XhMtSuAzlJIYDiAWdLFgy70Xy9CLS+vcxnzSO2yl/qDpHpXDBLxrMZh
+uSa+/+YZca8ajSa4BJql+npHtBhQZTY/W1a5t/PTIXpuS2ygqkrUpl3GUS0t3LcC
+XrvTsLuUk7sBGSMHC/NK/1PbGuv4WYzlsRCHAxaw94UVKHVyedZk3Qer9oPIZ8Pq
+zEzU3af2AzhmZ52hEobYoHCJtonDLtqlGSuYRBwhQgykw7n28/nBviI9zRMFugLv
+nOwsZEqLgilofrQjof2//F5wAq6LRH+OSAiGGqyx5QIDAQABMA0GCSqGSIb3DQEB
+CwUAA4IBAQC2rmgFwO6rdfJ2iy3jX7EvAq6c8iqSzfeGSi0+0SgMlWg6jNJhdbXL
+Ah9St8qA7SDaaWFsX/Opm1W1aht3bm7zftiM71Ejdv0sMpjpDWE7AX3fMaKRMVFV
+kSaPgfsLtTOu0JVs2/PQqYC7XGsjYnORUnNOnIPgPpFFoMcn5upEtUV5tDbGAb1S
+oBzK56XW2p9XiI3OHwL4OIyJmq/1gnAhw+IWqWDNFL+LgVyzWEDF84UDc9QK5VoD
+C7QpNFO9ih/PIMHYHlJp9AbNofEg24nfTdmAPRuo6Es/T8PK93xOCNyUk3sqmoqy
+m7g3t95BsKc2CC9OHlYUvwVdcK6w+Xmw
+-----END CERTIFICATE-----
+the current size of certs is 2
+buffer is: retrieve_certificates/2
+[0;32mI (8786) MQTT: sent subscribe successful, msg_id=56198[0m
+[0;32mI (8796) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=56198[0m
+[0;32mI (8796) MQTT: sent publish successful, msg_id=-1000[0m
+[0;32mI (9036) MQTT: MQTT_EVENT_DATA[0m
+-----BEGIN CERTIFICATE-----
+MIICqTCCAZECFGe6IXXUFcjrXq6QOqr2NUpJ59yHMA0GCSqGSIb3DQEBCwUAMBEx
+DzANBgNVBAMMBmJyb2tlcjAeFw0yNDA2MDUxNDI3MzZaFw0zNDA2MDMxNDI3MzZa
+MBExDzANBgNVBAMMBmJyb2tlcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBANAUuFKJX67URS6Yv7Efet4pV4c3vXI0b9RtKM/MpckQfUQbgwG5d9hyOmJW
+M06GdDxmxQecc/eZNcLrcXT72Z6bUSw5v4J5pPA7con4W/vNQ+v+8cQGnxxYuAUE
+vUiJO9/oXfO2jHXDsScvo+EdASbWxrEzOVPs0aL1ghzBs7Onw3hroY7F/NEteNC2
+WedKaebpxdwaV91HHSZirPhUBi4RqTCqAlWxjYKVAccRaDp0bc3G4sW+ppx3llk2
+B79MOYFl6jOJrPILuCh6osLiXpH38YZittlbHR6BUZtGNSHpBiKmtDyovsv41ImP
+sG4q7T6ToN50cllmydV+8VTfmwMCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAqSRV
+j+YjN4yHgW8SQCdxGF6DYUHemFbFHxrcn5G3ik3zpR+iysISXlpVsyy8vKSerxBd
+9IrD9seADA76yjjAlZqrl8Yp0uWY7fdtqC1pQQOuZYdZ8N6fZSCj0ryhZElFK2jG
+v2lYc8K6noutw/tDEVhl8Eft6oYPlt4zL1j+SGBy+m0mnur0hVTCoaUZKondfMak
+vpoER4c4U/XOrXJYGCoT8ApceulC8bEjbaKRtGnKVcINrrVPYpY4G7+HrRyHAN2b
+WmurmBuPRqb/Jnx27bdN2pI8hXeSNcnsbMoar0Z1gBcijz2PUvYSLDkiW3UsDC5T
+3WOsmQkkvmKSFw8/Fg==
+-----END CERTIFICATE-----IFICATE-----
+the current size of certs is 3
+buffer is: retrieve_certificates/3
+[0;32mI (9186) MQTT: sent subscribe successful, msg_id=49285[0m
+[0;32mI (9226) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=49285[0m
+[0;32mI (9226) MQTT: sent publish successful, msg_id=-1000[0m
+[0;32mI (9306) MQTT: MQTT_EVENT_DATA[0m
+end_certificatesIFICATE-----
+MIICqTCCAZECFGe6IXXUFcjrXq6QOqr2NUpJ59yHMA0GCSqGSIb3DQEBCwUAMBEx
+DzANBgNVBAMMBmJyb2tlcjAeFw0yNDA2MDUxNDI3MzZaFw0zNDA2MDMxNDI3MzZa
+MBExDzANBgNVBAMMBmJyb2tlcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBANAUuFKJX67URS6Yv7Efet4pV4c3vXI0b9RtKM/MpckQfUQbgwG5d9hyOmJW
+M06GdDxmxQecc/eZNcLrcXT72Z6bUSw5v4J5pPA7con4W/vNQ+v+8cQGnxxYuAUE
+vUiJO9/oXfO2jHXDsScvo+EdASbWxrEzOVPs0aL1ghzBs7Onw3hroY7F/NEteNC2
+WedKaebpxdwaV91HHSZirPhUBi4RqTCqAlWxjYKVAccRaDp0bc3G4sW+ppx3llk2
+B79MOYFl6jOJrPILuCh6osLiXpH38YZittlbHR6BUZtGNSHpBiKmtDyovsv41ImP
+sG4q7T6ToN50cllmydV+8VTfmwMCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAqSRV
+j+YjN4yHgW8SQCdxGF6DYUHemFbFHxrcn5G3ik3zpR+iysISXlpVsyy8vKSerxBd
+9IrD9seADA76yjjAlZqrl8Yp0uWY7fdtqC1pQQOuZYdZ8N6fZSCj0ryhZElFK2jG
+v2lYc8K6noutw/tDEVhl8Eft6oYPlt4zL1j+SGBy+m0mnur0hVTCoaUZKondfMak
+vpoER4c4U/XOrXJYGCoT8ApceulC8bEjbaKRtGnKVcINrrVPYpY4G7+HrRyHAN2b
+WmurmBuPRqb/Jnx27bdN2pI8hXeSNcnsbMoar0Z1gBcijz2PUvYSLDkiW3UsDC5T
+3WOsmQkkvmKSFw8/Fg==
+-----END CERTIFICATE-----IFICATE-----
+the current size of certs is 4
+buffer is: retrieve_certificates/4
+[0;32mI (9586) MQTT: sent subscribe successful, msg_id=23662[0m
+[0;32mI (9616) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=23662[0m
+[0;32mI (9616) MQTT: sent publish successful, msg_id=-1000[0m
