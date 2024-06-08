@@ -18,7 +18,8 @@
 #define MAX_HTTP_RECV_BUFFER 512
 #define MAX_HTTP_OUTPUT_BUFFER 2048
 
-void iota_testnet_get_tips(char parents[][80]);
+void iota_testnet_get_tips(char * parents[], int * n_tips);
 void iota_testnet_send_hash(char parents[][80], char * nonce);
-void iota_testnet_get_hash(char * block_id, char * hash_buffer);
+void iota_testnet_get_hash(char * block_id, char ** hash_buffer);
 void init_iota_module();
+void cleanup_iota_module();
