@@ -4,6 +4,8 @@
 #include "mbedtls/entropy.h"
 #include "mbedtls/ctr_drbg.h"
 #include <stdint.h>
+#include "esp_log.h"
+
 
 #define UTILS_SHA256_OUTPUT_SIZE 32
 
@@ -11,3 +13,6 @@
 void calculateSHA256Hash(unsigned char * msg, size_t msg_size, unsigned char * output_buffer, size_t buf_size);
 
 void generateNonce();
+
+int initRandomGen(mbedtls_ctr_drbg_context * ctr_ctx);
+

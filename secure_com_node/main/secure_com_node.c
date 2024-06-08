@@ -3,7 +3,7 @@
 #include "sdkconfig.h"
 #include "wifi_wrapper.h"
 #include "mqtt_wrapper.h"
-//#include "com_node_utils.h"
+#include "com_node_utils.h"
 #include "freertos/queue.h"
 #include "esp_mac.h"
 
@@ -12,26 +12,16 @@
 
 
 QueueHandle_t queue;
-//  mbedtls_ctr_drbg_context * rng;
+mbedtls_ctr_drbg_context * rng;
+
+const uint8_t init_device[6]={0x48,0x27,0xE2,0xE2,0xE5,0xE4};
   
   
-char* get_unique_MAC_address(){
-  char res[6*8];
-  unsigned char mac_base[6] = {0};
-  esp_efuse_mac_get_default(mac_base);
-  esp_read_mac(mac_base, ESP_MAC_WIFI_STA);
-  //unsigned char mac_local_base[6] = {0};
-  //unsigned char mac_uni_base[6] = {0};
-  //esp_derive_local_mac(mac_local_base, mac_uni_base);
-  //printf("Local Address: ")
-  //print_mac(mac_local_base); 
-  //printf("\nUni Address: ");
-  //print_mac(mac_uni_base);
-  printf("MAC Address: ");
-  //print_mac(mac_base);
-  
-  sprintf(res, "%02X:%02X:%02X:%02X:%02X:%02X", mac_base[0],mac_base[1],mac_base[2],mac_base[3],mac_base[4],mac_base[5]);
-  return res;
+void get_unique_MAC_address(uint8_t mac[6]){
+
+  esp_efuse_mac_get_default(mac);
+  esp_read_mac(mac, ESP_MAC_WIFI_STA);
+  return;
   
 }
 
@@ -85,6 +75,9 @@ void print_certificates(my_connection_data_pointer* cp){
   while(curr!=NULL){
     printf("%s\n", curr->certificate);
 
+    printf("MAC: %02X:%02X:%02X:%02X:%02X:%02X\n",curr->MAC[0],curr->MAC[1],curr->MAC[2],curr->MAC[3],curr->MAC[4],curr->MAC[5]);
+    fflush(stdout);
+
 
     curr=curr->next;
   }
@@ -108,7 +101,7 @@ void app_main(void)
   queue = xQueueCreate(5, sizeof(bool));
   xTaskCreatePinnedToCore(wifi_start_connection, "WiFi Task", 4096, queue, 0, NULL, 1);
 
-  initRandomGen(rng);
+  //initRandomGen(rng);
 
 
   // connecting the esp to the broker
@@ -119,11 +112,30 @@ void app_main(void)
   printf("I am printing the certificates\n");
   fflush(stdout);
   print_certificates(result);
-
   fflush(stdout);
 
+  uint8_t my_mac[6];
+  get_unique_MAC_address(my_mac);
+  printf("MAC Address: ");
+  printf("MAC mio device: %02X:%02X:%02X:%02X:%02X:%02X\n",my_mac[0],my_mac[1],my_mac[2],my_mac[3],my_mac[4],my_mac[5]);
 
-  free_certificate_data(result);
+  if(memcmp(init_device,my_mac, sizeof(my_mac))==0){
+
+    printf("sono il device che vuole iniziare una connessione\n");
+    fflush(stdout);
+
+
+
+  }
+
+  else{
+    printf("sono il device che riceve una connessione e la accetta dopo handshaking\n");
+    fflush(stdout);
+
+
+  }
+
+
 
   //mqtt_publish_message(client, "prova di connessione", "abcd", 1);
 
@@ -134,7 +146,7 @@ void app_main(void)
   
   //mqtt_get_my_messages(client, get_unique_MAC_address());
 
-
+  free_certificate_data(result);
   disconnect_mqtt_client(client);
   disconnect_wifi(); 
   vQueueDelete(queue);

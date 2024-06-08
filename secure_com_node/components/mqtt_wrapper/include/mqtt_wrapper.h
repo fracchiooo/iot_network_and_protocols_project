@@ -2,6 +2,11 @@
 #define MQTT_WRAPPER_H
 #include "mqtt_client.h"
 #include <string.h>
+#include <mbedtls/oid.h>
+#include <mbedtls/asn1.h>
+#include <mbedtls/x509.h>
+#include <mbedtls/x509_crt.h>
+#include "esp_err.h"
 
 
 typedef struct my_connection_data{
@@ -33,6 +38,45 @@ extern const uint8_t client_cert_pem_end[] asm("_binary_client_crt_end");
 extern const uint8_t client_key_pem_start[] asm("_binary_client_key_start");
 extern const uint8_t client_key_pem_start[] asm("_binary_client_key_end");
 
+
+esp_err_t extract_cn_and_verify_mac(char* certificate, uint8_t mac[6]) {
+     mbedtls_x509_crt cert;
+    mbedtls_x509_crt_init(&cert);
+
+    // Parse the certificate
+    int ret = mbedtls_x509_crt_parse(&cert, (const unsigned char *)certificate, strlen(certificate) + 1);
+    if (ret != 0) {
+        mbedtls_x509_crt_free(&cert);
+        return ESP_FAIL; // Parsing failed
+    }
+
+    const mbedtls_x509_name *name = &cert.subject;
+    char cn_value[256] = {0}; // Buffer for CN value, assuming it won't exceed 255 characters
+
+    while (name != NULL) {
+        if ((name->oid.tag == MBEDTLS_ASN1_OID) &&
+            (name->oid.len == MBEDTLS_OID_SIZE(MBEDTLS_OID_AT_CN)) &&
+            (memcmp(name->oid.p, MBEDTLS_OID_AT_CN, MBEDTLS_OID_SIZE(MBEDTLS_OID_AT_CN)) == 0)) {
+            strncpy(cn_value, (const char *)name->val.p, name->val.len);
+            cn_value[name->val.len] = '\0';
+            break;
+        }
+        name = name->next;
+    }
+
+    // Verify if CN is in MAC format
+    if (strlen(cn_value) == 17) {
+        // Convert MAC address string to uint8_t array
+        sscanf(cn_value, "%hhx:%hhx:%hhx:%hhx:%hhx:%hhx",
+               &mac[0], &mac[1], &mac[2], &mac[3], &mac[4], &mac[5]);
+        mbedtls_x509_crt_free(&cert);
+        return ESP_OK; // MAC address successfully extracted and stored
+    } else {
+        mbedtls_x509_crt_free(&cert);
+        return ESP_FAIL; // CN is not in MAC format
+    }
+    
+}
 
 
 static void free_certificate_data(my_connection_data_pointer* cn){
@@ -153,8 +197,8 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         // TODO could be done better using regex
         if(strstr(topic, "retrieve_certificates/")!=NULL){
             my_connection_data_pointer* res=(my_connection_data_pointer*) handler_args;
-            printf("%s\n", data);
-            fflush(stdout);
+            //printf("%s\n", data);
+            //fflush(stdout);
             if(strcmp(data,"end_certificates")==0){
                 res->end=true;
 
@@ -165,6 +209,17 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
                 curr_cert->certificate= (char*) malloc(event->data_len+1);
                 strncpy(curr_cert->certificate, data, event->data_len);
                 curr_cert->certificate[event->data_len]='\0';
+
+                
+                uint8_t mac[6];
+                if((extract_cn_and_verify_mac(curr_cert->certificate, mac)) == ESP_OK){
+                    memcpy(curr_cert->MAC, mac, sizeof(curr_cert->MAC));
+                }
+                else{
+                    memset(curr_cert->MAC, 0, sizeof(curr_cert->MAC));
+                }
+
+
                 
                 curr_cert->next=NULL;
 
