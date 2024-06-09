@@ -8,11 +8,13 @@
 #include <mbedtls/x509_crt.h>
 #include "esp_err.h"
 
+#define max_mess_size 4096
+
 
 typedef struct my_connection_data{
 
     uint8_t MAC[6];
-    char* certificate;
+    mbedtls_x509_crt certificate;
     uint8_t sim_key[16];
     struct my_connection_data * next;
 
@@ -39,16 +41,23 @@ extern const uint8_t client_key_pem_start[] asm("_binary_client_key_start");
 extern const uint8_t client_key_pem_start[] asm("_binary_client_key_end");
 
 
-esp_err_t extract_cn_and_verify_mac(char* certificate, uint8_t mac[6]) {
-     mbedtls_x509_crt cert;
+mbedtls_x509_crt parse_certificate(char* certificate){
+    //printf("%s\n", certificate);
+    mbedtls_x509_crt cert;
     mbedtls_x509_crt_init(&cert);
-
     // Parse the certificate
     int ret = mbedtls_x509_crt_parse(&cert, (const unsigned char *)certificate, strlen(certificate) + 1);
     if (ret != 0) {
         mbedtls_x509_crt_free(&cert);
-        return ESP_FAIL; // Parsing failed
+        printf("failed to parse!\n");
+        abort(); // Parsing failed
     }
+    return cert;
+
+}
+
+
+esp_err_t extract_cn_and_verify_mac(mbedtls_x509_crt cert, uint8_t mac[6]) {
 
     const mbedtls_x509_name *name = &cert.subject;
     char cn_value[256] = {0}; // Buffer for CN value, assuming it won't exceed 255 characters
@@ -86,9 +95,7 @@ static void free_certificate_data(my_connection_data_pointer* cn){
   while(curr!=NULL){
     my_connection_data* temp=curr;
     curr=curr->next;
-    if(temp->certificate!=NULL){
-        free(temp->certificate);
-    }
+    //mbedtls_x509_crt_free(&(temp->certificate));
     free(temp);
 
   }
@@ -115,39 +122,78 @@ static int mqtt_publish_message(esp_mqtt_client_handle_t client, char* message, 
 
 
 
-static char** mqtt_get_node_certificates(esp_mqtt_client_handle_t client, my_connection_data_pointer* result){
+my_connection_data_pointer* mqtt_get_node_certificates(esp_mqtt_client_handle_t client, char* message){
 
-  int msg_id;
-  //int msg_id = esp_mqtt_client_subscribe(client, "retrieve_certificates/#", 1);
-  int i=0;
-  int s=0;
-  char curr_topic[]="retrieve_certificates/";
-  while(result->end==false){
-  printf("the current size of certs is %d\n", result->size);
-  char buffer[100];
-  snprintf(buffer, sizeof(buffer), "%s%d", curr_topic, s);
-  printf("buffer is: %s\n",buffer);
-  fflush(stdout);
+    my_connection_data_pointer* result=(my_connection_data_pointer*) malloc(sizeof(my_connection_data_pointer));
+    result->size=0;
+    result->end=false;
+    result->certs=NULL;
 
-  msg_id = esp_mqtt_client_subscribe(client, buffer, 1);
-  ESP_LOGI(TAG_mqtt, "sent subscribe successful, msg_id=%d", msg_id);
+    int msg_id;
+    char* mess=message;
+    int s=0;
+    char base_topic[]="retrieve_certificates/";
 
- 
-  while(result->size==s && result->end==false){
-    vTaskDelay(400/ portTICK_PERIOD_MS);
-  }
-  s++;
-  }  
-  
-  printf("il numero di certificati retrieved è %d\n", result->size);
-  fflush(stdout);
-
-  printf("I have subscribed to %d certificate topics (considering the stopping one)\n", s);
+    //subscribe to the anchor topic
+    char curr_topic[100];
+    snprintf(curr_topic, sizeof(curr_topic), "%s%d", base_topic, s);
+    msg_id = esp_mqtt_client_subscribe(client, curr_topic, 1);
 
 
-  msg_id = esp_mqtt_client_unsubscribe(client, "retrieve_certificates/#");
-  ESP_LOGI(TAG_mqtt, "sent unsubscribe successful, msg_id=%d", msg_id);
-  return NULL;
+
+    while(strcmp(message, "reply_cert_end")!=0){
+        if(strstr(message, "reply_cert")!=NULL){
+            mess=message;
+            my_connection_data* curr_cert = (my_connection_data*) malloc(sizeof(my_connection_data));
+            mess=mess+strlen("reply_cert");
+            size_t data_len= strlen(mess);
+            //create the certificate from mess and data_len
+            char char_certificate[data_len+1];
+            strncpy(char_certificate, mess, data_len);
+            char_certificate[data_len]='\0';
+            mbedtls_x509_crt cert=parse_certificate(char_certificate);
+            curr_cert->certificate=cert;
+            //extract the mac vlue from certificate || 0s
+            uint8_t mac[6];
+            if((extract_cn_and_verify_mac(curr_cert->certificate, mac)) == ESP_OK){
+                memcpy(curr_cert->MAC, mac, sizeof(curr_cert->MAC));
+            }
+            else{
+                memset(curr_cert->MAC, 0, sizeof(curr_cert->MAC));
+            }
+            // adds the certificate to the linked list of certificates structure
+            curr_cert->next=NULL;
+            if(result->certs==NULL){
+                result->certs=curr_cert;
+            }else{        
+                my_connection_data* c=result->certs;
+                while(c->next!=NULL){
+                    c=c->next;
+                }
+                c->next=curr_cert;
+            }
+            result->size=result->size+1;
+
+            //clear the message
+            memset(mess, 0, max_mess_size);
+            s++;
+            snprintf(curr_topic, sizeof(curr_topic), "%s%d", base_topic, s);
+            printf("the new subscribed topic is: %s\n", curr_topic);
+            fflush(stdout);
+            msg_id = esp_mqtt_client_subscribe(client, curr_topic, 1);
+
+        }
+
+        vTaskDelay(400/ portTICK_PERIOD_MS);
+
+    }
+
+    printf("il numero di certificati retrieved è %d\n", result->size);
+    fflush(stdout);
+
+    msg_id = esp_mqtt_client_unsubscribe(client, "retrieve_certificates/#");
+    ESP_LOGI(TAG_mqtt, "sent unsubscribe successful, msg_id=%d", msg_id);
+    return result;
 
 
 }
@@ -190,53 +236,26 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         break;
     case MQTT_EVENT_DATA:
         ESP_LOGI(TAG_mqtt, "MQTT_EVENT_DATA");
+        char* ret_mess= (char*) handler_args;
+        memset(ret_mess, 0, max_mess_size);
+
         char *topic = strndup(event->topic, event->topic_len);
         char *data = strndup(event->data, event->data_len);
 
-
+        char* tmp=ret_mess;
         // TODO could be done better using regex
         if(strstr(topic, "retrieve_certificates/")!=NULL){
-            my_connection_data_pointer* res=(my_connection_data_pointer*) handler_args;
-            //printf("%s\n", data);
-            //fflush(stdout);
             if(strcmp(data,"end_certificates")==0){
-                res->end=true;
-
+                strcpy(tmp,"reply_cert_end");
             }
             else{
+                strcpy(tmp,"reply_cert");
+                tmp=tmp+strlen("reply_cert");
+                strcpy(tmp,data);
+            } 
+            printf("the mess which is now written by callback: %s\n", tmp);
+            fflush(stdout);
                 
-                my_connection_data* curr_cert = (my_connection_data*) malloc(sizeof(my_connection_data));
-                curr_cert->certificate= (char*) malloc(event->data_len+1);
-                strncpy(curr_cert->certificate, data, event->data_len);
-                curr_cert->certificate[event->data_len]='\0';
-
-                
-                uint8_t mac[6];
-                if((extract_cn_and_verify_mac(curr_cert->certificate, mac)) == ESP_OK){
-                    memcpy(curr_cert->MAC, mac, sizeof(curr_cert->MAC));
-                }
-                else{
-                    memset(curr_cert->MAC, 0, sizeof(curr_cert->MAC));
-                }
-
-
-                
-                curr_cert->next=NULL;
-
-                if(res->certs==NULL){
-                    res->certs=curr_cert;
-
-                }else{        
-                    my_connection_data* c=res->certs;
-                    while(c->next!=NULL){
-                        c=c->next;
-                    }
-                    c->next=curr_cert;
-                }
-
-
-                res->size=res->size+1;
-            }
         }
         else{
             printf("TOPIC=%.*s\r\n", event->topic_len, event->topic);
@@ -267,7 +286,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 
 
 
-static esp_mqtt_client_handle_t mqtt_app_start(char* broker_url, QueueHandle_t queue, my_connection_data_pointer* result){
+static esp_mqtt_client_handle_t mqtt_app_start(char* broker_url, QueueHandle_t queue, char* mess){
 
     esp_mqtt_client_config_t mqtt_cfg = {
         .broker.address.uri = broker_url,
@@ -299,7 +318,7 @@ static esp_mqtt_client_handle_t mqtt_app_start(char* broker_url, QueueHandle_t q
     esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg);
 
     /* The last argument may be used to pass data to the event handler, in this example mqtt_event_handler */
-    esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, (void*) result);
+    esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, (void*) mess);
     esp_mqtt_client_start(client);
     
     return client;

@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "secure_com_node",
-    "project_version":    "1f1e7b7-dirty",
+    "project_version":    "814316f-dirty",
     "project_path":       "/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node",
     "idf_path":           "/home/fracchio/esp/esp-idf",
     "build_dir":          "/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build",

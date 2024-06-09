@@ -73,9 +73,28 @@ void print_certificates(my_connection_data_pointer* cp){
   my_connection_data* curr= cp->certs;
 
   while(curr!=NULL){
-    printf("%s\n", curr->certificate);
+    //printf("%s\n", curr->certificate);
+    printf("\n----------------------------------\n");
+    char buf[1024];
+    mbedtls_x509_crt_info(buf, sizeof(buf)-1, "", &curr->certificate);
+    printf("%s\n", buf);
 
     printf("MAC: %02X:%02X:%02X:%02X:%02X:%02X\n",curr->MAC[0],curr->MAC[1],curr->MAC[2],curr->MAC[3],curr->MAC[4],curr->MAC[5]);
+
+    mbedtls_x509_crt *certificate = &(curr->certificate);  // Assuming curr is a pointer to a structure containing the certificate
+    /*mbedtls_pk_context pk;
+    mbedtls_pk_init(&pk);
+
+    // Extract public key from the certificate
+    mbedtls_pk_parse_public_key(&pk, certificate->pk.p, certificate->pk.len);
+
+
+
+    unsigned char buffer[1024];
+    mbedtls_pk_write_pubkey_pem(&pk, buffer, sizeof(buffer));
+    printf("public key: %s\n", buffer);*/
+
+    printf("\n----------------------------------\n");
     fflush(stdout);
 
 
@@ -88,10 +107,12 @@ void print_certificates(my_connection_data_pointer* cp){
 void app_main(void)
 {
 
-      my_connection_data_pointer* result=(my_connection_data_pointer*) malloc(sizeof(my_connection_data_pointer));
-      result->size=0;
-      result->end=false;
-      result->certs=NULL;
+
+
+
+      //struct for callback
+      char* mess=(char*) malloc(max_mess_size);
+      memset(mess, 0, max_mess_size);
 
 
 
@@ -105,9 +126,9 @@ void app_main(void)
 
 
   // connecting the esp to the broker
-  esp_mqtt_client_handle_t client= mqtt_app_start(CONFIG_BROKER_URI, queue, result);
+  esp_mqtt_client_handle_t client= mqtt_app_start(CONFIG_BROKER_URI, queue, mess);
 
-  mqtt_get_node_certificates(client, result);
+  my_connection_data_pointer* result=mqtt_get_node_certificates(client, mess);
 
   printf("I am printing the certificates\n");
   fflush(stdout);
@@ -146,9 +167,10 @@ void app_main(void)
   
   //mqtt_get_my_messages(client, get_unique_MAC_address());
 
+  free(mess);
   free_certificate_data(result);
+
   disconnect_mqtt_client(client);
   disconnect_wifi(); 
-  vQueueDelete(queue);
   return;
 }
