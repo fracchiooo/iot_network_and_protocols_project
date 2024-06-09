@@ -32,7 +32,7 @@ void base64stringcat(char * strings[], size_t n_of_strings, char * buffer, size_
         mbedtls_base64_encode(b64, 80, &outlen, (const unsigned char *)strings[i], strlen(strings[i]));
         strcat((char*)b64, strings[i]);
         buffer_used += strlen(strings[i])+1;
-    };
+    }
 }
 
 void give_me_a_nonce(mbedtls_ctr_drbg_context * ctr_drbg, unsigned char * nonce_buffer, size_t nonce_size) {
