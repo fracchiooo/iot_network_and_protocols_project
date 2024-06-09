@@ -1,4 +1,4 @@
-#include "iota_wrapper.h"
+#include ".h"
 #include "esp_err.h"
 #include "esp_http_client.h"
 #include "json_parser.h"
@@ -129,7 +129,6 @@ void iota_testnet_get_tips(char * parents[], int * n_tips) {
 
         int ret = json_parse_start(&jctx, local_response_buffer, strlen(local_response_buffer));
         if (ret == OS_SUCCESS) {
-            ESP_LOGI(TAG, "test");
             int num_elem;
             char str_val[80];
 
@@ -143,7 +142,6 @@ void iota_testnet_get_tips(char * parents[], int * n_tips) {
                 *n_tips = num_elem;
                 json_obj_leave_array(&jctx);
             }
-            json_obj_leave_object(&jctx);
 
         } else {
             ESP_LOGI(TAG, "PARSING_FAILURE");
@@ -160,28 +158,45 @@ void iota_testnet_get_tips(char * parents[], int * n_tips) {
     esp_http_client_set_url(client, "https://"IOTA_TESTNET_HOSTNAME""BLOCK_API_ROUTE"");
     esp_http_client_set_method(client, HTTP_METHOD_POST);
 
+    memset(local_response_buffer, 0, MAX_HTTP_OUTPUT_BUFFER);
+
     esp_http_client_cleanup(client);
 
-    // ESP_LOG_BUFFER_HEX(TAG, local_response_buffer, strlen(local_response_buffer));
-    //free(local_response_buffer);
-    //ESP_LOGI(TAG, "FREED");
 }
 
-void iota_testnet_send_hash(char parents[][80], char * nonce) {
+void iota_testnet_send_hash(char * parents[], int n_parents, char * data, char * nonce, char * b_id) {
+
+    // Data tag in hex
+    // char data_tag[80] = "0x62636861696e7461676765646461746174657374"
+
+    char * post_data = (char *) calloc(1024, sizeof(char));
+    strcpy(post_data, "{\"protocolVersion\": 2, \"parents\": [\"");
+    for (int i = 0; i < n_parents-1; i++) {
+        strcat(post_data, parents[i]);
+        strcat(post_data, "\",");
+    }
+    strcat(post_data, parents[n_parents-1]);
+    strcat(post_data, "], \"payload\": { \"type\": 5, \
+           \"tag\": \"0x62636861696e7461676765646461746174657374\" \
+           \"data\": \"");
+    strcat(post_data, data);
+    strcat(post_data, "\" }, \"nonce\": \"");
+    strcat(post_data, nonce);
+    strcat(post_data, "\"}");
+
+    ESP_LOGI(TAG, "post data: %s", post_data);
 
     esp_http_client_config_t iota_testnet_config = {
-        .host = IOTA_TESTNET_ROUTE,
-        .path = BLOCK_API_ROUTE,
+        .url = "https://api.testnet.iotaledger.net/api/core/v2/blocks/",
         .transport_type = HTTP_TRANSPORT_OVER_SSL,
         .event_handler = _http_event_handler,
         .user_data = local_response_buffer,
         .cert_pem = iota_testnet_root_cert_pem_start,
     };
 
-
     esp_http_client_handle_t client = esp_http_client_init(&iota_testnet_config);
 
-    const char *post_data = "";
+    esp_http_client_set_url("https://api.testnet.iotaledger.net/api/core/v2/blocks/");
     esp_http_client_set_method(client, HTTP_METHOD_POST);
     esp_http_client_set_post_field(client, post_data, strlen(post_data));
     esp_err_t err = esp_http_client_perform(client);
@@ -190,18 +205,35 @@ void iota_testnet_send_hash(char parents[][80], char * nonce) {
         ESP_LOGI(TAG, "HTTP POST Status = %d, content_length = %"PRId64,
                 esp_http_client_get_status_code(client),
                 esp_http_client_get_content_length(client));
+
+        jparse_ctx_t jctx;
+
+        int ret = json_parse_start(&jctx, local_response_buffer, strlen(local_response_buffer));
+        if (ret == OS_SUCCESS) {
+            char str_val[256];
+
+            if (json_obj_get_string(&jctx, "blockId", str_val, sizeof(str_val)) == OS_SUCCESS) {
+                strcpy(b_id, str_val);
+            }
+        } else {
+            ESP_LOGE(TAG, "PARSING_FAILURE");
+        }
     } else {
         ESP_LOGE(TAG, "HTTP POST request failed: %s", esp_err_to_name(err));
     }
+
+    free(post_data);
+
+    memset(local_response_buffer, 0, MAX_HTTP_OUTPUT_BUFFER);
+
+    esp_http_client_cleanup(client);
 }
 
-void iota_testnet_get_hash(char * block_id, char ** hash_buffer) {
+void iota_testnet_get_hash(char * block_id, char * hash_buffer) {
 
     char * block_uri = (char *) calloc(241, sizeof(char));
     strcpy(block_uri, "https://"IOTA_TESTNET_HOSTNAME""BLOCK_API_ROUTE"/");
     strcat(block_uri, block_id);
-
-    ESP_LOGI(TAG, "composed uri: %s", block_uri);
 
     esp_http_client_config_t iota_testnet_config = {
         .url = "https://api.testnet.iotaledger.net/api/core/v2/blocks/",
@@ -215,35 +247,49 @@ void iota_testnet_get_hash(char * block_id, char ** hash_buffer) {
 
     esp_http_client_set_url(client, block_uri);
     esp_http_client_set_method(client, HTTP_METHOD_GET);
-    //esp_http_client_set_header(client, "Accept", "application/json");
 
     esp_err_t err = esp_http_client_perform(client);
 
     if (err == ESP_OK) {
+        esp_http_client_fetch_headers(client);
         ESP_LOGI(TAG, "HTTP GET Status = %d, content_length = %"PRId64,
                 esp_http_client_get_status_code(client),
                 esp_http_client_get_content_length(client));
+
+        jparse_ctx_t jctx;
+
+        int ret = json_parse_start(&jctx, local_response_buffer, strlen(local_response_buffer));
+        if (ret == OS_SUCCESS) {
+            char str_val[256];
+
+            if (json_obj_get_object(&jctx, "payload") == OS_SUCCESS) {
+                if (json_obj_get_string(&jctx, "data", str_val, sizeof(str_val)) == OS_SUCCESS) {
+                    strcpy(hash_buffer, str_val);
+                }
+
+                json_obj_leave_object(&jctx);
+            }
+        } else {
+            ESP_LOGI(TAG, "PARSING_FAILURE");
+        }
+
     } else {
         ESP_LOGE(TAG, "HTTP GET request failed: %s", esp_err_to_name(err));
     }
 
-    ESP_LOGI(TAG, "%s", local_response_buffer);
+    ESP_LOGI(TAG, "found hash for block id: %s", hash_buffer);
+
+    //ESP_LOGI(TAG, "%s", local_response_buffer);
     free(block_uri);
+
+    memset(local_response_buffer, 0, MAX_HTTP_OUTPUT_BUFFER);
+
     esp_http_client_cleanup(client);
 }
 
 void init_iota_module() {
-    //esp_err_t ret = nvs_flash_init();
-    //if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-      //ESP_ERROR_CHECK(nvs_flash_erase());
-      //ret = nvs_flash_init();
-    //}
-    //ESP_ERROR_CHECK(ret);
-
-    //ESP_ERROR_CHECK(esp_netif_init());
 
     local_response_buffer = (char *) calloc(MAX_HTTP_OUTPUT_BUFFER + 1, sizeof(char));
-    //ESP_ERROR_CHECK(esp_event_loop_create_default());
 }
 
 void cleanup_iota_module() {
