@@ -20,7 +20,7 @@ int initRandomGen(mbedtls_ctr_drbg_context * ctr_ctx) {
 
   mbedtls_ctr_drbg_init(ctr_ctx);
 
-  ret = mbedtls_ctr_drbg_seed(ctr_ctx, mbedtls_entropy_func, &entropy,
+  int ret = mbedtls_ctr_drbg_seed(ctr_ctx, mbedtls_entropy_func, &entrpy,
 		  (const unsigned char *) pers,
 		  strlen(pers));
 

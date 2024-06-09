@@ -3,7 +3,8 @@
 #include "sdkconfig.h"
 #include "wifi_wrapper.h"
 #include "mqtt_wrapper.h"
-#include "com_node_utils.h"
+#include "iota_wrapper.h"
+#include "com_node_utils.h"ù
 #include "freertos/queue.h"
 #include "esp_mac.h"
 
@@ -159,7 +160,6 @@ void app_main(void)
 
 
   //mqtt_publish_message(client, "prova di connessione", "abcd", 1);
-
   
   //TODO parte solo indicativa, cosi ancora non funziona
 
@@ -170,7 +170,7 @@ void app_main(void)
   free(mess);
   free_certificate_data(result);
 
-  disconnect_mqtt_client(client);
+  //disconnect_mqtt_client(client);
   disconnect_wifi(); 
   return;
 }

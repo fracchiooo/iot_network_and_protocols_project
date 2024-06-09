@@ -120,8 +120,6 @@ static int mqtt_publish_message(esp_mqtt_client_handle_t client, char* message, 
 }
 
 
-
-
 my_connection_data_pointer* mqtt_get_node_certificates(esp_mqtt_client_handle_t client, char* message){
 
     my_connection_data_pointer* result=(my_connection_data_pointer*) malloc(sizeof(my_connection_data_pointer));
@@ -194,8 +192,6 @@ my_connection_data_pointer* mqtt_get_node_certificates(esp_mqtt_client_handle_t 
     msg_id = esp_mqtt_client_unsubscribe(client, "retrieve_certificates/#");
     ESP_LOGI(TAG_mqtt, "sent unsubscribe successful, msg_id=%d", msg_id);
     return result;
-
-
 }
 
 static int mqtt_get_my_messages(esp_mqtt_client_handle_t client, char* topic){
