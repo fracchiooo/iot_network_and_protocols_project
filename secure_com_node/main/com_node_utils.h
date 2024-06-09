@@ -1,5 +1,4 @@
 #pragma once
-
 #include "esp_tls.h"
 #include "esp_log.h"
 #include "mbedtls/sha256.h"
@@ -7,6 +6,7 @@
 #include "mbedtls/ctr_drbg.h"
 #include <stdint.h>
 #include <string.h>
+#include "esp_log.h"
 
 #define UTILS_SHA256_OUTPUT_SIZE 32
 

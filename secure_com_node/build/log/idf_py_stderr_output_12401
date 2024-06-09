@@ -1,0 +1,87 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375a0e: panic_abort at /home/fracchio/esp/esp-idf/components/esp_system/panic.c:472
+0x4037c085: esp_system_abort at /home/fracchio/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40383c75: __assert_func at /home/fracchio/esp/esp-idf/components/newlib/assert.c:81
+0x403824f0: block_trim_free at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x40381e19: multi_heap_malloc_impl at /home/fracchio/esp/esp-idf/components/heap/multi_heap.c:210
+0x403760a9: heap_caps_malloc_base at /home/fracchio/esp/esp-idf/components/heap/heap_caps.c:179
+0x403760df: heap_caps_calloc_base at /home/fracchio/esp/esp-idf/components/heap/heap_caps.c:515
+0x40376414: heap_caps_calloc at /home/fracchio/esp/esp-idf/components/heap/heap_caps.c:524
+0x4202d9ad: esp_mbedtls_mem_calloc at /home/fracchio/esp/esp-idf/components/mbedtls/port/esp_mem.c:17
+0x4202b1c5: mbedtls_calloc at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/platform.c:49
+0x4202015f: esp_mbedtls_add_tx_buffer at /home/fracchio/esp/esp-idf/components/mbedtls/port/dynamic/esp_mbedtls_dynamic_impl.c:259
+0x4201d20f: __wrap_mbedtls_ssl_write at /home/fracchio/esp/esp-idf/components/mbedtls/port/dynamic/esp_ssl_tls.c:305 (discriminator 15)
+0x42017eb8: esp_mbedtls_write at /home/fracchio/esp/esp-idf/components/esp-tls/esp_tls_mbedtls.c:285
+0x4209041f: esp_tls_conn_write at /home/fracchio/esp/esp-idf/components/esp-tls/esp_tls.c:137
+0x42018b7b: ssl_write at /home/fracchio/esp/esp-idf/components/tcp_transport/transport_ssl.c:213
+0x4209058d: esp_transport_write at /home/fracchio/esp/esp-idf/components/tcp_transport/transport.c:148
+0x4200aa40: esp_mqtt_write at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:670
+0x4200c7e1: esp_mqtt_client_subscribe_multiple at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1892
+0x4200c835: esp_mqtt_client_subscribe_single at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1906
+0x4200a02d: mqtt_get_node_certificates at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:88
+0x4200a1da: app_main at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:117
+0x42097f5f: main_task at /home/fracchio/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037cb91: vPortTaskWrapper at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375a0e: panic_abort at /home/fracchio/esp/esp-idf/components/esp_system/panic.c:472
+0x4037c085: esp_system_abort at /home/fracchio/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40383c75: __assert_func at /home/fracchio/esp/esp-idf/components/newlib/assert.c:81
+0x403824f0: block_trim_free at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x40381e19: multi_heap_malloc_impl at /home/fracchio/esp/esp-idf/components/heap/multi_heap.c:210
+0x403760a9: heap_caps_malloc_base at /home/fracchio/esp/esp-idf/components/heap/heap_caps.c:179
+0x403760df: heap_caps_calloc_base at /home/fracchio/esp/esp-idf/components/heap/heap_caps.c:515
+0x40376414: heap_caps_calloc at /home/fracchio/esp/esp-idf/components/heap/heap_caps.c:524
+0x4202d9ad: esp_mbedtls_mem_calloc at /home/fracchio/esp/esp-idf/components/mbedtls/port/esp_mem.c:17
+0x4202b1c5: mbedtls_calloc at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/platform.c:49
+0x4202015f: esp_mbedtls_add_tx_buffer at /home/fracchio/esp/esp-idf/components/mbedtls/port/dynamic/esp_mbedtls_dynamic_impl.c:259
+0x4201d20f: __wrap_mbedtls_ssl_write at /home/fracchio/esp/esp-idf/components/mbedtls/port/dynamic/esp_ssl_tls.c:305 (discriminator 15)
+0x42017eb8: esp_mbedtls_write at /home/fracchio/esp/esp-idf/components/esp-tls/esp_tls_mbedtls.c:285
+0x4209041f: esp_tls_conn_write at /home/fracchio/esp/esp-idf/components/esp-tls/esp_tls.c:137
+0x42018b7b: ssl_write at /home/fracchio/esp/esp-idf/components/tcp_transport/transport_ssl.c:213
+0x4209058d: esp_transport_write at /home/fracchio/esp/esp-idf/components/tcp_transport/transport.c:148
+0x4200aa40: esp_mqtt_write at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:670
+0x4200c7e1: esp_mqtt_client_subscribe_multiple at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1892
+0x4200c835: esp_mqtt_client_subscribe_single at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1906
+0x4200a02d: mqtt_get_node_certificates at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:88
+0x4200a1da: app_main at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:117
+0x42097f5f: main_task at /home/fracchio/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037cb91: vPortTaskWrapper at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375a0e: panic_abort at /home/fracchio/esp/esp-idf/components/esp_system/panic.c:472
+0x4037c085: esp_system_abort at /home/fracchio/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40383c75: __assert_func at /home/fracchio/esp/esp-idf/components/newlib/assert.c:81
+0x403824f0: block_trim_free at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x40381e19: multi_heap_malloc_impl at /home/fracchio/esp/esp-idf/components/heap/multi_heap.c:210
+0x403760a9: heap_caps_malloc_base at /home/fracchio/esp/esp-idf/components/heap/heap_caps.c:179
+0x403760df: heap_caps_calloc_base at /home/fracchio/esp/esp-idf/components/heap/heap_caps.c:515
+0x40376414: heap_caps_calloc at /home/fracchio/esp/esp-idf/components/heap/heap_caps.c:524
+0x4202d9ad: esp_mbedtls_mem_calloc at /home/fracchio/esp/esp-idf/components/mbedtls/port/esp_mem.c:17
+0x4202b1c5: mbedtls_calloc at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/platform.c:49
+0x4202015f: esp_mbedtls_add_tx_buffer at /home/fracchio/esp/esp-idf/components/mbedtls/port/dynamic/esp_mbedtls_dynamic_impl.c:259
+0x4201d20f: __wrap_mbedtls_ssl_write at /home/fracchio/esp/esp-idf/components/mbedtls/port/dynamic/esp_ssl_tls.c:305 (discriminator 15)
+0x42017eb8: esp_mbedtls_write at /home/fracchio/esp/esp-idf/components/esp-tls/esp_tls_mbedtls.c:285
+0x4209041f: esp_tls_conn_write at /home/fracchio/esp/esp-idf/components/esp-tls/esp_tls.c:137
+0x42018b7b: ssl_write at /home/fracchio/esp/esp-idf/components/tcp_transport/transport_ssl.c:213
+0x4209058d: esp_transport_write at /home/fracchio/esp/esp-idf/components/tcp_transport/transport.c:148
+0x4200aa40: esp_mqtt_write at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:670
+0x4200c7e1: esp_mqtt_client_subscribe_multiple at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1892
+0x4200c835: esp_mqtt_client_subscribe_single at /home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1906
+0x4200a02d: mqtt_get_node_certificates at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:88
+0x4200a1da: app_main at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:117
+0x42097f5f: main_task at /home/fracchio/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037cb91: vPortTaskWrapper at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0m

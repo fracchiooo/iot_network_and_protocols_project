@@ -1,5 +1,5 @@
 #include "com_node_utils.h"
-
+/*
 void calculateSHA256Hash(unsigned char * msg, size_t msg_size, unsigned char * output_buffer, size_t buf_size) {
   if (buf_size == 32) {
     mbedtls_sha256(msg, msg_size, output_buffer, 0);
@@ -33,4 +33,4 @@ int initRandomGen(mbedtls_ctr_drbg_context * ctr_ctx) {
 
 void generateNonce(mbedtls_ctr_drbg_context * rng, unsigned char * nonce_buffer, size_t nonce_len) {
   mbedtls_ctr_drbg_random(rng, nonce_buffer, nonce_len);
-}
+}*/

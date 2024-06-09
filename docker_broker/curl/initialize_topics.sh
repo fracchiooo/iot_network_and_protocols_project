@@ -15,9 +15,4 @@ for cert in /certs/clients_certs/*.crt; do
 
 done
 
-while true; do
-
-	sleep 1
-
-done
-
+mosquitto_pub -h mosquitto-cont -p 8883 -t "retrieve_certificates/$i" -m "end_certificates" -r --cert /certs/server.crt --key /certs/server.key --cafile /certs/server.crt --insecure

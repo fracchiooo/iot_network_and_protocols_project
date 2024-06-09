@@ -1,0 +1,20 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375a0e: panic_abort at /home/fracchio/esp/esp-idf/components/esp_system/panic.c:472
+0x4037c085: esp_system_abort at /home/fracchio/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40383c75: __assert_func at /home/fracchio/esp/esp-idf/components/newlib/assert.c:81
+0x40381f38: block_next at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf_block_functions.h:94 (discriminator 1)
+ (inlined by) block_link_next at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf_block_functions.h:101 (discriminator 1)
+ (inlined by) block_mark_as_free at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf_block_functions.h:109 (discriminator 1)
+ (inlined by) tlsf_free at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf.c:1121 (discriminator 1)
+0x40381d9c: multi_heap_free_impl at /home/fracchio/esp/esp-idf/components/heap/multi_heap.c:234
+0x40376252: heap_caps_free at /home/fracchio/esp/esp-idf/components/heap/heap_caps.c:393
+0x40383ca5: free at /home/fracchio/esp/esp-idf/components/newlib/heap.c:39
+0x42009d5d: free_certificate_data at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:44
+0x4200a19b: app_main at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:122
+0x42097eef: main_task at /home/fracchio/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037cb91: vPortTaskWrapper at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0m
