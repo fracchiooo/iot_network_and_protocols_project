@@ -5,6 +5,8 @@
 #include "mbedtls/ctr_drbg.h"
 #include "esp_log.h"
 
+#define NONCE_SIZE 16
+
 void init_rng(mbedtls_ctr_drbg_context * ctr_drbg);
 
 void give_me_a_nonce(mbedtls_ctr_drbg_context * ctr_drbg, unsigned char * nonce_buffer, size_t nonce_size);
