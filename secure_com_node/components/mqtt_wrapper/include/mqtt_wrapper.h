@@ -8,6 +8,7 @@
 #include <mbedtls/x509_crt.h>
 #include "esp_err.h"
 #include "mbedtls/ctr_drbg.h"
+#include "mbedtls/pk.h"
 
 #define max_mess_size 4096
 
@@ -42,9 +43,9 @@ extern const uint8_t client_key_pem_start[] asm("_binary_client_key_start");
 extern const uint8_t client_key_pem_end[] asm("_binary_client_key_end");
 
 
-void print_sha256_hash(const unsigned char hash[32]){
-    for(int i=0; i<32; ++i){
-        printf("%02x", hash[i]);
+void print_exadecimal(const unsigned char* buff, size_t size){
+    for(int i=0; i<size; ++i){
+        printf("%02x", buff[i]);
     }
     printf("\n");
 }
@@ -76,14 +77,15 @@ unsigned char* digital_sign_pem(const unsigned char* message, mbedtls_pk_context
         mbedtls_md_info_from_type(MBEDTLS_MD_SHA256),
         message, strlen((char*) message), hash
     );
-    print_sha256_hash(hash);
+    print_exadecimal(hash, 32);
 
     if(ret!=0){
         printf("error in hashing the message for dig. signature\n");
         return NULL;
     }
 
-    unsigned char* sig[MBEDTLS_PK_SIGNATURE_MAX_SIZE];
+    unsigned char sig[MBEDTLS_PK_SIGNATURE_MAX_SIZE];
+    memset(sig, 0, MBEDTLS_PK_SIGNATURE_MAX_SIZE);
     size_t sig_len;
 
     ret= mbedtls_pk_sign(&pk, MBEDTLS_MD_SHA256, hash, 32, sig, MBEDTLS_PK_SIGNATURE_MAX_SIZE ,&sig_len, mbedtls_ctr_drbg_random, &ctr_drbg);
@@ -94,12 +96,14 @@ unsigned char* digital_sign_pem(const unsigned char* message, mbedtls_pk_context
 
     }
 
-    printf("generated siganture!\n");
+    printf("generated siganture:\n");
 
 
     //TODO
     //mbedtls_entropy_free(&entropy);
     //mbedtls_ctr_drbg_free(&ctr_drbg);
+
+    print_exadecimal(sig, MBEDTLS_PK_SIGNATURE_MAX_SIZE);
 
     *signature_len= sig_len;
     return sig;
@@ -108,7 +112,9 @@ unsigned char* digital_sign_pem(const unsigned char* message, mbedtls_pk_context
 
 bool verify_signature(unsigned char* message, mbedtls_pk_context* pub_k, unsigned char* signature, size_t sig_len){
     printf("let's verify it..., the signature length is%d\n", sig_len);
+    print_exadecimal(signature, MBEDTLS_PK_SIGNATURE_MAX_SIZE);
     fflush(stdout);
+
 
 
     unsigned char hash[32];
@@ -117,7 +123,7 @@ bool verify_signature(unsigned char* message, mbedtls_pk_context* pub_k, unsigne
         mbedtls_md_info_from_type(MBEDTLS_MD_SHA256),
         message, strlen((char*) message), hash
     );
-    print_sha256_hash(hash);
+    print_exadecimal(hash, 32);
     if(ret!=0){
         printf("error in hashing the message for dig. signature\n");
         return false;
@@ -255,7 +261,7 @@ mbedtls_pk_context* get_pub_key_from_cert(mbedtls_x509_crt cert){
     //unsigned char buffer[4096];
     unsigned char* buffer=(unsigned char*) malloc(sizeof(unsigned char)*16000);
     //memset(buffer, 0, 16000);
-    int ret= mbedtls_pk_write_pubkey_pem(pk, buffer, 16000);
+    int ret= mbedtls_pk_write_pubkey_pem(pk, buffer, 16000-1);
     if(ret!=0){
         printf("Failed to write public key in PEM format\n");
         abort();
@@ -272,7 +278,7 @@ mbedtls_pk_context* get_pub_key_from_cert(mbedtls_x509_crt cert){
         printf("Failed to write public key in PEM format\n");
         return NULL;
     }*/
-    buffer[16000 - 1] = '\0'; 
+    buffer[16000-1]='\0';
     printf("Public key: \n%s\n", buffer);
     free(buffer);
     return pk;

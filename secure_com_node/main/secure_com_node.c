@@ -168,10 +168,6 @@ void app_main(void)
     printf("the result of the signature is %d\n", result);
     fflush(stdout);
 
-
-
-
-
   }
 
   else{
