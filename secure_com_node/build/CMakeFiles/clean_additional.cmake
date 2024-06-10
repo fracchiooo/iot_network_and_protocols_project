@@ -6,8 +6,8 @@ if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "")
   "bootloader/bootloader.bin"
   "bootloader/bootloader.elf"
   "bootloader/bootloader.map"
-  "client.crt.S"
-  "client.key.S"
+  "client.pem.S"
+  "clientkey.pem.S"
   "config/sdkconfig.cmake"
   "config/sdkconfig.h"
   "esp-idf/esptool_py/flasher_args.json.in"
@@ -22,7 +22,7 @@ if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "")
   "project_elf_src_esp32s3.c"
   "secure_com_node.bin"
   "secure_com_node.map"
-  "server.crt.S"
+  "server.pem.S"
   "x509_crt_bundle.S"
   )
 endif()

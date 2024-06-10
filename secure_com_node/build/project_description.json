@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "secure_com_node",
-    "project_version":    "b0eaeb2-dirty",
+    "project_version":    "ddf2f1d-dirty",
     "project_path":       "/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node",
     "idf_path":           "/home/fracchio/esp/esp-idf",
     "build_dir":          "/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build",
@@ -140,7 +140,7 @@
             "dir": "/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper",
             "type": "LIBRARY",
             "lib": "__idf_crypto_wrapper",
-            "reqs": [ "esp-tls" ],
+            "reqs": [ "esp-tls", "mqtt_wrapper" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
@@ -2229,7 +2229,7 @@
             "prefix": "idf",
             "dir": "/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper",
             "lib": "__idf_crypto_wrapper",
-            "reqs": [ "esp-tls" ],
+            "reqs": [ "esp-tls", "mqtt_wrapper" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
@@ -2271,18 +2271,6 @@
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
         },
-        "espressif__jsmn": {
-            "alias": "idf::espressif__jsmn",
-            "target": "___idf_espressif__jsmn",
-            "prefix": "idf",
-            "dir": "/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/managed_components/espressif__jsmn",
-            "lib": "__idf_espressif__jsmn",
-            "reqs": [],
-            "priv_reqs": [],
-            "managed_reqs": [],
-            "managed_priv_reqs": [],
-            "include_dirs": [ "include" ]
-        },
         "espressif__json_parser": {
             "alias": "idf::espressif__json_parser",
             "target": "___idf_espressif__json_parser",
@@ -2293,6 +2281,18 @@
             "priv_reqs": [ "espressif__jsmn" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__jsmn" ],
+            "include_dirs": [ "include" ]
+        },
+        "espressif__jsmn": {
+            "alias": "idf::espressif__jsmn",
+            "target": "___idf_espressif__jsmn",
+            "prefix": "idf",
+            "dir": "/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/managed_components/espressif__jsmn",
+            "lib": "__idf_espressif__jsmn",
+            "reqs": [],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
         }
     },

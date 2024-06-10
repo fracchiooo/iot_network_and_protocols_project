@@ -65,7 +65,7 @@
 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/espressif__json_parser/libespressif__json_parser.a
 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/main/libmain.a
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/mqtt_wrapper/libmqtt_wrapper.a
 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/crypto_wrapper/libcrypto_wrapper.a
 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/iota_wrapper/libiota_wrapper.a
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/mqtt_wrapper/libmqtt_wrapper.a
 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/wifi_wrapper/libwifi_wrapper.a

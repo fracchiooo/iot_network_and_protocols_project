@@ -1,0 +1,119 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/bootloader/esp-idf/esptool_py && /home/fracchio/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/fracchio/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/bootloader/bootloader.bin
+Bootloader binary size 0x5250 bytes. 0x2db0 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/secure_com_node.c.obj
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c: In function 'establish_connection':
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:42:16: warning: unused variable 'nonce' [-Wunused-variable]
+   42 |  unsigned char nonce[NONCE_LEN] = {0};
+      |                ^~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c: In function 'request_establish_connection':
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:63:16: warning: unused variable 'nonce2' [-Wunused-variable]
+   63 |  unsigned char nonce2[NONCE_LEN] = {0};
+      |                ^~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c: In function 'print_certificates':
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:95:25: warning: unused variable 'pk' [-Wunused-variable]
+   95 |     mbedtls_pk_context* pk= get_pub_key_from_cert(curr->certificate);
+      |                         ^~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:90:23: warning: unused variable 'certificate' [-Wunused-variable]
+   90 |     mbedtls_x509_crt *certificate = &(curr->certificate);  // Assuming curr is a pointer to a structure containing the certificate
+      |                       ^~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c: In function 'app_main':
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:124:27: warning: passing argument 1 of 'xTaskCreatePinnedToCore' from incompatible pointer type [-Wincompatible-pointer-types]
+  124 |   xTaskCreatePinnedToCore(wifi_start_connection, "WiFi Task", 4096, queue, 0, NULL, 1);
+      |                           ^~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           void (*)(struct QueueDefinition *)
+In file included from /home/fracchio/esp/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:20,
+                 from /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
+                 from /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:2:
+/home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:382:67: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(struct QueueDefinition *)'
+  382 |         extern BaseType_t xTaskCreatePinnedToCore( TaskFunction_t pxTaskCode,
+      |                                                    ~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:5:
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h: At top level:
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:373:12: warning: 'mqtt_get_my_messages' defined but not used [-Wunused-function]
+  373 | static int mqtt_get_my_messages(esp_mqtt_client_handle_t client, char* topic){
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:247:12: warning: 'mqtt_publish_message' defined but not used [-Wunused-function]
+  247 | static int mqtt_publish_message(esp_mqtt_client_handle_t client, char* message, char* topic, int qos){
+      |            ^~~~~~~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable secure_com_node.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/secure_com_node.bin
+[9/10] cd /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/esptool_py && /home/fracchio/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/fracchio/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/partition_table/partition-table.bin /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/secure_com_node.bin
+secure_com_node.bin binary size 0xdffb0 bytes. Smallest app partition is 0x100000 bytes. 0x20050 bytes (13%) free.
+[9/10] cd /home/fracchio/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/fracchio/esp/esp-idf -D "SERIAL_TOOL=/home/fracchio/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/fracchio/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build -P /home/fracchio/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 secure_com_node.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded Flash 8MB (GD)
+Crystal is 40MHz
+MAC: 48:27:e2:e2:e5:e4
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000effff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21072 bytes to 13080...
+Writing at 0x00000000... (100 %)
+Wrote 21072 bytes (13080 compressed) at 0x00000000 in 0.6 seconds (effective 269.8 kbit/s)...
+Hash of data verified.
+Compressed 917424 bytes to 558183...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001c8e1... (5 %)
+Writing at 0x000288ec... (8 %)
+Writing at 0x0002f9b0... (11 %)
+Writing at 0x0003c87c... (14 %)
+Writing at 0x0004269c... (17 %)
+Writing at 0x00048afd... (20 %)
+Writing at 0x0004e9d2... (22 %)
+Writing at 0x00054d0c... (25 %)
+Writing at 0x0005ae37... (28 %)
+Writing at 0x00060a43... (31 %)
+Writing at 0x00066b4b... (34 %)
+Writing at 0x0006d4a5... (37 %)
+Writing at 0x000731cd... (40 %)
+Writing at 0x000787a9... (42 %)
+Writing at 0x0007d754... (45 %)
+Writing at 0x00082814... (48 %)
+Writing at 0x0008788c... (51 %)
+Writing at 0x0008cad1... (54 %)
+Writing at 0x00091f1d... (57 %)
+Writing at 0x00097c73... (60 %)
+Writing at 0x0009d6c6... (62 %)
+Writing at 0x000a2fb3... (65 %)
+Writing at 0x000a8bdb... (68 %)
+Writing at 0x000ae976... (71 %)
+Writing at 0x000b41e4... (74 %)
+Writing at 0x000b9e33... (77 %)
+Writing at 0x000bfa85... (80 %)
+Writing at 0x000c51f6... (82 %)
+Writing at 0x000ccd1c... (85 %)
+Writing at 0x000d5cb2... (88 %)
+Writing at 0x000dd23c... (91 %)
+Writing at 0x000e37d7... (94 %)
+Writing at 0x000ea0da... (97 %)
+Writing at 0x000ef9f4... (100 %)
+Wrote 917424 bytes (558183 compressed) at 0x00010000 in 14.8 seconds (effective 494.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 295.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
