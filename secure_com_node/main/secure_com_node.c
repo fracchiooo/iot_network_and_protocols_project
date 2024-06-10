@@ -70,40 +70,7 @@ void request_establish_connection(char* MAC_identity_src, char* src_mess){
 }
 
 
-void print_certificates(my_connection_data_pointer* cp){
 
-  my_connection_data* curr= cp->certs;
-  char buf[1200];
-  while(curr!=NULL){
-    memset(buf, 0, sizeof(buf));
-    printf("\n----------------------------------\n");
-    mbedtls_x509_crt_info(buf, sizeof(buf)-1, "", &curr->certificate);
-    buf[sizeof(buf)-1]='\0';
-
-    printf("%s\n", buf);
-    fflush(stdout);
-
-
-    printf("MAC: %02X:%02X:%02X:%02X:%02X:%02X\n",curr->MAC[0],curr->MAC[1],curr->MAC[2],curr->MAC[3],curr->MAC[4],curr->MAC[5]);
-
-
-    mbedtls_x509_crt *certificate = &(curr->certificate);  // Assuming curr is a pointer to a structure containing the certificate
-
-  fflush(stdout);
-
-    
-    mbedtls_pk_context* pk= get_pub_key_from_cert(curr->certificate);
-
-
-    printf("\n----------------------\n");
-    fflush(stdout);
-
-
-    curr=curr->next;
-  }
-
-
-}
 
 void app_main(void)
 {
@@ -133,7 +100,7 @@ void app_main(void)
 
   printf("I am printing the certificates\n");
   fflush(stdout);
-  //print_certificates(result);
+  print_certificates(result);
   fflush(stdout);
       printf("breakpoint 0\n");
     fflush(stdout);
@@ -161,12 +128,18 @@ void app_main(void)
 
     size_t sig_len;
 
-    unsigned char* signature= digital_sign_pem((const unsigned char*) messaggio_to_sign, *pub_key, priv_key, &sig_len);
+    unsigned char* signature=(unsigned char*) malloc(MBEDTLS_PK_SIGNATURE_MAX_SIZE*sizeof(unsigned char));
+    memset(signature, 0, MBEDTLS_PK_SIGNATURE_MAX_SIZE);
+    signature[MBEDTLS_PK_SIGNATURE_MAX_SIZE-1]='\0';
+
+    digital_sign_pem((const unsigned char*) messaggio_to_sign, *pub_key, priv_key, &sig_len, signature);
+
 
     bool result= verify_signature((unsigned char*) messaggio_to_sign,pub_key, signature, sig_len);
 
     printf("the result of the signature is %d\n", result);
     fflush(stdout);
+    free(signature);
 
   }
 

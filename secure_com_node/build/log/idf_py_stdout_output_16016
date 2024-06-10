@@ -1,0 +1,268 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2da0
+entry 0x403c9914
+[0;32mI (27) boot: ESP-IDF v5.2.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun  9 2024 23:45:04[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0b0020 size=26e60h (159328) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=00036e88 vaddr=3fc97f00 size=04638h ( 17976) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0003b4c8 vaddr=40374000 size=04b50h ( 19280) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=a2f60h (667488) map[0m
+[0;32mI (262) esp_image: segment 4: paddr=000e2f88 vaddr=40378b50 size=0f338h ( 62264) load[0m
+[0;32mI (284) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (285) boot: Disabling RNG early entropy source...[0m
+[0;32mI (296) cpu_start: Multicore app[0m
+[0;32mI (306) cpu_start: Pro cpu start user code[0m
+[0;32mI (306) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (306) cpu_start: Application information:[0m
+[0;32mI (309) cpu_start: Project name:     secure_com_node[0m
+[0;32mI (315) cpu_start: App version:      ddf2f1d-dirty[0m
+[0;32mI (320) cpu_start: Compile time:     Jun 10 2024 19:56:54[0m
+[0;32mI (326) cpu_start: ELF file SHA256:  746b74bb7...[0m
+[0;32mI (332) cpu_start: ESP-IDF:          v5.2.1-dirty[0m
+[0;32mI (337) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (342) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (347) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (352) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (359) heap_init: At 3FCA04D8 len 00049238 (292 KiB): RAM[0m
+[0;32mI (365) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (371) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (377) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (384) spi_flash: detected chip: gd[0m
+[0;32mI (388) spi_flash: flash io: dio[0m
+[0;33mW (391) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (405) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (412) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (419) main_task: Started on CPU0[0m
+[0;32mI (429) main_task: Calling app_main()[0m
+[0;32mI (2469) pp: pp rom version: e7ae62f[0m
+[0;32mI (2469) net80211: net80211 rom version: e7ae62f[0m
+I (2499) wifi:wifi driver task: 3fcade68, prio:23, stack:6656, core=0
+I (2509) wifi:wifi firmware version: a9f5b59
+I (2509) wifi:wifi certification version: v7.0
+I (2509) wifi:config NVS flash: enabled
+I (2519) wifi:config nano formating: disabled
+I (2519) wifi:Init data frame dynamic rx buffer num: 32
+I (2519) wifi:Init static rx mgmt buffer num: 5
+I (2529) wifi:Init management short buffer num: 32
+I (2529) wifi:Init dynamic tx buffer num: 32
+I (2539) wifi:Init static tx FG buffer num: 2
+I (2539) wifi:Init static rx buffer size: 1600
+I (2549) wifi:Init static rx buffer num: 10
+I (2549) wifi:Init dynamic rx buffer num: 32
+[0;32mI (2589) wifi_init: rx ba win: 6[0m
+[0;32mI (2589) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2589) wifi_init: udp mbox: 6[0m
+[0;32mI (2589) wifi_init: tcp mbox: 6[0m
+[0;32mI (2589) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2599) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2609) wifi_init: tcp mss: 1440[0m
+[0;32mI (2609) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2609) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2649) phy_init: phy_version 640,cd64a1a,Jan 24 2024,17:28:12[0m
+I (2689) wifi:mode : sta (48:27:e2:e2:e5:e4)
+I (2689) wifi:enable tsf
+I (2699) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (2699) wifi:state: init -> auth (b0)
+I (2699) wifi:state: auth -> assoc (0)
+I (2709) wifi:state: assoc -> run (10)
+I (2729) wifi:connected with TIM-69567495, aid = 14, channel 1, BW20, bssid = ce:b1:01:33:36:34
+I (2729) wifi:security: WPA2-PSK, phy: bgn, rssi: -90
+I (2729) wifi:pm start, type: 1
+
+I (2739) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (2739) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+[0;32mI (2749) WIFI: Connesso al punto di accesso[0m
+I (2769) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (4819) wifi:<ba-add>idx:0 (ifx:0, ce:b1:01:33:36:34), tid:0, ssn:0, winSize:64
+[0;32mI (5749) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+got ip, proceeding to unblock mqttmqtt could proceed, connection established and ip address received
+[0;32mI (5849) MQTT: Other event id:7[0m
+[0;32mI (6539) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6549) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=41080[0m
+[0;32mI (6549) MQTT: sent publish successful, msg_id=-1000[0m
+[0;32mI (6619) MQTT: MQTT_EVENT_DATA[0m
+the mess which is now written by callback: -----BEGIN CERTIFICATE-----
+MIICtDCCAZwCFEpPN5y2xeIN7mTzD/EryZY1qy5kMA0GCSqGSIb3DQEBCwUAMBEx
+DzANBgNVBAMMBmJyb2tlcjAeFw0yNDA2MTAyMTI5NTBaFw0zNDA2MDgyMTI5NTBa
+MBwxGjAYBgNVBAMMETM0OkI3OkRBOjU0OjM1OjI4MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAq1OO2X/zc/0YMAXSpNVFln9RHgbQ/WVcDo90eV5VUjt5
+xK7shOTX5jsn/Dnc9L58VLJ7B6ZHfwaLleY6LCCdVtM26wbXwmmOU3/ep3gRlpph
+Wh4OZX+pOlQO++8U433N8ZfYJgBZRGIUgKbLYwtZAg0OmTE7t4j0cxjgu3zjlvYw
+eBxZGCVqA1pEmVNH28P6NpKZbRvieWU740nlkXewa9K2LQGxsRrgI5O/OxZftfyR
+yIhMJm5yZZWYKR6INvcnX1gbNCpEcNDTtIknX3UIsSj0NaJALDEL/mZ9UmbxRcM4
+xTJPDOnA3MvkCrgc8fdBRiRqT59AmkW/XzRRV183wQIDAQABMA0GCSqGSIb3DQEB
+CwUAA4IBAQADAHHiqmmjlQS3O0oKBVaZmzP27834oct40zOfJneFPX3nwl5rFaJi
+b1/GbUM2716/oq35tyAScaXAahqxWCNtv0kQnZIJapb4X/+9ocNUYlx6TXkhn8RI
+lUEgOZrVbbXzQ7NwFuZHUj8sCbOMUQCbsLJxIrNo4nHGJisLPk+huHufq74LUuWI
+rGjsG+foUXpW6I1ALrifn50O7UeUUm/aSEaPIGH8l9VcPVT9YOdUssFvAPF6XUbX
+kt+E0mDEy5ZGfRN/FQeg4KI9a2xcfVDefY4Vce20Mee7aiVHTDEdNEkKyL6AVOt3
+of7jlbzSjdBj07wnYplRf/hUk9GIy45z
+-----END CERTIFICATE-----
+the new subscribed topic is: retrieve_certificates/1
+[0;32mI (6959) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=55183[0m
+[0;32mI (6959) MQTT: sent publish successful, msg_id=-1000[0m
+[0;32mI (7129) MQTT: MQTT_EVENT_DATA[0m
+the mess which is now written by callback: -----BEGIN CERTIFICATE-----
+MIICtDCCAZwCFEpPN5y2xeIN7mTzD/EryZY1qy5lMA0GCSqGSIb3DQEBCwUAMBEx
+DzANBgNVBAMMBmJyb2tlcjAeFw0yNDA2MTAyMTMyMzhaFw0zNDA2MDgyMTMyMzha
+MBwxGjAYBgNVBAMMETQ4OjI3OkUyOkUyOkU1OkU0MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAo6JpeQkG3V1TH3nyEGCopDRvlF5gu8beVPuOr/B5CMGI
+5JOdncfBEzG7WJKgHrudJNaEHM1aeBHZMOtGv9JiZHv5Z8rsDoqlH0YG4WwMNNPy
+ZYLMVDPvnBcPQLIi2lzyu70eG4Epuqxhyvc252scFQfI5wlW2/nhPdVY73MNPIsd
+jKMB21D7aZOU5xhLGUwG++zT2GO/thmzeskVUN+sm8zWrbaa9PUJfOGRbjhX9K4a
+/ImgjCrvZRyzR8EGFiAPFr8No//td6rFVAGHSpjw+9dGJL42jQ6XTop2uxAJecGI
+Ilwqksw1H8BTmuWoKtx5ikGkOyB3fS81SiP38u3ImQIDAQABMA0GCSqGSIb3DQEB
+CwUAA4IBAQBaCbzNtlMuVryNvFcf2qsRjSsa6v+LrJB1LJAGfTbVRb/mSAlzI1dE
+U/fXBJ4FlljOohCiWFIe8ob3rOFMWeSb7hcW3FEpaSfI4wzKAJsmQAV0Brx8jngH
+v+F0Y6EVb4MZmpGWRW7/j3KoQdv+WgsZTbQkKCP7D1NXQ9FwJWoyiJOUgakGdWgk
+fMDHRSDPANNYUdn6DToClzUnKgKBsW416uKImKz6LenhLYDMeG+MsK4rJnyBhjng
+62EEY13JMUrOc5Gkp37sH5jYGuBZU/fLPKqRz7OlcEkV7VJE+XvCU7wiLllCcXML
+IwBmyM8PJcsJdQVZEDS1jOaE6SKQ4ADP
+-----END CERTIFICATE-----
+the new subscribed topic is: retrieve_certificates/2
+[0;32mI (7359) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=43995[0m
+[0;32mI (7359) MQTT: sent publish successful, msg_id=-1000[0m
+[0;32mI (7609) MQTT: MQTT_EVENT_DATA[0m
+the mess which is now written by callback: -----BEGIN CERTIFICATE-----
+MIICqTCCAZECFHqE+gwSeaSNMlSqWKWVpsc1HZUTMA0GCSqGSIb3DQEBCwUAMBEx
+DzANBgNVBAMMBmJyb2tlcjAeFw0yNDA2MTAyMTI1MTdaFw0zNDA2MDgyMTI1MTda
+MBExDzANBgNVBAMMBmJyb2tlcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAKuqJDos4ddmEWCyDmV9a+Zfugc4BLclqFwSt7FVJYPCSsHkE5sdm1QBbW4P
+WVhjitgvDzmY2kS7XPBWGjAsRNq+qM9VenoJbCH1BAktwI8iDleLm0z+kbPMfV+f
+GoPb1boc//cR33PC96Jphb4Ufs6LhnaEo0PyErFATrS6JEe7ytpYFu2K2zVvNild
+9v280v6kzf8ul1iAbtCq1BbuedkazW5yniL80ZsplQA7U9DNt3wBBmcC+K5LBvOU
+IEA6zpbAWAbSZT+PKKRjE8bXYn6v7oM14coxZQCOYniysXU+QWVK3Ad4F60R/XnN
+r/XEXootnN1b9/pAViSG1mKqX08CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAcUra
+wJhlThEFJZBZx7uh8EYf//0+NdaXT5UZfIaLddFKtcD9u0bdO8Ftk7tnuA7EvV9W
+aeOkxZ3kLithgp7LIuW2XIUcWe523zf2QvBPEDWw569APLuDV/KLPpBzNmfKEu7D
+OobTH7L18HAll6LYq69kpAdUCc5woSqQqhdQs70lW2ygu/FyaoLqzGlt/BMKHpXH
+P326HCMIzMQ2psOWYZ21G+U8A8ES5NHZKxgBUXV1b1S2lyJTUBdzttNzxNkQaE/e
+NL7Urk/jlSpoRfC9VALDqW9IqNZTKfdCfVmgUFxd5rL5X05jlfyj0wm3tMVNyxX8
+5yyHnOYRv7fXjejnjg==
+-----END CERTIFICATE-----
+the new subscribed topic is: retrieve_certificates/3
+[0;32mI (8019) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=55068[0m
+[0;32mI (8019) MQTT: sent publish successful, msg_id=-1000[0m
+[0;32mI (8129) MQTT: MQTT_EVENT_DATA[0m
+the mess which is now written by callback: reply_cert_end
+il numero di certificati retrieved è 3
+[0;32mI (8139) MQTT: sent unsubscribe successful, msg_id=31366[0m
+I am printing the certificates
+breakpoint 0
+MAC Address: MAC mio device: 48:27:E2:E2:E5:E4
+sono il device che vuole iniziare una connessione
+the private key is (in char*):
+ -----BEGIN PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCrU47Zf/Nz/Rgw
+BdKk1UWWf1EeBtD9ZVwOj3R5XlVSO3nEruyE5NfmOyf8Odz0vnxUsnsHpkd/BouV
+5josIJ1W0zbrBtfCaY5Tf96neBGWmmFaHg5lf6k6VA777xTjfc3xl9gmAFlEYhSA
+pstjC1kCDQ6ZMTu3iPRzGOC7fOOW9jB4HFkYJWoDWkSZU0fbw/o2kpltG+J5ZTvj
+SeWRd7Br0rYtAbGxGuAjk787Fl+1/JHIiEwmbnJllZgpHog29ydfWBs0KkRw0NO0
+iSdfdQixKPQ1okAsMQv+Zn1SZvFFwzjFMk8M6cDcy+QKuBzx90FGJGpPn0CaRb9f
+NFFXXzfBAgMBAAECggEAMEYRABPfYxUzVYSuf6dgPjGNh6pgBKYktC2TogcEf3Em
+tFadaiyY8NRGRfl/2q45lhvcMqGVj6MmfYwrY/eknaxR0xNQhAT+B2UGNaXNPuQs
+/hlt8QdxhW/d8PrCpf7yoloomzyJ6ozAPifBMx0lbUCEloGa0/IQ/sVJvUpJTmWF
+cl+k9LVvq0C7BD1u+3JKrH995bxZNwdDrsZclOT8POzSGEp2SEzdrtgYpTwzamHw
+eSM5DjtYwGmAm6PeFf/oLgH/PEGKBuwZTfTZxVN6oHqm0tCo1h2agoxIVjEmFVV9
+JAAUhOqGZRFDbuWqp8CdLyC0+U6mYJysM5PyIzvniQKBgQDk4NoNRlqxm2MY+5af
+pREJwgorrdBEc3MFpvxfvNE4mkRBCVhYkNlv7xzFWGUZFhX/V4qJGf6As+7sd4s1
+TlOYJwvyd1x/8tSwzMtYIc6ueD9zcvX4CtzbFagcRjUpjnZaYTiMpcTvBfLrpyvP
+bDGJEhPqr/XzWlyYCOBvyeXtnwKBgQC/oNZWhF+pnkbFEdJ2BCnUVFcKxhzbZBJI
+HmKam7StFSrEJRFe2tcGEkfnQzJ5FDkMAfpgZ5/lxlv9HGZMsyeCDQqftYA9bebW
+0pV4l7dgkoHCc8UoSg2eO7DWEz6Auqk/TVyKzBT/UQsmBlDc9eGZfGCEJJaJAsJM
+IIIa9UgenwKBgG1u0PM960k2OYiNanREcUQQIdrGjWjdJmbSc6K23fZJVE8gT7xw
+7XXmhwQYgqYe+D+RNKze39/bqGYptkazf6alLMIureyDR4yNLsCh0Xd8CSKDGfYS
+A41A6pMyQmLvOcl26Jne/K0oVAC2emz/lyOpoBo7LcbAMruCqwToLOaTAoGAPxEv
+GaBNX6SgxAEelArAvYnYb8pN+wKPZb7iUuIF76T0w0Mz2VUKyYvAsGMUPHckY0hP
+X+Ua4eOLqNzs6jdYPFwQcAmrIAyImZEK8np0Nstg+19gtubQXpBkncANpQ5J33SV
+jXSnQHQqyCPx/xbJXdtqZHMqPAN1cNqOF1M8nh8CgYEAjScZUN+g7euQO/c1QUIJ
+/DqfUo/yRghFveVd44V1Gcs0dEukUaADBVSl3z/OTN3eYge2Mb93gkT+JWZKLkxy
+E3jwCMG1W6Mu3oP9XMSRwrYI6aFhKcRGhnJkCeFQTbk+tkJZRVsLImLjg4O9IHPa
+G4fgDGItBpNiVI10JIgvUj8=
+-----END PRIVATE KEY-----
+
+[0;32mI (8199) MQTT: MQTT_EVENT_UNSUBSCRIBED, msg_id=31366[0m
+the key is: 
+-----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEAq1OO2X/zc/0YMAXSpNVFln9RHgbQ/WVcDo90eV5VUjt5xK7s
+hOTX5jsn/Dnc9L58VLJ7B6ZHfwaLleY6LCCdVtM26wbXwmmOU3/ep3gRlpphWh4O
+ZX+pOlQO++8U433N8ZfYJgBZRGIUgKbLYwtZAg0OmTE7t4j0cxjgu3zjlvYweBxZ
+GCVqA1pEmVNH28P6NpKZbRvieWU740nlkXewa9K2LQGxsRrgI5O/OxZftfyRyIhM
+Jm5yZZWYKR6INvcnX1gbNCpEcNDTtIknX3UIsSj0NaJALDEL/mZ9UmbxRcM4xTJP
+DOnA3MvkCrgc8fdBRiRqT59AmkW/XzRRV183wQIDAQABAoIBADBGEQAT32MVM1WE
+rn+nYD4xjYeqYASmJLQtk6IHBH9xJrRWnWosmPDURkX5f9quOZYb3DKhlY+jJn2M
+K2P3pJ2sUdMTUIQE/gdlBjWlzT7kLP4ZbfEHcYVv3fD6wqX+8qJaKJs8ieqMwD4n
+wTMdJW1AhJaBmtPyEP7FSb1KSU5lhXJfpPS1b6tAuwQ9bvtySqx/feW8WTcHQ67G
+XJTk/Dzs0hhKdkhM3a7YGKU8M2ph8HkjOQ47WMBpgJuj3hX/6C4B/zxBigbsGU30
+2cVTeqB6ptLQqNYdmoKMSFYxJhVVfSQAFITqhmURQ27lqqfAnS8gtPlOpmCcrDOT
+8iM754kCgYEA5ODaDUZasZtjGPuWn6URCcIKK63QRHNzBab8X7zROJpEQQlYWJDZ
+b+8cxVhlGRYV/1eKiRn+gLPu7HeLNU5TmCcL8ndcf/LUsMzLWCHOrng/c3L1+Arc
+2xWoHEY1KY52WmE4jKXE7wXy66crz2wxiRIT6q/181pcmAjgb8nl7Z8CgYEAv6DW
+VoRfqZ5GxRHSdgQp1FRXCsYc22QSSB5impu0rRUqxCURXtrXBhJH50MyeRQ5DAH6
+YGef5cZb/RxmTLMngg0Kn7WAPW3m1tKVeJe3YJKBwnPFKEoNnjuw1hM+gLqpP01c
+iswU/1ELJgZQ3PXhmXxghCSWiQLCTCCCGvVIHp8CgYBtbtDzPetJNjmIjWp0RHFE
+ECHaxo1o3SZm0nOitt32SVRPIE+8cO115ocEGIKmHvg/kTSs3t/f26hmKbZGs3+m
+pSzCLq3sg0eMjS7AodF3fAkigxn2EgONQOqTMkJi7znJduiZ3vytKFQAtnps/5cj
+qaAaOy3GwDK7gqsE6CzmkwKBgD8RLxmgTV+koMQBHpQKwL2J2G/KTfsCj2W+4lLi
+Be+k9MNDM9lVCsmLwLBjFDx3JGNIT1/lGuHji6jc7Oo3WDxcEHAJqyAMiJmRCvJ6
+dDbLYPtfYLbm0F6QZJ3ADaUOSd90lY10p0B0Ksgj8f8WyV3bamRzKjwDdXDajhdT
+PJ4fAoGBAI0nGVDfoO3rkDv3NUFCCfw6n1KP8kYIRb3lXeOFdRnLNHRLpFGgAwVU
+pd8/zkzd3mIHtjG/d4JE/iVmSi5MchN48AjBtVujLt6D/VzEkcK2COmhYSnERoZy
+ZAnhUE25PrZCWUVbCyJi44ODvSBz2huH4AxiLQaTYlSNdCSIL1I/
+-----END RSA PRIVATE KEY-----
+
+cert. version     : 1
+serial number     : 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+issuer name       : 0.0.0.0=#0C06000000000000
+subject name      : 0.0.0.0=#0C110000000000000000000000000000000000
+issued  on        : 2024-06-10 21:32:38
+expires on        : 2034-06-08 21:32:38
+signed using      : ???
+RSA key size      : 0 bits
+
+breakpoint 11
+the key is: 
+-----BEGIN PUBLIC KEY-----
+MBowDQYJKoZIhvcNAQEBBQADCQAwBgIBAAIBAA==
+-----END PUBLIC KEY-----
+
+starting digital signature process
+6017d62b4d70f968eb0b8e415d5ea7948838859e30b72687ff26380ab1b59d68
+generated siganture:
+69c8c08ffaaf3c200520c31397899ff1d16a23bcefca23d2bc27422ab29fa4b3ba7699ce0f9b80a233cd99a44f4f68dea97733212c3950f10d7b8d18afafb3781e7aac427380e64fc817cefd45992c5c862ec6553a3c624a71cf2fa36f803fd5b68c471c21d28da0157ed7d013304e664723be4fb167e46a2e0d1ce746c6369eda157f2b7778318fcbb58b45eddffb47dffe80be1a567b2ab9752e32e6b0c1f8afca5b5ba5749e8c8cdc3858066c4170f12e549c18a6532710cf1cf0a3d806b014306ea94efed6b09fa46466ddf9297820584c52985685ffe975f35182de7d9cce41ae00c6ffd9653436ef661d55f930a62df5252657a8440e06a2d93e4663f7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+let's verify it..., the signature length is256
+6017d62b4d70f968eb0b8e415d5ea7948838859e30b72687ff26380ab1b59d68
+error in verify signature: RSA - Input data contains invalid padding and is rejected
+the result of the signature is 0
+[0;32mI (10129) MQTT: MQTT client disconnected and deallocated[0m
+I (10129) wifi:state: run -> init (0)
+I (10129) wifi:pm stop, total sleep time: 3486153 us / 7399659 us
+
+I (10139) wifi:<ba-del>idx:0, tid:0
+I (10139) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+[0;32mI (10149) WIFI: Disconnesso dal punto di accesso[0m
+I (10289) wifi:flush txq
+I (10289) wifi:stop sw txq
+I (10289) wifi:lmac stop hw txq
+I (10289) wifi:Deinit lldesc rx mblock:10
+[0;32mI (10299) WIFI: WIFI disconnected and deallocated[0m
+[0;32mI (10299) main_task: Returned from app_main()[0m

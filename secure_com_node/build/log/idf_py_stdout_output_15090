@@ -1,0 +1,166 @@
+[1/16] Performing build step for 'bootloader'
+[1/1] cd /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/bootloader/esp-idf/esptool_py && /home/fracchio/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/fracchio/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/bootloader/bootloader.bin
+Bootloader binary size 0x5250 bytes. 0x2db0 bytes (36%) free.
+[2/16] No install step for 'bootloader'
+[3/16] Building C object esp-idf/crypto_wrapper/CMakeFiles/__idf_crypto_wrapper.dir/crypto_wrapper.c.obj
+FAILED: esp-idf/crypto_wrapper/CMakeFiles/__idf_crypto_wrapper.dir/crypto_wrapper.c.obj 
+/home/fracchio/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.2.1-dirty\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/config -I/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper -I/home/fracchio/esp/esp-idf/components/newlib/platform_include -I/home/fracchio/esp/esp-idf/components/freertos/config/include -I/home/fracchio/esp/esp-idf/components/freertos/config/include/freertos -I/home/fracchio/esp/esp-idf/components/freertos/config/xtensa/include -I/home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/fracchio/esp/esp-idf/components/freertos/esp_additions/include -I/home/fracchio/esp/esp-idf/components/esp_hw_support/include -I/home/fracchio/esp/esp-idf/components/esp_hw_support/include/soc -I/home/fracchio/esp/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/home/fracchio/esp/esp-idf/components/esp_hw_support/port/esp32s3/. -I/home/fracchio/esp/esp-idf/components/heap/include -I/home/fracchio/esp/esp-idf/components/log/include -I/home/fracchio/esp/esp-idf/components/soc/include -I/home/fracchio/esp/esp-idf/components/soc/esp32s3 -I/home/fracchio/esp/esp-idf/components/soc/esp32s3/include -I/home/fracchio/esp/esp-idf/components/hal/platform_port/include -I/home/fracchio/esp/esp-idf/components/hal/esp32s3/include -I/home/fracchio/esp/esp-idf/components/hal/include -I/home/fracchio/esp/esp-idf/components/esp_rom/include -I/home/fracchio/esp/esp-idf/components/esp_rom/include/esp32s3 -I/home/fracchio/esp/esp-idf/components/esp_rom/esp32s3 -I/home/fracchio/esp/esp-idf/components/esp_common/include -I/home/fracchio/esp/esp-idf/components/esp_system/include -I/home/fracchio/esp/esp-idf/components/esp_system/port/soc -I/home/fracchio/esp/esp-idf/components/esp_system/port/include/private -I/home/fracchio/esp/esp-idf/components/xtensa/esp32s3/include -I/home/fracchio/esp/esp-idf/components/xtensa/include -I/home/fracchio/esp/esp-idf/components/xtensa/deprecated_include -I/home/fracchio/esp/esp-idf/components/lwip/include -I/home/fracchio/esp/esp-idf/components/lwip/include/apps -I/home/fracchio/esp/esp-idf/components/lwip/include/apps/sntp -I/home/fracchio/esp/esp-idf/components/lwip/lwip/src/include -I/home/fracchio/esp/esp-idf/components/lwip/port/include -I/home/fracchio/esp/esp-idf/components/lwip/port/freertos/include -I/home/fracchio/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/fracchio/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/fracchio/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/fracchio/esp/esp-idf/components/esp-tls -I/home/fracchio/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/home/fracchio/esp/esp-idf/components/mbedtls/port/include -I/home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/include -I/home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library -I/home/fracchio/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include -I/home/fracchio/esp/esp-idf/components/mqtt/esp-mqtt/include -I/home/fracchio/esp/esp-idf/components/esp_event/include -I/home/fracchio/esp/esp-idf/components/tcp_transport/include -I/home/fracchio/esp/esp-idf/components/esp_timer/include -mlongcalls  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node=. -fmacro-prefix-map=/home/fracchio/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/crypto_wrapper/CMakeFiles/__idf_crypto_wrapper.dir/crypto_wrapper.c.obj -MF esp-idf/crypto_wrapper/CMakeFiles/__idf_crypto_wrapper.dir/crypto_wrapper.c.obj.d -o esp-idf/crypto_wrapper/CMakeFiles/__idf_crypto_wrapper.dir/crypto_wrapper.c.obj -c /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c
+In file included from /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c:1:
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:11:5: error: unknown type name 'mbedtls_x509_crt'
+   11 |     mbedtls_x509_crt certificate;
+      |     ^~~~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:21:5: error: unknown type name 'bool'
+   21 |     bool end;
+      |     ^~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:32:56: error: unknown type name 'esp_mqtt_client_handle_t'
+   32 | my_connection_data_pointer* mqtt_get_node_certificates(esp_mqtt_client_handle_t client, char* message);
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:34:1: error: unknown type name 'mbedtls_pk_context'; did you mean 'mbedtls_aes_context'?
+   34 | mbedtls_pk_context* get_pub_key_from_cert(mbedtls_x509_crt cert);
+      | ^~~~~~~~~~~~~~~~~~
+      | mbedtls_aes_context
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:34:43: error: unknown type name 'mbedtls_x509_crt'
+   34 | mbedtls_pk_context* get_pub_key_from_cert(mbedtls_x509_crt cert);
+      |                                           ^~~~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:36:1: error: unknown type name 'mbedtls_pk_context'; did you mean 'mbedtls_aes_context'?
+   36 | mbedtls_pk_context get_local_private_key();
+      | ^~~~~~~~~~~~~~~~~~
+      | mbedtls_aes_context
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:40:1: error: unknown type name 'esp_err_t'
+   40 | esp_err_t extract_cn_and_verify_mac(mbedtls_x509_crt cert, uint8_t mac[6]);
+      | ^~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:40:37: error: unknown type name 'mbedtls_x509_crt'
+   40 | esp_err_t extract_cn_and_verify_mac(mbedtls_x509_crt cert, uint8_t mac[6]);
+      |                                     ^~~~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:42:1: error: unknown type name 'bool'
+   42 | bool verify_signature(unsigned char* message, mbedtls_pk_context* pub_k, unsigned char* signature, size_t sig_len);
+      | ^~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:7:1: note: 'bool' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+    6 | #include "esp_log.h"
+  +++ |+#include <stdbool.h>
+    7 | 
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:42:47: error: unknown type name 'mbedtls_pk_context'; did you mean 'mbedtls_aes_context'?
+   42 | bool verify_signature(unsigned char* message, mbedtls_pk_context* pub_k, unsigned char* signature, size_t sig_len);
+      |                                               ^~~~~~~~~~~~~~~~~~
+      |                                               mbedtls_aes_context
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:44:53: error: unknown type name 'mbedtls_pk_context'; did you mean 'mbedtls_aes_context'?
+   44 | void digital_sign_pem(const unsigned char* message, mbedtls_pk_context pub_k, mbedtls_pk_context pk, size_t* signature_len, unsigned char* sig);
+      |                                                     ^~~~~~~~~~~~~~~~~~
+      |                                                     mbedtls_aes_context
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:44:79: error: unknown type name 'mbedtls_pk_context'; did you mean 'mbedtls_aes_context'?
+   44 | void digital_sign_pem(const unsigned char* message, mbedtls_pk_context pub_k, mbedtls_pk_context pk, size_t* signature_len, unsigned char* sig);
+      |                                                                               ^~~~~~~~~~~~~~~~~~
+      |                                                                               mbedtls_aes_context
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:46:1: error: unknown type name 'mbedtls_x509_crt'
+   46 | mbedtls_x509_crt parse_certificate(char* certificate);
+      | ^~~~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:48:16: error: unknown type name 'mbedtls_pk_context'; did you mean 'mbedtls_aes_context'?
+   48 | void print_key(mbedtls_pk_context pk, int k);
+      |                ^~~~~~~~~~~~~~~~~~
+      |                mbedtls_aes_context
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:50:20: error: unknown type name 'mbedtls_rsa_context'; did you mean 'mbedtls_aes_context'?
+   50 | void print_rsa_key(mbedtls_rsa_context pk, int k);
+      |                    ^~~~~~~~~~~~~~~~~~~
+      |                    mbedtls_aes_context
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c: In function 'print_rsa_key':
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c:56:47: warning: passing argument 1 of 'mbedtls_pk_write_pubkey_pem' from incompatible pointer type [-Wincompatible-pointer-types]
+   56 |     if(k==1) ret= mbedtls_pk_write_pubkey_pem(&pk, buffer, 16000-1);
+      |                                               ^~~
+      |                                               |
+      |                                               mbedtls_rsa_context *
+In file included from /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c:5:
+/home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h:1001:59: note: expected 'const mbedtls_pk_context *' but argument is of type 'mbedtls_rsa_context *'
+ 1001 | int mbedtls_pk_write_pubkey_pem(const mbedtls_pk_context *ctx, unsigned char *buf, size_t size);
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c:57:40: warning: passing argument 1 of 'mbedtls_pk_write_key_pem' from incompatible pointer type [-Wincompatible-pointer-types]
+   57 |     else ret= mbedtls_pk_write_key_pem(&pk, buffer, 16000-1);
+      |                                        ^~~
+      |                                        |
+      |                                        mbedtls_rsa_context *
+/home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h:1013:56: note: expected 'const mbedtls_pk_context *' but argument is of type 'mbedtls_rsa_context *'
+ 1013 | int mbedtls_pk_write_key_pem(const mbedtls_pk_context *ctx, unsigned char *buf, size_t size);
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c: At top level:
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c:97:18: error: conflicting types for 'parse_certificate'; have 'mbedtls_x509_crt(char *)'
+   97 | mbedtls_x509_crt parse_certificate(char* certificate){
+      |                  ^~~~~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:46:18: note: previous declaration of 'parse_certificate' with type 'int(char *)'
+   46 | mbedtls_x509_crt parse_certificate(char* certificate);
+      |                  ^~~~~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c:234:20: error: conflicting types for 'get_local_private_key'; have 'mbedtls_pk_context()'
+  234 | mbedtls_pk_context get_local_private_key(){
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:36:20: note: previous declaration of 'get_local_private_key' with type 'int()'
+   36 | mbedtls_pk_context get_local_private_key();
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c: In function 'mqtt_get_node_certificates':
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c:317:36: error: incompatible types when assigning to type 'int' from type 'mbedtls_x509_crt'
+  317 |             curr_cert->certificate=cert;
+      |                                    ^~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c:320:52: error: incompatible type for argument 1 of 'extract_cn_and_verify_mac'
+  320 |             if((extract_cn_and_verify_mac(curr_cert->certificate, mac)) == ESP_OK){
+      |                                           ~~~~~~~~~^~~~~~~~~~~~~
+      |                                                    |
+      |                                                    int
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c:186:54: note: expected 'mbedtls_x509_crt' but argument is of type 'int'
+  186 | esp_err_t extract_cn_and_verify_mac(mbedtls_x509_crt cert, uint8_t mac[6]) {
+      |                                     ~~~~~~~~~~~~~~~~~^~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c: At top level:
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c:218:13: warning: 'free_certificate_data' defined but not used [-Wunused-function]
+  218 | static void free_certificate_data(my_connection_data_pointer* cn){
+      |             ^~~~~~~~~~~~~~~~~~~~~
+In file included from /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c:4:
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:187:13: warning: 'disconnect_mqtt_client' defined but not used [-Wunused-function]
+  187 | static void disconnect_mqtt_client(esp_mqtt_client_handle_t client){
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:148:33: warning: 'mqtt_app_start' defined but not used [-Wunused-function]
+  148 | static esp_mqtt_client_handle_t mqtt_app_start(char* broker_url, QueueHandle_t queue, char* mess){
+      |                                 ^~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:60:12: warning: 'mqtt_get_my_messages' defined but not used [-Wunused-function]
+   60 | static int mqtt_get_my_messages(esp_mqtt_client_handle_t client, char* topic){
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:48:12: warning: 'mqtt_publish_message' defined but not used [-Wunused-function]
+   48 | static int mqtt_publish_message(esp_mqtt_client_handle_t client, char* message, char* topic, int qos){
+      |            ^~~~~~~~~~~~~~~~~~~~
+[4/16] Completed 'bootloader'
+[5/16] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/secure_com_node.c.obj
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c: In function 'establish_connection':
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:42:16: warning: unused variable 'nonce' [-Wunused-variable]
+   42 |  unsigned char nonce[NONCE_LEN] = {0};
+      |                ^~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c: In function 'request_establish_connection':
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:63:16: warning: unused variable 'nonce2' [-Wunused-variable]
+   63 |  unsigned char nonce2[NONCE_LEN] = {0};
+      |                ^~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c: In function 'print_certificates':
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:95:25: warning: unused variable 'pk' [-Wunused-variable]
+   95 |     mbedtls_pk_context* pk= get_pub_key_from_cert(curr->certificate);
+      |                         ^~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:90:23: warning: unused variable 'certificate' [-Wunused-variable]
+   90 |     mbedtls_x509_crt *certificate = &(curr->certificate);  // Assuming curr is a pointer to a structure containing the certificate
+      |                       ^~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c: In function 'app_main':
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:124:27: warning: passing argument 1 of 'xTaskCreatePinnedToCore' from incompatible pointer type [-Wincompatible-pointer-types]
+  124 |   xTaskCreatePinnedToCore(wifi_start_connection, "WiFi Task", 4096, queue, 0, NULL, 1);
+      |                           ^~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           void (*)(struct QueueDefinition *)
+In file included from /home/fracchio/esp/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:20,
+                 from /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
+                 from /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:2:
+/home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:382:67: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(struct QueueDefinition *)'
+  382 |         extern BaseType_t xTaskCreatePinnedToCore( TaskFunction_t pxTaskCode,
+      |                                                    ~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:7:
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h: At top level:
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.h:38:13: warning: 'free_certificate_data' used but never defined
+   38 | static void free_certificate_data(my_connection_data_pointer* cn);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+In file included from /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:5:
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:60:12: warning: 'mqtt_get_my_messages' defined but not used [-Wunused-function]
+   60 | static int mqtt_get_my_messages(esp_mqtt_client_handle_t client, char* topic){
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:48:12: warning: 'mqtt_publish_message' defined but not used [-Wunused-function]
+   48 | static int mqtt_publish_message(esp_mqtt_client_handle_t client, char* message, char* topic, int qos){
+      |            ^~~~~~~~~~~~~~~~~~~~
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,22 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375a0e: panic_abort at /home/fracchio/esp/esp-idf/components/esp_system/panic.c:472
+0x4037c085: esp_system_abort at /home/fracchio/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40383c75: __assert_func at /home/fracchio/esp/esp-idf/components/newlib/assert.c:81
+0x40381f16: tlsf_free at /home/fracchio/esp/esp-idf/components/heap/tlsf/tlsf.c:1120 (discriminator 1)
+0x40381d9c: multi_heap_free_impl at /home/fracchio/esp/esp-idf/components/heap/multi_heap.c:234
+0x40376252: heap_caps_free at /home/fracchio/esp/esp-idf/components/heap/heap_caps.c:393
+0x420301f9: esp_mbedtls_mem_free at /home/fracchio/esp/esp-idf/components/mbedtls/port/esp_mem.c:38
+0x4202d8ea: mbedtls_free at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/platform.c:54
+0x4202c088: rsa_free_wrap at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/pk_wrap.c:588
+0x4202bcbb: mbedtls_pk_free at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/pk.c:65
+0x4203567f: mbedtls_x509_crt_free at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crt.c:3232
+0x4200aca3: extract_cn_and_verify_mac at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c:204
+0x4200af03: mqtt_get_node_certificates at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/crypto_wrapper/crypto_wrapper.c:317
+0x4200a851: app_main at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:99
+0x420a217f: main_task at /home/fracchio/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037cb91: vPortTaskWrapper at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0m
