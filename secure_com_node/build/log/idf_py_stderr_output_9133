@@ -1,0 +1,21 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x42021e23: mbedtls_mpi_copy at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/bignum.c:332
+[0m
+[0;33m0x400570e8: memset in ROM
+0x400570f3: memset in ROM
+[0m
+[0;33m0x42021e20: mbedtls_mpi_copy at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/bignum.c:332
+0x4202c57d: mbedtls_rsa_export at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/rsa.c:536
+0x4202b91a: pk_write_rsa_pubkey at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/pkwrite.c:122
+0x4202ba35: mbedtls_pk_write_pubkey at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/pkwrite.c:342
+0x4202ba72: mbedtls_pk_write_pubkey_der at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/pkwrite.c:378
+0x4202bb59: mbedtls_pk_write_pubkey_pem at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/pkwrite.c:750
+0x4200a432: get_pub_key_from_cert at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:248
+0x4200a782: app_main at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:160
+0x4209ef43: main_task at /home/fracchio/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037cb91: vPortTaskWrapper at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0m

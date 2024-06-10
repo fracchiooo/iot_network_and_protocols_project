@@ -1,0 +1,21 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375a0e: panic_abort at /home/fracchio/esp/esp-idf/components/esp_system/panic.c:472
+0x4037c085: esp_system_abort at /home/fracchio/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4037cf82: vApplicationStackOverflowHook at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4037e3b3: vTaskSwitchContext at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4037d048: _frxt_dispatch at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4037d03e: _frxt_int_exit at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375a0e: panic_abort at /home/fracchio/esp/esp-idf/components/esp_system/panic.c:472
+0x4037c085: esp_system_abort at /home/fracchio/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4037cf82: vApplicationStackOverflowHook at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4037e3b3: vTaskSwitchContext at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4037d048: _frxt_dispatch at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4037d03e: _frxt_int_exit at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0m

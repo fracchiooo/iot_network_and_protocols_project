@@ -1,121 +1,229 @@
-[1/10] Performing build step for 'bootloader'
-[1/1] cd /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/bootloader/esp-idf/esptool_py && /home/fracchio/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/fracchio/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/bootloader/bootloader.bin
-Bootloader binary size 0x5250 bytes. 0x2db0 bytes (36%) free.
-[2/10] No install step for 'bootloader'
-[3/10] Completed 'bootloader'
-[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/secure_com_node.c.obj
-In file included from /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:5:
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:34:1: warning: 'asm' declaration ignored due to conflict with previous rename [-Wpragmas]
-   34 | extern const uint8_t client_key_pem_start[] asm("_binary_client_key_end");
-      | ^~~~~~
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h: In function 'mqtt_get_node_certificates':
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:75:7: warning: unused variable 'i' [-Wunused-variable]
-   75 |   int i=0;
-      |       ^
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c: In function 'get_unique_MAC_address':
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:34:10: warning: function returns address of local variable [-Wreturn-local-addr]
-   34 |   return res;
-      |          ^~~
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c: In function 'establish_connection':
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:50:16: warning: unused variable 'nonce' [-Wunused-variable]
-   50 |  unsigned char nonce[NONCE_LEN] = {0};
-      |                ^~~~~
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c: In function 'request_establish_connection':
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:71:16: warning: unused variable 'nonce2' [-Wunused-variable]
-   71 |  unsigned char nonce2[NONCE_LEN] = {0};
-      |                ^~~~~~
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c: In function 'app_main':
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:109:27: warning: passing argument 1 of 'xTaskCreatePinnedToCore' from incompatible pointer type [-Wincompatible-pointer-types]
-  109 |   xTaskCreatePinnedToCore(wifi_start_connection, "WiFi Task", 4096, queue, 0, NULL, 1);
-      |                           ^~~~~~~~~~~~~~~~~~~~~
-      |                           |
-      |                           void (*)(struct QueueDefinition *)
-In file included from /home/fracchio/esp/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:20,
-                 from /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
-                 from /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:2:
-/home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:382:67: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(struct QueueDefinition *)'
-  382 |         extern BaseType_t xTaskCreatePinnedToCore( TaskFunction_t pxTaskCode,
-      |                                                    ~~~~~~~~~~~~~~~^~~~~~~~~~
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h: At top level:
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:108:12: warning: 'mqtt_get_my_messages' defined but not used [-Wunused-function]
-  108 | static int mqtt_get_my_messages(esp_mqtt_client_handle_t client, char* topic){
-      |            ^~~~~~~~~~~~~~~~~~~~
-/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:61:12: warning: 'mqtt_publish_message' defined but not used [-Wunused-function]
-   61 | static int mqtt_publish_message(esp_mqtt_client_handle_t client, char* message, char* topic, int qos){
-      |            ^~~~~~~~~~~~~~~~~~~~
-[5/10] Linking C static library esp-idf/main/libmain.a
-[6/10] Generating ld/sections.ld
-[7/10] Linking CXX executable secure_com_node.elf
-[8/10] Generating binary image from built executable
-esptool.py v4.7.0
-Creating esp32s3 image...
-Merged 2 ELF sections
-Successfully created esp32s3 image.
-Generated /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/secure_com_node.bin
-[9/10] cd /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/esptool_py && /home/fracchio/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/fracchio/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/partition_table/partition-table.bin /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/secure_com_node.bin
-secure_com_node.bin binary size 0xd4a70 bytes. Smallest app partition is 0x100000 bytes. 0x2b590 bytes (17%) free.
-[9/10] cd /home/fracchio/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/fracchio/esp/esp-idf -D "SERIAL_TOOL=/home/fracchio/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/fracchio/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build -P /home/fracchio/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
-esptool.py --chip esp32s3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 secure_com_node.bin 0x8000 partition_table/partition-table.bin
-esptool.py v4.7.0
-Serial port /dev/ttyUSB0
-Connecting....
-Chip is ESP32-S3 (QFN56) (revision v0.2)
-Features: WiFi, BLE, Embedded Flash 8MB (GD)
-Crystal is 40MHz
-MAC: 48:27:e2:e2:e5:e4
-Uploading stub...
-Running stub...
-Stub running...
-Changing baud rate to 460800
-Changed.
-Configuring flash size...
-Flash will be erased from 0x00000000 to 0x00005fff...
-Flash will be erased from 0x00010000 to 0x000e4fff...
-Flash will be erased from 0x00008000 to 0x00008fff...
-Compressed 21072 bytes to 13078...
-Writing at 0x00000000... (100 %)
-Wrote 21072 bytes (13078 compressed) at 0x00000000 in 0.6 seconds (effective 261.3 kbit/s)...
-Hash of data verified.
-Compressed 871024 bytes to 532740...
-Writing at 0x00010000... (3 %)
-Writing at 0x0001ce28... (6 %)
-Writing at 0x000270b0... (9 %)
-Writing at 0x0002fbe1... (12 %)
-Writing at 0x0003ad8f... (15 %)
-Writing at 0x00040d81... (18 %)
-Writing at 0x0004716e... (21 %)
-Writing at 0x0004d302... (24 %)
-Writing at 0x000535e9... (27 %)
-Writing at 0x00059628... (30 %)
-Writing at 0x0005f308... (33 %)
-Writing at 0x00065452... (36 %)
-Writing at 0x0006bbca... (39 %)
-Writing at 0x0007195e... (42 %)
-Writing at 0x00076de4... (45 %)
-Writing at 0x0007bdec... (48 %)
-Writing at 0x00080ea3... (51 %)
-Writing at 0x00085f43... (54 %)
-Writing at 0x0008b1fd... (57 %)
-Writing at 0x0009061e... (60 %)
-Writing at 0x000964a2... (63 %)
-Writing at 0x0009be37... (66 %)
-Writing at 0x000a18b3... (69 %)
-Writing at 0x000a7467... (72 %)
-Writing at 0x000ad181... (75 %)
-Writing at 0x000b2993... (78 %)
-Writing at 0x000b8734... (81 %)
-Writing at 0x000be1df... (84 %)
-Writing at 0x000c3a56... (87 %)
-Writing at 0x000cea16... (90 %)
-Writing at 0x000d552f... (93 %)
-Writing at 0x000db7a5... (96 %)
-Writing at 0x000e182f... (100 %)
-Wrote 871024 bytes (532740 compressed) at 0x00010000 in 13.0 seconds (effective 535.5 kbit/s)...
-Hash of data verified.
-Compressed 3072 bytes to 103...
-Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 470.8 kbit/s)...
-Hash of data verified.
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x9 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2da0
+entry 0x403c9914
+[0;32mI (27) boot: ESP-IDF v5.2.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun  9 2024 23:45:04[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=23ff8h (147448) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=00034020 vaddr=3fc97f00 size=04638h ( 17976) load[0m
+[0;32mI (130) esp_image: segment 2: paddr=00038660 vaddr=40374000 size=079b8h ( 31160) load[0m
+[0;32mI (139) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=9fdech (654828) map[0m
+[0;32mI (258) esp_image: segment 4: paddr=000dfe14 vaddr=4037b9b8 size=0c4d0h ( 50384) load[0m
+[0;32mI (277) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (278) boot: Disabling RNG early entropy source...[0m
+[0;32mI (289) cpu_start: Multicore app[0m
+[0;32mI (299) cpu_start: Pro cpu start user code[0m
+[0;32mI (299) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (299) cpu_start: Application information:[0m
+[0;32mI (302) cpu_start: Project name:     secure_com_node[0m
+[0;32mI (308) cpu_start: App version:      41dd7e4-dirty[0m
+[0;32mI (313) cpu_start: Compile time:     Jun  9 2024 23:44:59[0m
+[0;32mI (319) cpu_start: ELF file SHA256:  c652f7edf...[0m
+[0;32mI (325) cpu_start: ESP-IDF:          v5.2.1-dirty[0m
+[0;32mI (330) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (335) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (340) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (345) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (352) heap_init: At 3FCA04D8 len 00049238 (292 KiB): RAM[0m
+[0;32mI (358) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (364) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (370) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (377) spi_flash: detected chip: gd[0m
+[0;32mI (381) spi_flash: flash io: dio[0m
+[0;33mW (385) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (398) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (405) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (412) main_task: Started on CPU0[0m
+[0;32mI (422) main_task: Calling app_main()[0m
+[0;32mI (2462) pp: pp rom version: e7ae62f[0m
+[0;32mI (2462) net80211: net80211 rom version: e7ae62f[0m
+I (2492) wifi:wifi driver task: 3fcade68, prio:23, stack:6656, core=0
+I (2502) wifi:wifi firmware version: a9f5b59
+I (2502) wifi:wifi certification version: v7.0
+I (2502) wifi:config NVS flash: enabled
+I (2512) wifi:config nano formating: disabled
+I (2512) wifi:Init data frame dynamic rx buffer num: 32
+I (2512) wifi:Init static rx mgmt buffer num: 5
+I (2522) wifi:Init management short buffer num: 32
+I (2522) wifi:Init dynamic tx buffer num: 32
+I (2532) wifi:Init static tx FG buffer num: 2
+I (2532) wifi:Init static rx buffer size: 1600
+I (2542) wifi:Init static rx buffer num: 10
+I (2542) wifi:Init dynamic rx buffer num: 32
+[0;32mI (2582) wifi_init: rx ba win: 6[0m
+[0;32mI (2582) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2582) wifi_init: udp mbox: 6[0m
+[0;32mI (2582) wifi_init: tcp mbox: 6[0m
+[0;32mI (2582) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2592) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2602) wifi_init: tcp mss: 1440[0m
+[0;32mI (2602) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2602) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2642) phy_init: phy_version 640,cd64a1a,Jan 24 2024,17:28:12[0m
+I (2682) wifi:mode : sta (48:27:e2:e2:e5:e4)
+I (2682) wifi:enable tsf
+I (2692) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (2692) wifi:state: init -> auth (b0)
+I (2692) wifi:state: auth -> assoc (0)
+I (2702) wifi:state: assoc -> run (10)
+I (2712) wifi:connected with TIM-69567495, aid = 14, channel 1, BW20, bssid = ce:b1:01:33:36:34
+I (2712) wifi:security: WPA2-PSK, phy: bgn, rssi: -71
+I (2722) wifi:pm start, type: 1
 
-Leaving...
-Hard resetting via RTS pin...
+I (2722) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (2722) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+[0;32mI (2732) WIFI: Connesso al punto di accesso[0m
+I (2762) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (4812) wifi:<ba-add>idx:0 (ifx:0, ce:b1:01:33:36:34), tid:0, ssn:0, winSize:64
+[0;32mI (6232) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+got ip, proceeding to unblock mqttmqtt could proceed, connection established and ip address received
+[0;32mI (6282) MQTT: Other event id:7[0m
+[0;32mI (6762) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6862) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=31812[0m
+[0;32mI (6862) MQTT: sent publish successful, msg_id=-1000[0m
+[0;32mI (7042) MQTT: MQTT_EVENT_DATA[0m
+the mess which is now written by callback: -----BEGIN CERTIFICATE-----
+MIICtDCCAZwCFBDR1fFgPc/95b2b/7gccbeI+9lBMA0GCSqGSIb3DQEBCwUAMBEx
+DzANBgNVBAMMBmJyb2tlcjAeFw0yNDA2MDYxNTQ5NDdaFw0zNDA2MDQxNTQ5NDda
+MBwxGjAYBgNVBAMMETQ4OjI3OkUyOkUyOkU1OkU0MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAprQWBbpej5wmpwG2jc8yj3M5cBKz+IadcmFEfBVDtcr1
+InoeJW/wLFRNiRc5NVgTCmF5nUZ2vXKXXNHdJVbM6RtxlIlDfFIFoBAA6xEvhAAU
+ihmKcogXpEUcECHXD3HhXaJuTiP4K5rBh+/D+GKraaNWiQ1Ll7bnZ4ZdF9DgZz4F
+Sa9PCZkURv5uIhUWjyXdpgBhF3VgqtWajuNke6zK6ZmNsa1qLHn7akQ7GxoBe1Iy
+UMto1Mcz5VE3GNKMt92mZUSCaZLy+Bqn6HSgzHxBQgV7M6s8eAcUoUz02gCZ1hTK
+3QWvYRAnPc24I9Q0ibFKV+kV0S8XGEOIzAh+Vrm9SwIDAQABMA0GCSqGSIb3DQEB
+CwUAA4IBAQB1MJxbTC98NJ19E2NFGUNgQcYOP1z7b89O8tE5oo6vKs5vSwtXgrSg
+pW7UJ+deDvN2CCWuZ9P4HOj20kOnY54ghpChl/bfgV7Nbq6s2wKzRDX3Avbe6/Es
+nAnrDoG5RHPoAcWmRvqbiGDWe2wgSkxbqR28i7zOWWNFdD45FcRbcd2C7v9i/U7n
+Dsg/M5IrD9DjrNZ8op1R2UuXI3BrfgxcxCojt4N4+MUNRZhOPbL69+WLUkCav+8H
+TSRY6BaQ7hmMU35JBkP/V05FCcV3xhZdUNyAiwyhDeGNSX1u7MdQBrFkGYgUhcNO
+cNW1ksk0OZerEuM7H/PkE/z6hflJxgNP
+-----END CERTIFICATE-----
+the new subscribed topic is: retrieve_certificates/1
+[0;32mI (7202) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=50374[0m
+[0;32mI (7202) MQTT: sent publish successful, msg_id=-1000[0m
+[0;32mI (7302) MQTT: MQTT_EVENT_DATA[0m
+the mess which is now written by callback: -----BEGIN CERTIFICATE-----
+MIICtDCCAZwCFBDR1fFgPc/95b2b/7gccbeI+9lCMA0GCSqGSIb3DQEBCwUAMBEx
+DzANBgNVBAMMBmJyb2tlcjAeFw0yNDA2MDYxNTUwNTNaFw0zNDA2MDQxNTUwNTNa
+MBwxGjAYBgNVBAMMETM0OkI3OkRBOjU0OjM1OjI4MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEArpj3sn2f1kQu3+vCebGlQAgx7ClpegCZ6Nd1NElOujhS
+zQPMqcLX5XhMtSuAzlJIYDiAWdLFgy70Xy9CLS+vcxnzSO2yl/qDpHpXDBLxrMZh
+uSa+/+YZca8ajSa4BJql+npHtBhQZTY/W1a5t/PTIXpuS2ygqkrUpl3GUS0t3LcC
+XrvTsLuUk7sBGSMHC/NK/1PbGuv4WYzlsRCHAxaw94UVKHVyedZk3Qer9oPIZ8Pq
+zEzU3af2AzhmZ52hEobYoHCJtonDLtqlGSuYRBwhQgykw7n28/nBviI9zRMFugLv
+nOwsZEqLgilofrQjof2//F5wAq6LRH+OSAiGGqyx5QIDAQABMA0GCSqGSIb3DQEB
+CwUAA4IBAQC2rmgFwO6rdfJ2iy3jX7EvAq6c8iqSzfeGSi0+0SgMlWg6jNJhdbXL
+Ah9St8qA7SDaaWFsX/Opm1W1aht3bm7zftiM71Ejdv0sMpjpDWE7AX3fMaKRMVFV
+kSaPgfsLtTOu0JVs2/PQqYC7XGsjYnORUnNOnIPgPpFFoMcn5upEtUV5tDbGAb1S
+oBzK56XW2p9XiI3OHwL4OIyJmq/1gnAhw+IWqWDNFL+LgVyzWEDF84UDc9QK5VoD
+C7QpNFO9ih/PIMHYHlJp9AbNofEg24nfTdmAPRuo6Es/T8PK93xOCNyUk3sqmoqy
+m7g3t95BsKc2CC9OHlYUvwVdcK6w+Xmw
+-----END CERTIFICATE-----
+the new subscribed topic is: retrieve_certificates/2
+[0;32mI (7582) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=47340[0m
+[0;32mI (7582) MQTT: sent publish successful, msg_id=-1000[0m
+[0;32mI (7792) MQTT: MQTT_EVENT_DATA[0m
+the mess which is now written by callback: -----BEGIN CERTIFICATE-----
+MIICqTCCAZECFGe6IXXUFcjrXq6QOqr2NUpJ59yHMA0GCSqGSIb3DQEBCwUAMBEx
+DzANBgNVBAMMBmJyb2tlcjAeFw0yNDA2MDUxNDI3MzZaFw0zNDA2MDMxNDI3MzZa
+MBExDzANBgNVBAMMBmJyb2tlcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBANAUuFKJX67URS6Yv7Efet4pV4c3vXI0b9RtKM/MpckQfUQbgwG5d9hyOmJW
+M06GdDxmxQecc/eZNcLrcXT72Z6bUSw5v4J5pPA7con4W/vNQ+v+8cQGnxxYuAUE
+vUiJO9/oXfO2jHXDsScvo+EdASbWxrEzOVPs0aL1ghzBs7Onw3hroY7F/NEteNC2
+WedKaebpxdwaV91HHSZirPhUBi4RqTCqAlWxjYKVAccRaDp0bc3G4sW+ppx3llk2
+B79MOYFl6jOJrPILuCh6osLiXpH38YZittlbHR6BUZtGNSHpBiKmtDyovsv41ImP
+sG4q7T6ToN50cllmydV+8VTfmwMCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAqSRV
+j+YjN4yHgW8SQCdxGF6DYUHemFbFHxrcn5G3ik3zpR+iysISXlpVsyy8vKSerxBd
+9IrD9seADA76yjjAlZqrl8Yp0uWY7fdtqC1pQQOuZYdZ8N6fZSCj0ryhZElFK2jG
+v2lYc8K6noutw/tDEVhl8Eft6oYPlt4zL1j+SGBy+m0mnur0hVTCoaUZKondfMak
+vpoER4c4U/XOrXJYGCoT8ApceulC8bEjbaKRtGnKVcINrrVPYpY4G7+HrRyHAN2b
+WmurmBuPRqb/Jnx27bdN2pI8hXeSNcnsbMoar0Z1gBcijz2PUvYSLDkiW3UsDC5T
+3WOsmQkkvmKSFw8/Fg==
+-----END CERTIFICATE-----
+the new subscribed topic is: retrieve_certificates/3
+[0;32mI (8002) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=43656[0m
+[0;32mI (8002) MQTT: sent publish successful, msg_id=-1000[0m
+[0;32mI (8052) MQTT: MQTT_EVENT_DATA[0m
+the mess which is now written by callback: reply_cert_end
+il numero di certificati retrieved è 3
+[0;32mI (8372) MQTT: sent unsubscribe successful, msg_id=61113[0m
+I am printing the certificates
+breakpoint 0
+MAC Address: MAC mio device: 48:27:E2:E2:E5:E4
+sono il device che vuole iniziare una connessione
+the private key is (in char*):
+ -----BEGIN PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCmtBYFul6PnCan
+AbaNzzKPczlwErP4hp1yYUR8FUO1yvUieh4lb/AsVE2JFzk1WBMKYXmdRna9cpdc
+0d0lVszpG3GUiUN8UgWgEADrES+EABSKGYpyiBekRRwQIdcPceFdom5OI/grmsGH
+78P4Yqtpo1aJDUuXtudnhl0X0OBnPgVJr08JmRRG/m4iFRaPJd2mAGEXdWCq1ZqO
+42R7rMrpmY2xrWoseftqRDsbGgF7UjJQy2jUxzPlUTcY0oy33aZlRIJpkvL4Gqfo
+dKDMfEFCBXszqzx4BxShTPTaAJnWFMrdBa9hECc9zbgj1DSJsUpX6RXRLxcYQ4jM
+CH5Wub1LAgMBAAECggEAUpAtug+IZvMNF7ja+9grb+2+/FlfBk9RqoUvII99lgub
+pkQ6KwuKNcJZFnVIkbl50LHfRDxScdjPy5prP2OCoE9FzS3AnVGYVKKoecPstyE9
+CvrEXZ42q1bJI9pGw/EAj9nzbMMW1i3S/SsMcbgYsnzBzqYlktH1QQpEkBeVFLxP
+SOrXhdmRw6td/TfWwwhxb3knDj5+3X66lkGXxVxD7jH5Gh3j01FiXXKA0ltAc33H
+IDmv8jqpjOTZpPd9UFpV+oM3j4lvkqDQ0Y/u3nK6Sok4Zdjhsp/E0Oytd1vd54tQKBgQDds/UyZn/SV63kov+K
+7nS9T1QTEKIQF8joUFkptM2gRwwnB7t3kzwXQ1t7ByRXeSuMCVXIJ5pahN6btuW9
+1ZooWaRltuplWI84wqU0z05GueYLvqpzpTvnZXR5TKx9PWuqAZavufgbxktRZPRq
+R6xLpxULkzqVIoSwQW2wMRgprQKBgQDAff97fhKLeafHH+3OlNcPHzYF98vfXFIt
+FJVryHXvm+iHafQ8PucIxMjAKnPno6/HnxLZfbfh/y2cee+ZEXRMZN+E3gdtz36Z
+N8ddpb1bvaTTHtnpvmHjxdUKeDLo66dFOMcabkTi5yAved66Bw8DSMzN8DgXAjXm
+XCt0dRtR1wKBgAvWLtIpDMwDKGKbnT8iqhLtaFS4P57SVkSo/YmvgIb9JBX1YLnq
+n3uyefDgmb0d2Aha+zx7eM86ZtQzeKKhA+EBoDhaAru0dbkXE1D1fH1kMXcRD/Kq
+sL8S+Jv9TvxEyjnCafQp3qhE9wJ6fF4sQ3OqkQIUMz2BIUpzw9JzXJHlAoGBALZQ
+oEHezsG7n+VBoIMhBfAUp55PbJFJZ6u66ysC2nDvQfW/rMvC6B+uAlW/37dtmXeA
+euHz6M3sWs7xzrUziuswP2QgxviCpm2IHxPbftX9cLdlaQ+yehS5s2YPImjpiaxO
+coXeGvCt6BYPX5ziQp3hvdjvxLBGL7bXZXEP2ahRAoGAU9bOvFkHu0SkHzox+TFX
+tad+V1YRCtODg08h8B0yP943NQwII7mkws/54zHVOaC++XIjdFf8crgOY6Tq2FZh
+BcCLmnfS6/L9zSScjE8k+qTVboP/XcFSbnY+0ppYQ5KhmqR3jq2rqhFF4AAhFmkL
+8yXt0zK7RDaOAXfUnlaRZBs=
+-----END PRIVATE KEY-----
+
+[0;32mI (8382) MQTT: MQTT_EVENT_UNSUBSCRIBED, msg_id=61113[0m
+Public key: 
+-----BEGIN PUBLIC KEY-----
+MBowDQYJKoZIhvcNAQEBBQADCQAwBgIBAAIBAA==
+-----END PUBLIC KEY-----
+
+starting digital signature process
+the hashed message for signin is: `�+Mp�h��A]^���8��0�&��&8
+���h��������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������#
+generated siganture!
+let's verify it..., the signature length is256
+the hashed message for verification is: `�+Mp�h��A]^���8��0�&��&8
+���h
+error in verifying the signature, the code is -16640
+the result of the signature is 0
+[0;32mI (10052) MQTT: MQTT client disconnected and deallocated[0m
+I (10052) wifi:state: run -> init (0)
+I (10052) wifi:pm stop, total sleep time: 4491343 us / 7335106 us
+
+I (10052) wifi:<ba-del>idx:0, tid:0
+I (10062) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+[0;32mI (10072) WIFI: Disconnesso dal punto di accesso[0m
+I (10072) wifi:flush txq
+I (10072) wifi:stop sw txq
+I (10072) wifi:lmac stop hw txq
+I (10082) wifi:Deinit lldesc rx mblock:10
+[0;32mI (10092) WIFI: WIFI disconnected and deallocated[0m
+[0;32mI (10092) main_task: Returned from app_main()[0m

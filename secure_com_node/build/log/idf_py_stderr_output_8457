@@ -1,0 +1,24 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40056f5c: memcpy in ROM
+[0m
+[0;33m0x40056f5c: memcpy in ROM
+0x40056f72: memcpy in ROM
+[0m
+[0;33m0x40056f59: memcpy in ROM
+0x42023564: mbedtls_mpi_core_read_be at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/bignum_core.c:249
+0x42021ef3: mbedtls_mpi_read_binary at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/bignum.c:854
+0x4202c6af: mbedtls_rsa_public at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/rsa.c:882
+0x4202d244: mbedtls_rsa_rsassa_pkcs1_v15_verify at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/rsa.c:2307
+0x4202d2a4: mbedtls_rsa_pkcs1_verify at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/rsa.c:2352
+0x4202a772: rsa_verify_wrap at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/pk_wrap.c:263
+0x4202a3dd: mbedtls_pk_verify_restartable at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/pk.c:457
+0x4202a40a: mbedtls_pk_verify at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/pk.c:468
+0x4200a26a: verify_signature at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:115
+0x4200a7a2: app_main at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:166
+0x4209ef2f: main_task at /home/fracchio/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037cb91: vPortTaskWrapper at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0m

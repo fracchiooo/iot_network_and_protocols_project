@@ -1,4 +1,4 @@
-#include ".h"
+#include "iota_wrapper.h"
 #include "esp_err.h"
 #include "esp_http_client.h"
 #include "json_parser.h"
@@ -196,7 +196,7 @@ void iota_testnet_send_hash(char * parents[], int n_parents, char * data, char *
 
     esp_http_client_handle_t client = esp_http_client_init(&iota_testnet_config);
 
-    esp_http_client_set_url("https://api.testnet.iotaledger.net/api/core/v2/blocks/");
+    esp_http_client_set_url(client, "https://api.testnet.iotaledger.net/api/core/v2/blocks/");
     esp_http_client_set_method(client, HTTP_METHOD_POST);
     esp_http_client_set_post_field(client, post_data, strlen(post_data));
     esp_err_t err = esp_http_client_perform(client);

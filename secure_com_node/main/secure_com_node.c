@@ -4,7 +4,8 @@
 #include "wifi_wrapper.h"
 #include "mqtt_wrapper.h"
 #include "iota_wrapper.h"
-#include "com_node_utils.h"ù
+#include "crypto_wrapper.h"
+#include "com_node_utils.h"
 #include "freertos/queue.h"
 #include "esp_mac.h"
 
@@ -72,30 +73,29 @@ void request_establish_connection(char* MAC_identity_src, char* src_mess){
 void print_certificates(my_connection_data_pointer* cp){
 
   my_connection_data* curr= cp->certs;
-
+  char buf[1200];
   while(curr!=NULL){
-    //printf("%s\n", curr->certificate);
+    memset(buf, 0, sizeof(buf));
     printf("\n----------------------------------\n");
-    char buf[1024];
     mbedtls_x509_crt_info(buf, sizeof(buf)-1, "", &curr->certificate);
+    buf[sizeof(buf)-1]='\0';
+
     printf("%s\n", buf);
+    fflush(stdout);
+
 
     printf("MAC: %02X:%02X:%02X:%02X:%02X:%02X\n",curr->MAC[0],curr->MAC[1],curr->MAC[2],curr->MAC[3],curr->MAC[4],curr->MAC[5]);
 
+
     mbedtls_x509_crt *certificate = &(curr->certificate);  // Assuming curr is a pointer to a structure containing the certificate
-    /*mbedtls_pk_context pk;
-    mbedtls_pk_init(&pk);
 
-    // Extract public key from the certificate
-    mbedtls_pk_parse_public_key(&pk, certificate->pk.p, certificate->pk.len);
+  fflush(stdout);
+
+    
+    mbedtls_pk_context* pk= get_pub_key_from_cert(curr->certificate);
 
 
-
-    unsigned char buffer[1024];
-    mbedtls_pk_write_pubkey_pem(&pk, buffer, sizeof(buffer));
-    printf("public key: %s\n", buffer);*/
-
-    printf("\n----------------------------------\n");
+    printf("\n----------------------\n");
     fflush(stdout);
 
 
@@ -133,8 +133,10 @@ void app_main(void)
 
   printf("I am printing the certificates\n");
   fflush(stdout);
-  print_certificates(result);
+  //print_certificates(result);
   fflush(stdout);
+      printf("breakpoint 0\n");
+    fflush(stdout);
 
   uint8_t my_mac[6];
   get_unique_MAC_address(my_mac);
@@ -145,6 +147,28 @@ void app_main(void)
 
     printf("sono il device che vuole iniziare una connessione\n");
     fflush(stdout);
+
+
+    mbedtls_pk_context priv_key= get_local_private_key();
+    char * messaggio_to_sign="sono il messaggio da essere firmato da me";
+
+    my_connection_data* cert=result->certs;
+    while(memcmp(cert->MAC, my_mac, sizeof(cert->MAC)) !=0){
+      cert=cert->next;
+    }
+
+    mbedtls_pk_context* pub_key= get_pub_key_from_cert(cert->certificate);
+
+    size_t sig_len;
+
+    unsigned char* signature= digital_sign_pem((const unsigned char*) messaggio_to_sign, *pub_key, priv_key, &sig_len);
+
+    bool result= verify_signature((unsigned char*) messaggio_to_sign,pub_key, signature, sig_len);
+
+    printf("the result of the signature is %d\n", result);
+    fflush(stdout);
+
+
 
 
 
@@ -170,7 +194,7 @@ void app_main(void)
   free(mess);
   free_certificate_data(result);
 
-  //disconnect_mqtt_client(client);
+  disconnect_mqtt_client(client);
   disconnect_wifi(); 
   return;
 }

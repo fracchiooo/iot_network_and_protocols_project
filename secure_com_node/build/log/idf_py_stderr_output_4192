@@ -1,0 +1,50 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x42021edb: mbedtls_mpi_cmp_mpi at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/bignum.c:972
+[0m
+[0;33m0x40056f5c: memcpy in ROM
+0x40056f72: memcpy in ROM
+[0m
+[0;33m0x42021ed8: mbedtls_mpi_cmp_mpi at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/bignum.c:972
+0x42021f9d: mbedtls_mpi_cmp_int at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/bignum.c:1027
+0x4202c3d5: mbedtls_rsa_export at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/rsa.c:515
+0x4202b7f6: pk_write_rsa_pubkey at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/pkwrite.c:122
+0x4202b911: mbedtls_pk_write_pubkey at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/pkwrite.c:342
+0x4202b94e: mbedtls_pk_write_pubkey_der at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/pkwrite.c:378
+0x4202ba35: mbedtls_pk_write_pubkey_pem at /home/fracchio/esp/esp-idf/components/mbedtls/mbedtls/library/pkwrite.c:750
+0x4200a303: get_pub_key_from_cert at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/components/mqtt_wrapper/include/mqtt_wrapper.h:130
+0x4200a593: print_certificates at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:89
+0x4200a626: app_main at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:130
+0x420a0317: main_task at /home/fracchio/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037cb91: vPortTaskWrapper at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x4037f7fb: vTaskGenericNotifyGiveFromISR at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:6134 (discriminator 3)
+[0m
+[0;33m0x400556d5: strlen in ROM
+0x400556e5: strlen in ROM
+[0m
+[0;33m0x4037f7f8: vTaskGenericNotifyGiveFromISR at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:6134 (discriminator 3)
+0x40376f25: timer_alarm_handler at /home/fracchio/esp/esp-idf/components/esp_timer/src/esp_timer.c:505
+0x403770a9: timer_alarm_isr at /home/fracchio/esp/esp-idf/components/esp_timer/src/esp_timer_impl_systimer.c:93
+0x403775bd: _xt_lowint1 at /home/fracchio/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400559dd: _xtos_set_intlevel in ROM
+0x4037cf37: vPortClearInterruptMaskFromISR at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:564
+ (inlined by) vPortExitCritical at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:504
+0x40376eaa: vPortExitCriticalSafe at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:600
+ (inlined by) timer_list_unlock at /home/fracchio/esp/esp-idf/components/esp_timer/src/esp_timer.c:403
+0x420076dd: esp_timer_delete at /home/fracchio/esp/esp-idf/components/esp_timer/src/esp_timer.c:310
+0x42058697: ets_timer_done at /home/fracchio/esp/esp-idf/components/esp_timer/src/ets_timer_legacy.c:103
+0x4207bf05: esp_coex_common_timer_done_wrapper at /home/fracchio/esp/esp-idf/components/esp_coex/esp32s3/esp_coex_adapter.c:113
+0x42046b69: ieee80211_sta_new_state at ??:?
+0x4203db85: ieee80211_sta_disconnect at ??:?
+0x4203dc08: ieee80211_sta_disconnect at ??:?
+0x4203eda0: wifi_disconnect_process at ??:?
+0x4203d2fe: ieee80211_ioctl_process at ??:?
+0x403845c9: ppTask at ??:?
+0x4037cb91: vPortTaskWrapper at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0m

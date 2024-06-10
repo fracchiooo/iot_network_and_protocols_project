@@ -1,0 +1,29 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375a0e: panic_abort at /home/fracchio/esp/esp-idf/components/esp_system/panic.c:472
+0x4037c085: esp_system_abort at /home/fracchio/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40383c75: __assert_func at /home/fracchio/esp/esp-idf/components/newlib/assert.c:81
+0x4037f775: vTaskGenericNotifyGiveFromISR at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:6129 (discriminator 1)
+0x40376f25: timer_alarm_handler at /home/fracchio/esp/esp-idf/components/esp_timer/src/esp_timer.c:505
+0x403770a9: timer_alarm_isr at /home/fracchio/esp/esp-idf/components/esp_timer/src/esp_timer_impl_systimer.c:93
+0x403775bd: _xt_lowint1 at /home/fracchio/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42008dde: uart_ll_get_txfifo_len at /home/fracchio/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:387
+ (inlined by) uart_tx_char at /home/fracchio/esp/esp-idf/components/vfs/vfs_uart.c:165
+0x42009cdf: uart_write at /home/fracchio/esp/esp-idf/components/vfs/vfs_uart.c:218
+0x4200880d: console_write at /home/fracchio/esp/esp-idf/components/vfs/vfs_console.c:73 (discriminator 1)
+0x42007ee6: esp_vfs_write at /home/fracchio/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x420844ee: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4208395d: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x420839ba: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+0x42083ff9: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x420840df: _puts_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:91
+0x42084117: puts at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:129 (discriminator 1)
+0x4200a5f4: print_certificates at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:83
+0x4200a6d3: app_main at /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/main/secure_com_node.c:136
+0x420a03df: main_task at /home/fracchio/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037cb91: vPortTaskWrapper at /home/fracchio/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0m

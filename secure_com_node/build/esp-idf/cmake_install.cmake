@@ -419,7 +419,27 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/espressif__jsmn/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/espressif__json_parser/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/main/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/crypto_wrapper/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/iota_wrapper/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

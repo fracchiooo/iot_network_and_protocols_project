@@ -1,0 +1,9 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40387d2a: _xt_context_save at /home/fracchio/esp/esp-idf/components/xtensa/xtensa_context.S:203
+[0m
+[0;33m0x40387d27: _xt_context_save at /home/fracchio/esp/esp-idf/components/xtensa/xtensa_context.S:202
+[0m
+[0;33m0x40375984: esp_restart_noos at /home/fracchio/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0m

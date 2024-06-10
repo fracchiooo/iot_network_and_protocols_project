@@ -1,0 +1,73 @@
+[1/5] cd /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/esp-idf/esptool_py && /home/fracchio/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/fracchio/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/partition_table/partition-table.bin /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/secure_com_node.bin
+secure_com_node.bin binary size 0xdd540 bytes. Smallest app partition is 0x100000 bytes. 0x22ac0 bytes (14%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/bootloader/esp-idf/esptool_py && /home/fracchio/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/fracchio/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build/bootloader/bootloader.bin
+Bootloader binary size 0x5250 bytes. 0x2db0 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/fracchio/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/fracchio/esp/esp-idf -D "SERIAL_TOOL=/home/fracchio/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/fracchio/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build -P /home/fracchio/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 secure_com_node.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded Flash 8MB (GD)
+Crystal is 40MHz
+MAC: 48:27:e2:e2:e5:e4
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000edfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21072 bytes to 13080...
+Writing at 0x00000000... (100 %)
+Wrote 21072 bytes (13080 compressed) at 0x00000000 in 0.7 seconds (effective 243.0 kbit/s)...
+Hash of data verified.
+Compressed 906560 bytes to 553590...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001cd7a... (5 %)
+Writing at 0x00027307... (8 %)
+Writing at 0x0002f919... (11 %)
+Writing at 0x0003b427... (14 %)
+Writing at 0x000414d3... (17 %)
+Writing at 0x0004783b... (20 %)
+Writing at 0x0004d9e3... (23 %)
+Writing at 0x00053c85... (26 %)
+Writing at 0x00059d49... (29 %)
+Writing at 0x0005f9b6... (32 %)
+Writing at 0x00065b4b... (35 %)
+Writing at 0x0006c2e2... (38 %)
+Writing at 0x000720e5... (41 %)
+Writing at 0x00077aec... (44 %)
+Writing at 0x0007cac0... (47 %)
+Writing at 0x00081bc6... (50 %)
+Writing at 0x00086bad... (52 %)
+Writing at 0x0008becf... (55 %)
+Writing at 0x0009125f... (58 %)
+Writing at 0x00096f00... (61 %)
+Writing at 0x0009c9c6... (64 %)
+Writing at 0x000a22a2... (67 %)
+Writing at 0x000a7f10... (70 %)
+Writing at 0x000adcce... (73 %)
+Writing at 0x000b354b... (76 %)
+Writing at 0x000b916f... (79 %)
+Writing at 0x000beea5... (82 %)
+Writing at 0x000c44a2... (85 %)
+Writing at 0x000cb9bb... (88 %)
+Writing at 0x000d4a1e... (91 %)
+Writing at 0x000dc61e... (94 %)
+Writing at 0x000e268c... (97 %)
+Writing at 0x000e8cec... (100 %)
+Wrote 906560 bytes (553590 compressed) at 0x00010000 in 13.4 seconds (effective 541.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 189.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -7,6 +7,7 @@
 #include <mbedtls/x509.h>
 #include <mbedtls/x509_crt.h>
 #include "esp_err.h"
+#include "mbedtls/ctr_drbg.h"
 
 #define max_mess_size 4096
 
@@ -38,7 +39,101 @@ extern const uint8_t server_cert_end[] asm("_binary_server_crt_end");
 extern const uint8_t client_cert_pem_start[] asm("_binary_client_crt_start");
 extern const uint8_t client_cert_pem_end[] asm("_binary_client_crt_end");
 extern const uint8_t client_key_pem_start[] asm("_binary_client_key_start");
-extern const uint8_t client_key_pem_start[] asm("_binary_client_key_end");
+extern const uint8_t client_key_pem_end[] asm("_binary_client_key_end");
+
+
+void print_sha256_hash(const unsigned char hash[32]){
+    for(int i=0; i<32; ++i){
+        printf("%02x", hash[i]);
+    }
+    printf("\n");
+}
+
+
+
+
+unsigned char* digital_sign_pem(const unsigned char* message, mbedtls_pk_context pub_k, mbedtls_pk_context pk, size_t* signature_len){
+
+    printf("starting digital signature process\n");
+    fflush(stdout);
+
+    mbedtls_entropy_context entropy;
+    mbedtls_ctr_drbg_context ctr_drbg;
+
+    const char* pers= "mbedtls_pk_sign\0";
+    mbedtls_entropy_init(&entropy);
+    mbedtls_ctr_drbg_init(&ctr_drbg);
+
+    int ret= mbedtls_ctr_drbg_seed(&ctr_drbg, mbedtls_entropy_func, &entropy, (const unsigned char*) pers, strlen(pers));
+    if(ret!=0){
+        printf("mbedtls drbg seed error\n");
+        return NULL;
+    }
+
+    unsigned char hash[32];
+
+    ret= mbedtls_md(
+        mbedtls_md_info_from_type(MBEDTLS_MD_SHA256),
+        message, strlen((char*) message), hash
+    );
+    print_sha256_hash(hash);
+
+    if(ret!=0){
+        printf("error in hashing the message for dig. signature\n");
+        return NULL;
+    }
+
+    unsigned char* sig[MBEDTLS_PK_SIGNATURE_MAX_SIZE];
+    size_t sig_len;
+
+    ret= mbedtls_pk_sign(&pk, MBEDTLS_MD_SHA256, hash, 32, sig, MBEDTLS_PK_SIGNATURE_MAX_SIZE ,&sig_len, mbedtls_ctr_drbg_random, &ctr_drbg);
+
+    if(ret!=0){
+        printf("error in signin the hashed message, message code: %d\n", ret);
+        return NULL;
+
+    }
+
+    printf("generated siganture!\n");
+
+
+    //TODO
+    //mbedtls_entropy_free(&entropy);
+    //mbedtls_ctr_drbg_free(&ctr_drbg);
+
+    *signature_len= sig_len;
+    return sig;
+}
+
+
+bool verify_signature(unsigned char* message, mbedtls_pk_context* pub_k, unsigned char* signature, size_t sig_len){
+    printf("let's verify it..., the signature length is%d\n", sig_len);
+    fflush(stdout);
+
+
+    unsigned char hash[32];
+
+    int ret= mbedtls_md(
+        mbedtls_md_info_from_type(MBEDTLS_MD_SHA256),
+        message, strlen((char*) message), hash
+    );
+    print_sha256_hash(hash);
+    if(ret!=0){
+        printf("error in hashing the message for dig. signature\n");
+        return false;
+    }
+
+
+
+    ret= mbedtls_pk_verify(pub_k, MBEDTLS_MD_SHA256, hash, 32, signature, sig_len);
+    if(ret!=0){
+        printf("error in verifying the signature, the code is %d\n", ret);
+        return false;
+    }
+    return true;
+}
+
+
 
 
 mbedtls_x509_crt parse_certificate(char* certificate){
@@ -50,7 +145,6 @@ mbedtls_x509_crt parse_certificate(char* certificate){
     if (ret != 0) {
         mbedtls_x509_crt_free(&cert);
         printf("failed to parse!\n");
-        abort(); // Parsing failed
     }
     return cert;
 
@@ -120,6 +214,71 @@ static int mqtt_publish_message(esp_mqtt_client_handle_t client, char* message, 
 }
 
 
+
+
+mbedtls_pk_context get_local_private_key(){
+
+    mbedtls_pk_context pk;
+    mbedtls_pk_init(&pk);
+    printf("the private key is (in char*):\n %s\n", client_key_pem_start);
+    mbedtls_entropy_context entropy;
+    mbedtls_ctr_drbg_context ctr_drbg;
+
+    const char* pers= "mbedtls_pk_sign";
+    mbedtls_entropy_init(&entropy);
+    mbedtls_ctr_drbg_init(&ctr_drbg);
+
+    int ret= mbedtls_ctr_drbg_seed(&ctr_drbg, mbedtls_entropy_func, &entropy, (const unsigned char*) pers, strlen(pers));
+    if(ret!=0){
+        printf("mbedtls drbg seed error\n");
+        mbedtls_pk_free(&pk);
+    }
+    else {
+        ret= mbedtls_pk_parse_key(&pk, (const unsigned char*) client_key_pem_start, 
+        strlen((const char*)client_key_pem_start)+1, NULL, 0, mbedtls_ctr_drbg_random, &ctr_drbg
+        );
+        if(ret!=0){
+            printf("error in parsing local private key\n");
+            mbedtls_pk_free(&pk);
+        }
+
+
+    }
+
+
+    return pk;
+}
+
+mbedtls_pk_context* get_pub_key_from_cert(mbedtls_x509_crt cert){
+    mbedtls_pk_context *pk = &cert.pk;
+
+    //unsigned char buffer[4096];
+    unsigned char* buffer=(unsigned char*) malloc(sizeof(unsigned char)*16000);
+    //memset(buffer, 0, 16000);
+    int ret= mbedtls_pk_write_pubkey_pem(pk, buffer, 16000);
+    if(ret!=0){
+        printf("Failed to write public key in PEM format\n");
+        abort();
+        return NULL;
+    }
+    
+    /*if (!mbedtls_pk_can_do(pk, MBEDTLS_PK_RSA)) {
+        printf("The key in the certificate is not an RSA key\n");
+        return NULL;
+    }
+    unsigned char buffer[4096];
+    int ret = mbedtls_pk_write_pubkey_pem(pk, buffer, sizeof(buffer)-1);
+    if (ret != 0) {
+        printf("Failed to write public key in PEM format\n");
+        return NULL;
+    }*/
+    buffer[16000 - 1] = '\0'; 
+    printf("Public key: \n%s\n", buffer);
+    free(buffer);
+    return pk;
+}
+
+
 my_connection_data_pointer* mqtt_get_node_certificates(esp_mqtt_client_handle_t client, char* message){
 
     my_connection_data_pointer* result=(my_connection_data_pointer*) malloc(sizeof(my_connection_data_pointer));
@@ -159,6 +318,7 @@ my_connection_data_pointer* mqtt_get_node_certificates(esp_mqtt_client_handle_t 
             else{
                 memset(curr_cert->MAC, 0, sizeof(curr_cert->MAC));
             }
+
             // adds the certificate to the linked list of certificates structure
             curr_cert->next=NULL;
             if(result->certs==NULL){
