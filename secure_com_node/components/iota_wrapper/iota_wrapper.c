@@ -2,11 +2,15 @@
 #include "esp_err.h"
 #include "esp_http_client.h"
 #include "json_parser.h"
+#include "cJSON.h"
 
 static const char *TAG = "IOTA_OVER_HTTPS_CLIENT";
 
 extern const char iota_testnet_root_cert_pem_start[] asm("_binary_iota_testnet_pem_start");
 extern const char iota_testnet_root_cert_pem_end[]   asm("_binary_iota_testnet_pem_end");
+
+//extern const char shimmer_testnet_root_cert_pem_start[] asm("_binary_howsmyssl_com_root_cert_pem_start");
+//extern const char shimmer_testnet_root_cert_pem_end[]   asm("_binary_howsmyssl_com_root_cert_pem_end");
 
 static char * local_response_buffer;
 
@@ -198,6 +202,7 @@ void iota_testnet_send_hash(char * parents[], int n_parents, char * data, char *
     esp_http_client_set_post_field(client, post_data, strlen(post_data));
     esp_err_t err = esp_http_client_perform(client);
 
+    jparse_ctx_t jctx;
     if (err == ESP_OK) {
         ESP_LOGI(TAG, "HTTP POST Status = %d, content_length = %"PRId64,
                 esp_http_client_get_status_code(client),
@@ -205,7 +210,6 @@ void iota_testnet_send_hash(char * parents[], int n_parents, char * data, char *
 
         ESP_LOGI(TAG, "%s", local_response_buffer);
 
-        jparse_ctx_t jctx;
 
         int ret = json_parse_start(&jctx, local_response_buffer, strlen(local_response_buffer));
         if (ret == OS_SUCCESS) {
@@ -218,7 +222,6 @@ void iota_testnet_send_hash(char * parents[], int n_parents, char * data, char *
         } else {
             ESP_LOGE(TAG, "PARSING_FAILURE");
         }
-        json_parse_end(&jctx);
     } else {
         ESP_LOGE(TAG, "%s", local_response_buffer);
         ESP_LOGE(TAG, "HTTP POST request failed: %s", esp_err_to_name(err));
@@ -228,69 +231,62 @@ void iota_testnet_send_hash(char * parents[], int n_parents, char * data, char *
 
     //memset(local_response_buffer, 0, MAX_HTTP_OUTPUT_BUFFER);
 
+    json_parse_end(&jctx);
     esp_http_client_cleanup(client);
 }
 
 void iota_testnet_get_hash(char * block_id, char * hash_buffer) {
 
-    char * block_uri = (char *) calloc(241, sizeof(char));
-    strcpy(block_uri, "https://"IOTA_TESTNET_HOSTNAME""BLOCK_API_ROUTE"/");
-    strcat(block_uri, block_id);
+  char * block_uri = (char *) calloc(241, sizeof(char));
+  strcpy(block_uri, "https://"IOTA_TESTNET_HOSTNAME""BLOCK_API_ROUTE"/");
+  strcat(block_uri, block_id);
 
-    esp_http_client_config_t iota_testnet_config = {
-        .url = "https://api.testnet.iotaledger.net/api/core/v2/blocks/",
-        .transport_type = HTTP_TRANSPORT_OVER_SSL,
-        .event_handler = _http_event_handler,
-        .user_data = (char *)local_response_buffer,
-        .cert_pem = (const char *)iota_testnet_root_cert_pem_start,
-    };
+  esp_http_client_config_t iota_testnet_config = {
+      .url = "https://api.testnet.iotaledger.net/api/core/v2/blocks/",
+      .transport_type = HTTP_TRANSPORT_OVER_SSL,
+      .event_handler = _http_event_handler,
+      .user_data = (char *)local_response_buffer,
+      .cert_pem = (const char *)iota_testnet_root_cert_pem_start,
+  };
 
-    esp_http_client_handle_t client = esp_http_client_init(&iota_testnet_config);
+  esp_http_client_handle_t client = esp_http_client_init(&iota_testnet_config);
 
-    esp_http_client_set_url(client, block_uri);
-    esp_http_client_set_method(client, HTTP_METHOD_GET);
+  esp_http_client_set_url(client, block_uri);
+  esp_http_client_set_method(client, HTTP_METHOD_GET);
 
-    esp_err_t err = esp_http_client_perform(client);
+  esp_err_t err = esp_http_client_perform(client);
 
-    if (err == ESP_OK) {
-        esp_http_client_fetch_headers(client);
-        ESP_LOGI(TAG, "HTTP GET Status = %d, content_length = %"PRId64,
-                esp_http_client_get_status_code(client),
-                esp_http_client_get_content_length(client));
+  if (err == ESP_OK) {
+    ESP_LOGI(TAG, "HTTP GET Status = %d, content_length = %"PRId64,
+      esp_http_client_get_status_code(client),
+      esp_http_client_get_content_length(client));
 
-        jparse_ctx_t jctx;
-
-        int ret = json_parse_start(&jctx, local_response_buffer, strlen(local_response_buffer));
-        if (ret == OS_SUCCESS) {
-            char * str_val = (char *) calloc(512, sizeof(char));
-
-            ESP_LOGI(TAG, "%s", local_response_buffer);
-            if (json_obj_get_object(&jctx, "payload") == OS_SUCCESS) {
-                ESP_LOGI(TAG, "1");
-                if (json_obj_get_string(&jctx, "data", str_val, sizeof(str_val)) == OS_SUCCESS) {
-                    ESP_LOGI(TAG, "2");
-                    strcpy(hash_buffer, str_val);
-                    ESP_LOGI(TAG, "%s", hash_buffer);
-                }
-            }
-            json_obj_leave_object(&jctx);
-            free(str_val);
-        } else {
-            ESP_LOGI(TAG, "PARSING_FAILURE");
-        }
-        json_parse_end(&jctx);
-    } else {
-        ESP_LOGE(TAG, "HTTP GET request failed: %s", esp_err_to_name(err));
+    cJSON *json = cJSON_Parse(local_response_buffer);
+    if (json != NULL) {
+      cJSON *msg_payload = cJSON_GetObjectItem(json, "payload");
+      cJSON *data_payload = cJSON_GetObjectItem(msg_payload, "data");
+      if (cJSON_IsString(data_payload) && (data_payload->valuestring != NULL)) {
+        ESP_LOGI(TAG, "hash: %s", data_payload->valuestring);
+        strcpy(hash_buffer, data_payload->valuestring);
+      }
+      //cJSON_Delete(data_payload);
+      //cJSON_Delete(msg_payload);
+      cJSON_Delete(json);
     }
+  }
 
-    ESP_LOGI(TAG, "found hash for block id: %s", hash_buffer);
+  else {
+      ESP_LOGE(TAG, "HTTP GET request failed: %s", esp_err_to_name(err));
+  }
 
-    //ESP_LOGI(TAG, "%s", local_response_buffer);
-    free(block_uri);
+  ESP_LOGI(TAG, "found hash for block id: %s", hash_buffer);
 
-    //memset(local_response_buffer, 0, MAX_HTTP_OUTPUT_BUFFER);
+  //ESP_LOGI(TAG, "%s", local_response_buffer);
+  free(block_uri);
 
-    esp_http_client_cleanup(client);
+  //memset(local_response_buffer, 0, MAX_HTTP_OUTPUT_BUFFER);
+
+  esp_http_client_cleanup(client);
 }
 
 void init_iota_module() {
@@ -301,3 +297,8 @@ void init_iota_module() {
 void cleanup_iota_module() {
     free(local_response_buffer);
 }
+
+//curl -L -X POST 'https://api.testnet.iotaledger.net/api/core/v2/blocks'
+//-H 'Content-Type: application/json'
+//-H 'Accept: application/json'
+//--data-raw '{"protocolVersion": 2, "parents": ["0x00974d9fb276b192b043be13d92f05ad4b2919a6ffd92405f34deea4f4642591", "0xa5535f3e8cbac4a7958da1d79cb281b75bea8a189f97df383ed5ddc8966c908d", "0xa885e011eeffea65ab2adf1c0ce413880469498000a8be70d84ba56925c2e034", "0xf6df4bb2689aa76a20295391661d4e2f74fa75e628ad541a715bb25b44654953"], "payload": { "type": 5, "tag": "0x62636861696e7461676765646461746174657374" "data": "0xcafecafe" }, "nonce": "��d31271d6f8a2dd41b00c2fa5c7bb50a5"}'

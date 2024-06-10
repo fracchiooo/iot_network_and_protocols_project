@@ -15,8 +15,8 @@
 
 QueueHandle_t queue;
   mbedtls_ctr_drbg_context * rng;
-  
-  
+
+
 char* get_unique_MAC_address(){
   char res[6*8];
   unsigned char mac_base[6] = {0};
@@ -26,15 +26,15 @@ char* get_unique_MAC_address(){
   //unsigned char mac_uni_base[6] = {0};
   //esp_derive_local_mac(mac_local_base, mac_uni_base);
   //printf("Local Address: ")
-  //print_mac(mac_local_base); 
+  //print_mac(mac_local_base);
   //printf("\nUni Address: ");
   //print_mac(mac_uni_base);
   printf("MAC Address: ");
   //print_mac(mac_base);
-  
+
   sprintf(res, "%02X:%02X:%02X:%02X:%02X:%02X", mac_base[0],mac_base[1],mac_base[2],mac_base[3],mac_base[4],mac_base[5]);
   return res;
-  
+
 }
 
 void request_public_keys(char * key_buffer, char * keylen)
@@ -75,7 +75,7 @@ void request_establish_connection(char* MAC_identity_src, char* src_mess){
 
 //concatenate the keys
 
-//send AES 128 encrypted message on the /MAC_identity_src, responding to its messages 
+//send AES 128 encrypted message on the /MAC_identity_src, responding to its messages
 
 }
 
@@ -89,7 +89,7 @@ void app_main(void)
   queue = xQueueCreate(5, sizeof(bool));
   xTaskCreatePinnedToCore(wifi_start_connection, "WiFi Task", 4096, queue, 0, NULL, 1);
 
-  // TODO questa parte va rifatta meglio, per ora blocco qua per non far andare in errore mwtt client    
+  // TODO questa parte va rifatta meglio, per ora blocco qua per non far andare in errore mwtt client
   //while(1){
   //if(xQueueReceive(queue, &value, (TickType_t)5)){
   //  if(value==true){
@@ -141,8 +141,7 @@ void app_main(void)
   free(block_id);
 
   cleanup_iota_module();
-  disconnect_wifi(); 
+  disconnect_wifi();
   vQueueDelete(queue);
   return;
 }
-

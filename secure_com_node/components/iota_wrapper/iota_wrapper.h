@@ -11,6 +11,10 @@
 #include "esp_event.h"
 #include "esp_netif.h"
 #include "esp_tls.h"
+#include "esp_err.h"
+#include "esp_http_client.h"
+#include "json_parser.h"
+#include "./jsmn.h"
 
 #include "esp_http_client.h"
 #include "iota_defines.h"
