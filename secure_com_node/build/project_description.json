@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "secure_com_node",
-    "project_version":    "ddf2f1d-dirty",
+    "project_version":    "6e87bf9-dirty",
     "project_path":       "/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node",
     "idf_path":           "/home/fracchio/esp/esp-idf",
     "build_dir":          "/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/build",
@@ -2271,18 +2271,6 @@
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]
         },
-        "espressif__json_parser": {
-            "alias": "idf::espressif__json_parser",
-            "target": "___idf_espressif__json_parser",
-            "prefix": "idf",
-            "dir": "/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/managed_components/espressif__json_parser",
-            "lib": "__idf_espressif__json_parser",
-            "reqs": [ "espressif__jsmn" ],
-            "priv_reqs": [ "espressif__jsmn" ],
-            "managed_reqs": [],
-            "managed_priv_reqs": [ "espressif__jsmn" ],
-            "include_dirs": [ "include" ]
-        },
         "espressif__jsmn": {
             "alias": "idf::espressif__jsmn",
             "target": "___idf_espressif__jsmn",
@@ -2293,6 +2281,18 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "espressif__json_parser": {
+            "alias": "idf::espressif__json_parser",
+            "target": "___idf_espressif__json_parser",
+            "prefix": "idf",
+            "dir": "/home/fracchio/Scrivania/iot_network_and_protocols_project/secure_com_node/managed_components/espressif__json_parser",
+            "lib": "__idf_espressif__json_parser",
+            "reqs": [ "espressif__jsmn" ],
+            "priv_reqs": [ "espressif__jsmn" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [ "espressif__jsmn" ],
             "include_dirs": [ "include" ]
         }
     },
