@@ -1,6 +1,7 @@
 #include "crypto_wrapper.h"
 #include "mbedtls/ctr_drbg.h"
 #include "mbedtls/base64.h"
+#include <stdint.h>
 #include <string.h>
 
 
@@ -60,9 +61,13 @@ void base64cat_decode(char * in_string, char * out_strings[], size_t n_strings, 
   free(buffer);
 }
 
-void construct_conn_init_message(mbedtls_ctr_drbg_context *rng, char * out_string, size_t out_string_size) {
+void construct_conn_init_message(mbedtls_ctr_drbg_context *rng, char * out_string, size_t out_string_size, mbedtls_pk_context pka, mbedtls_pk_context pub_kb, uint8_t mac_a, uint8_t mac_b) {
+  size_t olen = 0;
   char * nonce_buffer = (char *) calloc(NONCE_SIZE, sizeof(char));
   size_t nonce_size = NONCE_SIZE;
+
+  char * enc_key_buffer = (char *) calloc(64, sizeof(char));
+  size_t enc_key_buffer_size = 64;
 
   char * AES_key[32];
 
@@ -74,14 +79,89 @@ void construct_conn_init_message(mbedtls_ctr_drbg_context *rng, char * out_strin
     ESP_LOGE(TAG, "Failed to generate key");
   }
 
+  ret = mbedtls_pk_encrypt(&pub_kb, AES_key, 32, enc_key_buffer, &olen, enc_key_buffer_size, mbedtls_ctr_drbg_random, rng);
+  if (ret != 0) {
+    ESP_LOGE(TAG, "error encrypting symmetric key");
+  }
+
+  char * Da_buffer = (char *) calloc(512, sizeof(char));
+  size_t Da_size = 512;
+
+  char * Da[] = {"0", nonce_buffer, (char *) mac_b, enc_key_buffer};
+  base64stringcat(Da, 4, Da_buffer, Da_size);
+
+  char * Da_signed_buffer = (char *) calloc(512, sizeof(char));
+  size_t Da_signed_size = 512;
+
+  digital_sign_pem(Da_buffer, pka, 512, Da_signed_buffer);
   // What do we need? A cert, B's MAC and a key signed with B's pubkey
-  char * values[] = {"CONN_REQUEST", CERT_A, "0", nonce_buffer, MAC_B, KEY_SIGNED_WITH_B_KEY};
+  char * values[] = {"CONN_REQUEST", (char *) mac_a, "0", nonce_buffer, (char *) mac_b, enc_key_buffer, Da_signed_buffer};
+
+  free(Da_signed_buffer);
+  free(Da_buffer);
+  free(nonce_buffer);
+  free(enc_key_buffer);
+}
+
+void construct_conn_reply_message(mbedtls_ctr_drbg_context *rng, char * out_string, size_t out_string_size, mbedtls_pk_context pka, mbedtls_pk_context pub_kb, char * old_nonce, uint8_t mac_a, uint8_t mac_b) {
+  size_t olen = 0;
+  char * nonce_buffer = (char *) calloc(NONCE_SIZE, sizeof(char));
+  size_t nonce_size = NONCE_SIZE;
+
+  char * enc_key_buffer = (char *) calloc(64, sizeof(char));
+  size_t enc_key_buffer_size = 64;
+
+  char * AES_key[32];
+
+  give_me_a_nonce(rng, nonce_buffer, nonce_size);
+
+  // This is our AES key. Yes, this is what the documentation says
+  int ret = mbedtls_ctr_drbg_random(rng, AES_key, 32);
+  if (ret != 0 ) {
+    ESP_LOGE(TAG, "Failed to generate key");
+  }
+
+  ret = mbedtls_pk_encrypt(&pub_kb, AES_key, 32, enc_key_buffer, &olen, enc_key_buffer_size, mbedtls_ctr_drbg_random, rng);
+  if (ret != 0) {
+    ESP_LOGE(TAG, "error encrypting symmetric key");
+  }
+
+  char * Da_buffer = (char *) calloc(512, sizeof(char));
+  size_t Da_size = 512;
+
+  char * Da[] = {"0", nonce_buffer, (char *) mac_b, old_nonce, enc_key_buffer};
+  base64stringcat(Da, 5, Da_buffer, Da_size);
+
+  char * Da_signed_buffer = (char *) calloc(512, sizeof(char));
+  size_t Da_signed_size = 512;
+
+  digital_sign_pem(Da_buffer, pka, 512, Da_signed_buffer);
+  // What do we need? A cert, B's MAC and a key signed with B's pubkey
+  char * values[] = {"CONN_REPLY", (char *) mac_a, "0", nonce_buffer, (char *) mac_b, old_nonce, enc_key_buffer, Da_signed_buffer};
+
+  free(Da_signed_buffer);
+  free(Da_buffer);
+  free(nonce_buffer);
+  free(enc_key_buffer);
+}
+
+void construct_nonce_signed(mbedtls_pk_context pka, uint8_t mac_a, char * nonce1, char * nonce2) {
+  char * unsigned_buffer = (char *) calloc(512, sizeof(char));
+  char * signed_buffer = (char *) calloc(512, sizeof(char));
+
+  char * nonce_values[] = {nonce1, nonce2, mac_b};
+  base64stringcat(nonce_values, 3, unsigned_buffer, 512);
+  digital_sign_pem(unsigned_buffer, pka, 512, signed_buffer);
+
+  char * values[] = {"NONCE_VER", mac_b, signed_buffer};
+
+  free(unsigned_buffer);
+  free(signed_buffer);
 }
 
 void give_me_a_nonce(mbedtls_ctr_drbg_context * ctr_drbg, unsigned char * nonce_buffer, size_t nonce_size) {
     mbedtls_ctr_drbg_random(ctr_drbg, nonce_buffer, nonce_size);
 }
-
 
 void print_rsa_key(mbedtls_rsa_context pk, int k){
     unsigned char* buffer=(unsigned char*) malloc(sizeof(unsigned char)*16000);
@@ -137,7 +217,6 @@ mbedtls_x509_crt parse_certificate(char* certificate){
     }
     return cert;
 }
-
 
 void digital_sign_pem(const unsigned char* message, mbedtls_pk_context pub_k, mbedtls_pk_context pk, size_t* signature_len, unsigned char* sig){
 

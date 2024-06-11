@@ -60,3 +60,10 @@ void print_rsa_key(mbedtls_rsa_context pk, int k);
 
 void print_certificates(my_connection_data_pointer* cp);
 
+void base64cat_decode(char * in_string, char * out_strings[], size_t n_strings, size_t string_size);
+
+void construct_conn_init_message(mbedtls_ctr_drbg_context *rng, char * out_string, size_t out_string_size, mbedtls_pk_context pka, mbedtls_pk_context pub_kb, uint8_t mac_a, uint8_t mac_b);
+
+void construct_conn_reply_message(mbedtls_ctr_drbg_context *rng, char * out_string, size_t out_string_size, mbedtls_pk_context pka, mbedtls_pk_context pub_kb, char * old_nonce, uint8_t mac_a, uint8_t mac_b);
+
+void construct_nonce_signed(mbedtls_pk_context pka, uint8_t mac_a, char * nonce1, char * nonce2);
