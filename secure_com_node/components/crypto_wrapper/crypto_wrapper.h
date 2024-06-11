@@ -50,13 +50,11 @@ esp_err_t extract_cn_and_verify_mac(mbedtls_x509_crt cert, uint8_t mac[6]);
 
 bool verify_signature(unsigned char* message, mbedtls_pk_context* pub_k, unsigned char* signature, size_t sig_len);
 
-void digital_sign_pem(const unsigned char* message, mbedtls_pk_context pub_k, mbedtls_pk_context pk, size_t* signature_len, unsigned char* sig);
+void digital_sign_pem(const unsigned char* message, mbedtls_pk_context pk, size_t* signature_len, unsigned char* sig);
 
 mbedtls_x509_crt parse_certificate(char* certificate);
 
 void print_key(mbedtls_pk_context pk, int k);
-
-void print_rsa_key(mbedtls_rsa_context pk, int k);
 
 void print_certificates(my_connection_data_pointer* cp);
 

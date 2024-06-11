@@ -98,13 +98,6 @@ void app_main(void)
 
   my_connection_data_pointer* result=mqtt_get_node_certificates(client, mess);
 
-  printf("I am printing the certificates\n");
-  fflush(stdout);
-  print_certificates(result);
-  fflush(stdout);
-      printf("breakpoint 0\n");
-    fflush(stdout);
-
   uint8_t my_mac[6];
   get_unique_MAC_address(my_mac);
   printf("MAC Address: ");
@@ -124,6 +117,17 @@ void app_main(void)
       cert=cert->next;
     }
 
+    char buf[1200];
+    memset(buf, 0, sizeof(buf));
+    printf("\n----------------------------------\n");
+    mbedtls_x509_crt_info(buf, sizeof(buf)-1, "", &cert->certificate);
+    buf[sizeof(buf)-1]='\0';
+
+    printf("il certificato dal quale estraggo la public key è %s\n", buf);
+    fflush(stdout);
+
+    printf("MAC public key mine: %02X:%02X:%02X:%02X:%02X:%02X\n",cert->MAC[0],cert->MAC[1],cert->MAC[2],cert->MAC[3],cert->MAC[4],cert->MAC[5]);
+    
     mbedtls_pk_context* pub_key= get_pub_key_from_cert(cert->certificate);
 
     size_t sig_len;
@@ -132,7 +136,7 @@ void app_main(void)
     memset(signature, 0, MBEDTLS_PK_SIGNATURE_MAX_SIZE);
     signature[MBEDTLS_PK_SIGNATURE_MAX_SIZE-1]='\0';
 
-    digital_sign_pem((const unsigned char*) messaggio_to_sign, *pub_key, priv_key, &sig_len, signature);
+    digital_sign_pem((const unsigned char*) messaggio_to_sign,priv_key, &sig_len, signature);
 
 
     bool result= verify_signature((unsigned char*) messaggio_to_sign,pub_key, signature, sig_len);
@@ -150,6 +154,9 @@ void app_main(void)
 
   }
 
+  printf("I am printing the certificates\n");
+  fflush(stdout);
+  print_certificates(result);
 
 
   //mqtt_publish_message(client, "prova di connessione", "abcd", 1);

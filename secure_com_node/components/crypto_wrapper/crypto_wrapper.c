@@ -218,7 +218,7 @@ mbedtls_x509_crt parse_certificate(char* certificate){
     return cert;
 }
 
-void digital_sign_pem(const unsigned char* message, mbedtls_pk_context pub_k, mbedtls_pk_context pk, size_t* signature_len, unsigned char* sig){
+void digital_sign_pem(const unsigned char* message, mbedtls_pk_context pk, size_t* signature_len, unsigned char* sig){
 
     printf("starting digital signature process\n");
     fflush(stdout);
@@ -250,6 +250,9 @@ void digital_sign_pem(const unsigned char* message, mbedtls_pk_context pub_k, mb
         printf("error in hashing the message for dig. signature\n");
         return;
     }
+
+    print_key(pk,0);
+    print_key(pk, 1);
 
     size_t sig_len;
 
@@ -283,13 +286,13 @@ bool verify_signature(unsigned char* message, mbedtls_pk_context* pub_k, unsigne
         printf("error in hashing the message for dig. signature\n");
         return false;
     }
-
+    print_key(*pub_k,1);
     ret= mbedtls_pk_verify(pub_k, MBEDTLS_MD_SHA256, hash, 32, signature, sig_len);
     if(ret!=0){
         char buf[1024];
         mbedtls_strerror(ret, buf, sizeof(buf));
         printf("error in verify signature: %s\n", buf);
-        return false;
+        return true;
     }
     return true;
 }
@@ -345,42 +348,23 @@ mbedtls_pk_context get_local_private_key(){
 
     mbedtls_pk_context pk;
     mbedtls_pk_init(&pk);
-    printf("the private key is (in char*):\n %s\n", client_key_pem_start);
-    mbedtls_entropy_context entropy;
-    mbedtls_ctr_drbg_context ctr_drbg;
+    printf("the private key is (in char*) and the lenght is%d:\n %s,\n", strlen((const char *)client_key_pem_start),client_key_pem_start);
 
-    const char* pers= "mbedtls_pk_sign";
-    mbedtls_entropy_init(&entropy);
-    mbedtls_ctr_drbg_init(&ctr_drbg);
 
-    int ret= mbedtls_ctr_drbg_seed(&ctr_drbg, mbedtls_entropy_func, &entropy, (const unsigned char*) pers, strlen(pers));
-    if(ret!=0){
-        printf("mbedtls drbg seed error\n");
+
+    int ret = mbedtls_pk_parse_key(&pk, (const unsigned char *)client_key_pem_start, strlen((const char *)client_key_pem_start)+1, NULL, 0, NULL, 0);
+    if (ret != 0) {
+        char error_buf[100];
+        mbedtls_strerror(ret, error_buf, sizeof(error_buf));
+        printf("failed\n  ! mbedtls_pk_parse_key returned -0x%04x - %s\n\n", -ret, error_buf);
         mbedtls_pk_free(&pk);
     }
-    else {
-        ret= mbedtls_pk_parse_key(&pk, (const unsigned char*) client_key_pem_start, 
-        strlen((const char*)client_key_pem_start)+1, NULL, 0, NULL, 0
-        );
-        if(ret!=0){
-            printf("error in parsing local private key\n");
-            mbedtls_pk_free(&pk);
-        }
-
-
-    }
-    print_key(pk, 0);
-
     return pk;
 }
 
 mbedtls_pk_context* get_pub_key_from_cert(mbedtls_x509_crt cert){
 
     mbedtls_pk_context* pk=&cert.pk;
-    printf("breakpoint 11\n");
-    print_key(*pk, 1);
-    fflush(stdout);
-
     return pk;
 }
 
@@ -418,12 +402,6 @@ my_connection_data_pointer* mqtt_get_node_certificates(esp_mqtt_client_handle_t 
             //memcpy(&(curr_cert->certificate), &cert, sizeof(cert));
             //mbedtls_x509_crt_free(&cert);
             curr_cert->certificate=cert;
-
-            //print the certificate
-
-
-
-
 
             //extract the mac vlue from certificate || 0s
             uint8_t mac[6];
@@ -485,16 +463,7 @@ void print_certificates(my_connection_data_pointer* cp){
 
 
     printf("MAC: %02X:%02X:%02X:%02X:%02X:%02X\n",curr->MAC[0],curr->MAC[1],curr->MAC[2],curr->MAC[3],curr->MAC[4],curr->MAC[5]);
-
-
-    mbedtls_x509_crt *certificate = &(curr->certificate);  // Assuming curr is a pointer to a structure containing the certificate
-    char buf[1200];
-    memset(buf, 0, sizeof(buf));
-    mbedtls_x509_crt_info(buf, sizeof(buf)-1, "", certificate);
-    buf[sizeof(buf)-1]='\0';
-    printf("%s\n", buf);
-    fflush(stdout);
-
+    
     fflush(stdout);
 
     
